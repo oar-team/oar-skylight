@@ -36,22 +36,22 @@ export class AuthenticationService {
   login(user: User) {
     
     this.setUser(user);
-    this.getWhoAmI();
+    this.requestWhoAmI();
 
   }
-
-  // Récupère le data WhoAmI et appel isUserLogged  
-  getWhoAmI() {
+  
+  // Get WhoAmI data and call isUserLogged  
+  requestWhoAmI() {
     let user = this.getUser();
   
-    this.requestWhoAmI().subscribe(
+    this.doRequestWhoAmI().subscribe(
         data => this.isUserLogged(data),
         error => console.log(error)
         );
   }
   
-  // A partir de la réponse WhoAmI
-  // Si l'utilisateur retourné est bien l'utilisateur courant, alors isLogged = true
+  // From WhoAmI Response, set isLogged
+  // If a user is responded, isLogged = true
   isUserLogged(data:any) {
     if(data.authenticated_user == this.getUser().getUsername()) {
       this.setIsLogged(true);
@@ -65,12 +65,23 @@ export class AuthenticationService {
   }
 
 
-  //Getter for isLogged
+  //  Getter for isLogged
   getIsLogged():BehaviorSubject<Boolean> {
     return this.isLogged;
   }
 
-  //Getter for isLogged value
+
+  /*
+  *    Request the Api if the user is logged.
+  *    Return isLogged. Subscribe to get the value 
+  */
+  getIsLoggedWhoAmI():BehaviorSubject<Boolean> {
+    this.requestWhoAmI();
+
+    return this.isLogged;
+  }
+
+  //  Getter for isLogged value
   getIsLoggedValue():Boolean {
     return this.isLogged.getValue();
   }
@@ -79,7 +90,7 @@ export class AuthenticationService {
 	// if not logged the authenticated user is an empty string ('')
 	// Level of access: private
 	// API doc: http://oar.imag.fr/docs/latest/user/api.html#get-whoami
-	requestWhoAmI() {
+	doRequestWhoAmI() {
         let headers = new Headers();
         let user = this.user.getValue();
 
@@ -93,6 +104,7 @@ export class AuthenticationService {
         }
         ).map(res => res.json());
 	}
+  
 
   logOut(error:any) {
     console.log(error);
@@ -100,7 +112,7 @@ export class AuthenticationService {
     
     this.isLogged.next(false);
     this.user.next(new User('', ''));
-
+    
   }
 
 
