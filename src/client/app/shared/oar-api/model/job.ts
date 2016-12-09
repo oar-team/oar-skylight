@@ -102,10 +102,20 @@ export class Job {
         this.walltime       =	input.walltime;
         this.wantedResources=	input.wanted_resources;
         
-        // Implémentation des liens
+        // Link implementation for a Job
 
         for(let element of input.links) {
-            this.links.push(new Link().deserialize(element));
+            let link:Link = new Link().deserialize(element);
+            
+            /*
+            *  Since we don't know where to split the string ("/oar-priv/" can change)
+            *  we split on "/jobs" to avoid trouble and then add "jobs" to form a link route that look like : jobs/1/nodes
+            */
+            let arrStr = link.api_href.split('/jobs');
+            console.log(arrStr);
+            link.href = 'jobs' + arrStr[1];
+
+            this.links.push(link);
         }
         
           for(let element of input.events) {

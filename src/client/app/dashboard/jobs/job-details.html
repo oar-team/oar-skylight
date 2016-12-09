@@ -1,7 +1,8 @@
-<h2>Job : {{id}} - Details</h2>
+<h2>Job : {{id}} - Details - </h2>
+
 
 <div class="row">
-    <div class="col-xl-6">
+    <div class="col-xl-8">
 
         <table class="table table-striped table-hover table-bordered">
            <tr *ngFor="let entry of job.json | keys">
@@ -10,5 +11,13 @@
            </tr>
         </table>
 
+    </div>
+    <div class="col-xl-4">
+        <div class="btn-group-vertical" role="group" aria-label="..." >
+            <button type="button" class="btn btn-lg btn-secondary"  
+                *ngFor="let link of job.links" (click)="onClickLink(link)">
+                <span *ngIf="link.title !== '' ">{{ link.title }}</span>
+            </button>
+        </div>
     </div>
 </div>

@@ -10,14 +10,18 @@ interface Serializable<T> {
 export class Link implements Serializable<Link>{
    
     title:string;
-    href:string;
+    // href of the api
+    api_href:string;
     rel:string;
+
+    // href for the app routing
+    href:string;
 
     deserialize(input :any) {
         this.rel = input.rel;
-        this.href = input.href;
+        this.api_href = input.href;
         this.title = input.title;
-    
+        this.href = "";
         return this;
     }
 

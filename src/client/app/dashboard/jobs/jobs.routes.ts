@@ -10,10 +10,14 @@ export const JobsRoutes: Route[] = [
 	{
 		path: 'jobs/:id',
 		component: JobDetails,
-		canActivate: [AuthGuard]
+		//canActivate: [AuthGuard]
 	},
 	{
 		path: 'jobs',
 		component: JobsComponent
-	}	
+	} 
+	// {
+	// 	path: 'jobs/:id/nodes',
+	// 	component: JobNodesComponent
+	// }
 ];

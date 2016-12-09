@@ -7,22 +7,23 @@ import { Message } from 'primeng/primeng';
 import { AuthenticationService } from './authentification.service';
 
 
- /*
- *  AuthGuard : https://angular.io/docs/ts/latest/guide/router.html#!#guards   
- */
+/*
+*  AuthGuard : https://angular.io/docs/ts/latest/guide/router.html#!#guards   
+*/
 
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-  constructor(private auth: AuthenticationService, private router: Router) {}
+  constructor(private auth: AuthenticationService, private router: Router) { }
 
   canActivate() {
     // If user is not logged in we'll send them to the homepage 
-    if (!this.auth.getIsLoggedValue()) {
+    let bool = this.auth.getIsLoggedValue();
+    if (!bool) {
       this.router.navigate(['403']);
-      return false;
     }
-    return true;
+
+    return bool;
   }
 
 }

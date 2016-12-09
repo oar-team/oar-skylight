@@ -78,8 +78,6 @@ export class JobsComponent {
     }
     
     gotoJob(id:string) {
-        console.log('hello');
-        
         this.router.navigate(['dashboard/jobs/' + id]);
     }
  }

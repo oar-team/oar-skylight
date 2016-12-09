@@ -10,7 +10,8 @@ export class AuthenticationService {
 
   private user: BehaviorSubject<User>;
   private isLogged: BehaviorSubject<boolean>;
-  private urlProtocole = "http://";
+  private urlProtocole = 'http' + '://';
+
   private urlWhoAmI:string = "localhost:46668/oarapi-priv/";
   constructor(
       private _router: Router, 
