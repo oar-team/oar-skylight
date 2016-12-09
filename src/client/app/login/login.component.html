@@ -1,0 +1,24 @@
+<div class="login-page">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4">
+        	<img src="assets/img/SB-admin.png" width="150px" class="user-avatar" />
+			<h1>Oar Dashboard</h1>
+
+			<p-messages [value]="msgs" [closable]="false"></p-messages>
+
+			<form [formGroup]="loginForm" (ngSubmit)="doLogin($event)">
+				<div class="form-content">
+					<div class="form-group">
+						<input formControlName="username" class="form-control input-underline input-lg"  type="text" placeholder="Login">
+					</div>
+
+					<div class="form-group">
+						<input formControlName="password" type="password"  class="form-control input-underline input-lg" placeholder="Password">
+					</div>
+				</div>
+				<button class="btn rounded-btn" type="submit">Log in</button>			
+			
+			</form>
+		</div>	
+	</div>
+</div>

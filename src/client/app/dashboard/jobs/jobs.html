@@ -1,0 +1,44 @@
+<h1>Jobs</h1>
+<!--
+<div class="list-group">
+    <a *ngFor="let job of jobs" href="#" class="list-group-item" >{{job.id}} - {{job.owner}}</a>
+</div>-->
+
+<table class="table table-striped" [mfData]="getJobs()" #mf="mfDataTable" [mfRowsOnPage]="25">
+    <thead>
+    <tr>
+        <th style="width: 10%">
+            <mfDefaultSorter by="id">ID</mfDefaultSorter>
+        </th>
+        <th style="width: 10%">
+            <mfDefaultSorter by="stopTime">Stop Time</mfDefaultSorter>
+        </th>
+        <th style="width: 10%">
+            <mfDefaultSorter by="owner">Owner</mfDefaultSorter>
+        </th>
+        <th style="width: 30%">
+            <mfDefaultSorter by="message">Message</mfDefaultSorter>
+        </th>        
+        <th style="width: 30%">
+            Details
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+        <td >{{item.id}}</td>
+        <td>{{item.stopTime | date:'medium'}}</td>
+        <td>{{item.owner}}</td>
+        <td>{{item.message}}</td>
+        <td><button (click)="gotoJob(item.id)">More</button></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">
+            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+        </td>
+
+    </tr>
+    </tfoot>
+</table>
