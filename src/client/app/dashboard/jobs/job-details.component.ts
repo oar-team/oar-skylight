@@ -14,6 +14,8 @@ import { Link } from '../../shared/oar-api/model/link';
 export class JobDetails {
     id: number;
     job: Job;
+    buttonState: Number;
+    messageButton = "Display details";
 
     constructor(
         private route: ActivatedRoute,
@@ -21,6 +23,7 @@ export class JobDetails {
         private apiService: OarApiService
     ) {
         this.job = new Job();
+        this.buttonState = 0;
     }
 
     ngOnInit() {
@@ -28,7 +31,6 @@ export class JobDetails {
             this.id = +params['id']; // (+) converts string 'id' to a number
         });
 
-        this.getJob(this.id.toString());
 
     }
 
@@ -51,10 +53,23 @@ export class JobDetails {
     */
     setJob(json: any) {
         this.job = new Job().deserialize(json);
-        console.log(this.job);
     }
 
-    onClickLink(link:Link) {
+    loadDetails() {
+
+        if (this.buttonState == 0) {
+            this.buttonState = 1;
+            this.messageButton = "Hide Details";
+            this.getJob(this.id.toString());
+        } else {
+            this.buttonState = 0;
+            this.messageButton = "Display details";
+            this.job = new Job();
+        }
+    }
+
+    onClickLink(link: Link) {
+
         console.log('route : ' + link.href);
     }
 
