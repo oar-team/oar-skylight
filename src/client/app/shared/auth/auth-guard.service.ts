@@ -7,9 +7,11 @@ import { Message } from 'primeng/primeng';
 import { AuthenticationService } from './authentification.service';
 
 
-/*
-*  AuthGuard : https://angular.io/docs/ts/latest/guide/router.html#!#guards   
-*/
+/**
+ *   Authguard for logged user
+ * 
+ *   __more info :__ https://angular.io/docs/ts/latest/guide/router.html#!#guards
+ */
 
 @Injectable()
 export class AuthGuard implements CanActivate {

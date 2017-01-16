@@ -2810,6 +2810,13 @@
           "angular/cor",
           "args:str",
           "class",
+          "custom",
+          "descript",
+          "each",
+          "element",
+          "element.us",
+          "entry.key",
+          "entry.valu",
           "export",
           "file",
           "implement",
@@ -2819,6 +2826,7 @@
           "keys.push({key",
           "keys:ani",
           "keyspip",
+          "list",
           "match",
           "pipe",
           "pipe({nam",
@@ -2829,6 +2837,7 @@
           "sourc",
           "src/client/app/dashboard/jobs/key",
           "transform(value:ani",
+          "us",
           "valu",
           "value[key"
         ],
@@ -5667,7 +5676,7 @@
                                 },
                                 "pipes/KeysPipe.html": {
                                   "ref": "pipes/KeysPipe.html",
-                                  "tf": 0.030303030303030304
+                                  "tf": 0.018867924528301886
                                 }
                               }
                             }
@@ -7679,7 +7688,7 @@
                         "docs": {
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
-                            "tf": 0.030303030303030304
+                            "tf": 0.018867924528301886
                           }
                         }
                       }
@@ -11088,7 +11097,7 @@
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.030303030303030304
+                      "tf": 0.018867924528301886
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -12900,6 +12909,23 @@
                   }
                 }
               }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "pipes/KeysPipe.html": {
+                        "ref": "pipes/KeysPipe.html",
+                        "tf": 0.03773584905660377
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "m": {
@@ -14129,6 +14155,10 @@
                             "ref": "injectables/OarApiService.html",
                             "tf": 0.018867924528301886
                           },
+                          "pipes/KeysPipe.html": {
+                            "ref": "pipes/KeysPipe.html",
+                            "tf": 0.018867924528301886
+                          },
                           "classes/Job.html": {
                             "ref": "classes/Job.html",
                             "tf": 0.014184397163120567
@@ -15054,6 +15084,49 @@
                   }
                 }
               }
+            },
+            "t": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "y": {
+                  "docs": {},
+                  ".": {
+                    "docs": {},
+                    "k": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "y": {
+                          "docs": {
+                            "pipes/KeysPipe.html": {
+                              "ref": "pipes/KeysPipe.html",
+                              "tf": 0.03773584905660377
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "v": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "l": {
+                          "docs": {},
+                          "u": {
+                            "docs": {
+                              "pipes/KeysPipe.html": {
+                                "ref": "pipes/KeysPipe.html",
+                                "tf": 0.03773584905660377
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "t": {
@@ -15295,7 +15368,7 @@
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.030303030303030304
+                        "tf": 0.018867924528301886
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -15385,6 +15458,10 @@
                         "components/SidebarComponent.html": {
                           "ref": "components/SidebarComponent.html",
                           "tf": 0.029850746268656716
+                        },
+                        "pipes/KeysPipe.html": {
+                          "ref": "pipes/KeysPipe.html",
+                          "tf": 0.018867924528301886
                         },
                         "classes/Job.html": {
                           "ref": "classes/Job.html",
@@ -15549,6 +15626,17 @@
                                     }
                                   }
                                 }
+                              }
+                            }
+                          }
+                        },
+                        "u": {
+                          "docs": {},
+                          "s": {
+                            "docs": {
+                              "pipes/KeysPipe.html": {
+                                "ref": "pipes/KeysPipe.html",
+                                "tf": 0.018867924528301886
                               }
                             }
                           }
@@ -15957,6 +16045,20 @@
                 }
               }
             }
+          },
+          "a": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "pipes/KeysPipe.html": {
+                    "ref": "pipes/KeysPipe.html",
+                    "tf": 0.03773584905660377
+                  }
+                }
+              }
+            }
           }
         },
         "f": {
@@ -16299,7 +16401,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.030303030303030304
+                    "tf": 0.018867924528301886
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -19227,7 +19329,7 @@
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.030303030303030304
+                        "tf": 0.018867924528301886
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -19271,7 +19373,7 @@
                             },
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.030303030303030304
+                              "tf": 0.018867924528301886
                             },
                             "classes/Job.html": {
                               "ref": "classes/Job.html",
@@ -19766,7 +19868,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.030303030303030304
+                    "tf": 0.018867924528301886
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -22432,7 +22534,7 @@
                 },
                 "pipes/KeysPipe.html": {
                   "ref": "pipes/KeysPipe.html",
-                  "tf": 0.12121212121212122
+                  "tf": 0.11320754716981132
                 }
               },
               "s": {
@@ -22449,7 +22551,7 @@
                         },
                         "pipes/KeysPipe.html": {
                           "ref": "pipes/KeysPipe.html",
-                          "tf": 5.0606060606060606
+                          "tf": 5.037735849056604
                         }
                       }
                     }
@@ -22477,7 +22579,7 @@
                                     "docs": {
                                       "pipes/KeysPipe.html": {
                                         "ref": "pipes/KeysPipe.html",
-                                        "tf": 0.030303030303030304
+                                        "tf": 0.018867924528301886
                                       }
                                     }
                                   }
@@ -22500,7 +22602,7 @@
                         "docs": {
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
-                            "tf": 0.030303030303030304
+                            "tf": 0.018867924528301886
                           }
                         }
                       }
@@ -22886,6 +22988,10 @@
                   "components/JobsComponent.html": {
                     "ref": "components/JobsComponent.html",
                     "tf": 0.005847953216374269
+                  },
+                  "pipes/KeysPipe.html": {
+                    "ref": "pipes/KeysPipe.html",
+                    "tf": 0.03773584905660377
                   }
                 },
                 ".": {
@@ -24431,7 +24537,7 @@
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.06060606060606061
+                      "tf": 0.03773584905660377
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -28584,7 +28690,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 5.0606060606060606
+                    "tf": 5.0754716981132075
                   }
                 },
                 "(": {
@@ -28599,7 +28705,7 @@
                           "docs": {
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.030303030303030304
+                              "tf": 0.018867924528301886
                             }
                           }
                         }
@@ -28613,7 +28719,7 @@
                     "docs": {
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.030303030303030304
+                        "tf": 0.018867924528301886
                       }
                     }
                   }
@@ -28638,7 +28744,7 @@
                                   "docs": {
                                     "pipes/KeysPipe.html": {
                                       "ref": "pipes/KeysPipe.html",
-                                      "tf": 0.06060606060606061
+                                      "tf": 0.03773584905660377
                                     }
                                   }
                                 }
@@ -29359,7 +29465,7 @@
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.06060606060606061
+                        "tf": 0.03773584905660377
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -30006,7 +30112,7 @@
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.030303030303030304
+                        "tf": 0.05660377358490566
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -33801,7 +33907,7 @@
                                                                           "docs": {
                                                                             "pipes/KeysPipe.html": {
                                                                               "ref": "pipes/KeysPipe.html",
-                                                                              "tf": 0.030303030303030304
+                                                                              "tf": 0.018867924528301886
                                                                             }
                                                                           }
                                                                         }
@@ -36014,7 +36120,7 @@
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.030303030303030304
+                      "tf": 0.018867924528301886
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -42336,7 +42442,7 @@
                                               "docs": {
                                                 "pipes/KeysPipe.html": {
                                                   "ref": "pipes/KeysPipe.html",
-                                                  "tf": 0.030303030303030304
+                                                  "tf": 0.018867924528301886
                                                 }
                                               }
                                             }
@@ -42459,6 +42565,10 @@
               "injectables/NameListService.html": {
                 "ref": "injectables/NameListService.html",
                 "tf": 0.008064516129032258
+              },
+              "pipes/KeysPipe.html": {
+                "ref": "pipes/KeysPipe.html",
+                "tf": 0.018867924528301886
               }
             },
             "e": {
@@ -42847,7 +42957,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.06060606060606061
+                    "tf": 0.03773584905660377
                   }
                 },
                 "e": {
@@ -42862,7 +42972,7 @@
                           "docs": {
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.030303030303030304
+                              "tf": 0.018867924528301886
                             }
                           }
                         }
@@ -44368,7 +44478,7 @@
           }
         }
       },
-      "length": 3462
+      "length": 3471
     },
     "corpusTokens": [
       "0",
@@ -44823,6 +44933,7 @@
       "cssnano.d.t",
       "currentpag",
       "currentpage:numb",
+      "custom",
       "d'un",
       "dakota",
       "danger",
@@ -44900,8 +45011,10 @@
       "e",
       "e.item",
       "e2e.t",
+      "each",
       "element",
       "element.component.html",
+      "element.us",
       "element/bselement.component.t",
       "element/bselement.modul",
       "element/bselement.module.t",
@@ -44909,6 +45022,8 @@
       "enabl",
       "end",
       "ensembl",
+      "entry.key",
+      "entry.valu",
       "env",
       "env.config.t",
       "env_nam",
@@ -46129,7 +46244,7 @@
     "pipes/KeysPipe.html": {
       "url": "pipes/KeysPipe.html",
       "title": "pipe - KeysPipe",
-      "body": "\n                   \n\n\n\n\n\n\n  Pipes\n  KeysPipe\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/dashboard/jobs/keys-pipe.ts\n        \n\n    \n    \n        import { Pipe, PipeTransform } from '@angular/core';\n\n@Pipe({name: 'keys'})\nexport class KeysPipe implements PipeTransform {\n  transform(value:any, args:string[]) : any {\n    let keys:any[] = [];\n    for (let key in value) {\n      keys.push({key: key, value: value[key]});\n    }\n    return keys;\n  }\n}\n    \n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \n\n\n\n\n\n\n  Pipes\n  KeysPipe\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/dashboard/jobs/keys-pipe.ts\n        \n\n            \n                Description\n            \n            \n                Custom pipe that return a list of key for each element.Used like that :              {{ entry.key }}        {{ entry.value}}      \n            \n    \n    \n        import { Pipe, PipeTransform } from '@angular/core';\n/**\n * Custom pipe that return a list of key for each element.\n * \n * Used like that :\n*       \n          {{ entry.key }}\n          {{ entry.value}}\n        \n */\n@Pipe({name: 'keys'})\nexport class KeysPipe implements PipeTransform {\n  transform(value:any, args:string[]) : any {\n    let keys:any[] = [];\n    for (let key in value) {\n      keys.push({key: key, value: value[key]});\n    }\n    return keys;\n  }\n}\n    \n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "classes/Job.html": {
       "url": "classes/Job.html",
