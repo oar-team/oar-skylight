@@ -2497,6 +2497,8 @@
           "zero"
         ],
         "injectables/AuthGuard.html": [
+          "__",
+          "__more",
           "angular/cor",
           "angular/rout",
           "auth",
@@ -2508,6 +2510,7 @@
           "canactiv",
           "class",
           "constructor(priv",
+          "descript",
           "export",
           "file",
           "guard.service.t",
@@ -2534,6 +2537,7 @@
           "this.router.navigate(['403",
           "type",
           "user",
+          "usermor",
           "void",
           "we'll"
         ],
@@ -2736,24 +2740,38 @@
           "world"
         ],
         "injectables/OarApiService.html": [
+          "__",
+          "__more",
+          "__return",
+          "__todo",
+          "access",
+          "accessmor",
           "angular/cor",
           "angular/http",
+          "api",
           "api.service.t",
           "api/model/job",
           "api/oar",
           "baselogin",
           "baseurloar",
           "class",
+          "config",
           "constructor",
+          "current",
           "descript",
           "docker",
           "export",
           "file",
+          "format",
           "getjob",
           "getjob(id",
           "getresourc",
+          "global",
           "http",
+          "http://oar.imag.fr/docs/latest/user/api.html",
+          "http://oar.imag.fr/docs/latest/user/api.htmltodo",
           "id",
+          "idreturn",
           "import",
           "info",
           "inject",
@@ -2766,18 +2784,20 @@
           "match",
           "mdp",
           "method",
+          "oar",
           "oarapiservic",
           "observ",
-          "paramet",
           "priv",
           "privat",
           "res.json",
+          "resourc",
           "resources.json",
           "respons",
           "result",
           "return",
           "rxjs/add/operator/map",
           "rxjs/rx",
+          "servic",
           "shared/oar",
           "signatur",
           "sourc",
@@ -2790,7 +2810,6 @@
           "this.mdp",
           "this.urljob",
           "this.urlresourc",
-          "todo",
           "type",
           "urljob",
           "urlresourc",
@@ -2807,6 +2826,8 @@
           "rout"
         ],
         "pipes/KeysPipe.html": [
+          "__",
+          "__usag",
           "angular/cor",
           "args:str",
           "class",
@@ -2814,7 +2835,8 @@
           "descript",
           "each",
           "element",
-          "element.us",
+          "element.usag",
+          "entri",
           "entry.key",
           "entry.valu",
           "export",
@@ -2828,6 +2850,8 @@
           "keyspip",
           "list",
           "match",
+          "ngfor=\"let",
+          "object",
           "pipe",
           "pipe({nam",
           "pipe.t",
@@ -2837,7 +2861,6 @@
           "sourc",
           "src/client/app/dashboard/jobs/key",
           "transform(value:ani",
-          "us",
           "valu",
           "value[key"
         ],
@@ -5660,7 +5683,7 @@
                                 },
                                 "injectables/AuthGuard.html": {
                                   "ref": "injectables/AuthGuard.html",
-                                  "tf": 0.016666666666666666
+                                  "tf": 0.014084507042253521
                                 },
                                 "injectables/AuthenticationService.html": {
                                   "ref": "injectables/AuthenticationService.html",
@@ -5672,11 +5695,11 @@
                                 },
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.009433962264150943
+                                  "tf": 0.006535947712418301
                                 },
                                 "pipes/KeysPipe.html": {
                                   "ref": "pipes/KeysPipe.html",
-                                  "tf": 0.018867924528301886
+                                  "tf": 0.016129032258064516
                                 }
                               }
                             }
@@ -5704,7 +5727,7 @@
                                   },
                                   "injectables/OarApiService.html": {
                                     "ref": "injectables/OarApiService.html",
-                                    "tf": 0.009433962264150943
+                                    "tf": 0.006535947712418301
                                   }
                                 }
                               }
@@ -5818,7 +5841,7 @@
                                   },
                                   "injectables/AuthGuard.html": {
                                     "ref": "injectables/AuthGuard.html",
-                                    "tf": 0.03333333333333333
+                                    "tf": 0.028169014084507043
                                   },
                                   "injectables/AuthenticationService.html": {
                                     "ref": "injectables/AuthenticationService.html",
@@ -5916,6 +5939,10 @@
                   "ref": "injectables/AuthenticationService.html",
                   "tf": 0.012711864406779662
                 },
+                "injectables/OarApiService.html": {
+                  "ref": "injectables/OarApiService.html",
+                  "tf": 0.026143790849673203
+                },
                 "classes/Link.html": {
                   "ref": "classes/Link.html",
                   "tf": 0.013333333333333334
@@ -5983,7 +6010,7 @@
                                     },
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.009433962264150943
+                                      "tf": 0.006535947712418301
                                     }
                                   },
                                   ".": {
@@ -6109,7 +6136,7 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.009433962264150943
+                          "tf": 0.006535947712418301
                         }
                       }
                     }
@@ -6151,7 +6178,7 @@
                                   "docs": {
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.009433962264150943
+                                      "tf": 0.006535947712418301
                                     }
                                   }
                                 }
@@ -7062,7 +7089,7 @@
                 "docs": {
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.014084507042253521
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -7085,7 +7112,7 @@
                             },
                             "injectables/AuthGuard.html": {
                               "ref": "injectables/AuthGuard.html",
-                              "tf": 5.05
+                              "tf": 5.056338028169014
                             }
                           }
                         }
@@ -7182,7 +7209,7 @@
                       "docs": {
                         "injectables/AuthGuard.html": {
                           "ref": "injectables/AuthGuard.html",
-                          "tf": 0.016666666666666666
+                          "tf": 0.014084507042253521
                         },
                         "injectables/AuthenticationService.html": {
                           "ref": "injectables/AuthenticationService.html",
@@ -7229,7 +7256,7 @@
                                                   },
                                                   "injectables/AuthGuard.html": {
                                                     "ref": "injectables/AuthGuard.html",
-                                                    "tf": 0.03333333333333333
+                                                    "tf": 0.028169014084507043
                                                   },
                                                   "injectables/AuthenticationService.html": {
                                                     "ref": "injectables/AuthenticationService.html",
@@ -7285,7 +7312,7 @@
                                                       "docs": {
                                                         "injectables/AuthGuard.html": {
                                                           "ref": "injectables/AuthGuard.html",
-                                                          "tf": 0.016666666666666666
+                                                          "tf": 0.014084507042253521
                                                         }
                                                       }
                                                     }
@@ -7688,7 +7715,7 @@
                         "docs": {
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
-                            "tf": 0.018867924528301886
+                            "tf": 0.016129032258064516
                           }
                         }
                       }
@@ -7807,6 +7834,24 @@
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
                         "tf": 0.00423728813559322
+                      },
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.006535947712418301
+                      }
+                    },
+                    "m": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "r": {
+                          "docs": {
+                            "injectables/OarApiService.html": {
+                              "ref": "injectables/OarApiService.html",
+                              "tf": 0.006535947712418301
+                            }
+                          }
+                        }
                       }
                     }
                   }
@@ -8025,7 +8070,7 @@
                           "docs": {
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.009433962264150943
+                              "tf": 0.006535947712418301
                             }
                           }
                         }
@@ -8047,7 +8092,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.009433962264150943
+                                "tf": 0.006535947712418301
                               }
                             }
                           }
@@ -8628,7 +8673,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.05
+                    "tf": 0.04225352112676056
                   }
                 },
                 "e": {
@@ -11081,7 +11126,7 @@
                     },
                     "injectables/AuthGuard.html": {
                       "ref": "injectables/AuthGuard.html",
-                      "tf": 0.016666666666666666
+                      "tf": 0.014084507042253521
                     },
                     "injectables/AuthenticationService.html": {
                       "ref": "injectables/AuthenticationService.html",
@@ -11093,11 +11138,11 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.009433962264150943
+                      "tf": 0.006535947712418301
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.018867924528301886
+                      "tf": 0.016129032258064516
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -11725,6 +11770,10 @@
                         "ref": "components/AppComponent.html",
                         "tf": 0.03225806451612903
                       },
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.013071895424836602
+                      },
                       "interfaces/EnvConfig.html": {
                         "ref": "interfaces/EnvConfig.html",
                         "tf": 0.029411764705882353
@@ -12140,7 +12189,7 @@
                                 },
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.009433962264150943
+                                  "tf": 0.006535947712418301
                                 },
                                 "classes/Job.html": {
                                   "ref": "classes/Job.html",
@@ -12283,7 +12332,7 @@
                                           },
                                           "injectables/AuthGuard.html": {
                                             "ref": "injectables/AuthGuard.html",
-                                            "tf": 0.016666666666666666
+                                            "tf": 0.014084507042253521
                                           },
                                           "injectables/NameListService.html": {
                                             "ref": "injectables/NameListService.html",
@@ -12829,7 +12878,7 @@
                         "docs": {
                           "injectables/AuthGuard.html": {
                             "ref": "injectables/AuthGuard.html",
-                            "tf": 0.06666666666666667
+                            "tf": 0.056338028169014086
                           }
                         }
                       }
@@ -12867,7 +12916,12 @@
                   "n": {
                     "docs": {},
                     "t": {
-                      "docs": {},
+                      "docs": {
+                        "injectables/OarApiService.html": {
+                          "ref": "injectables/OarApiService.html",
+                          "tf": 0.013071895424836602
+                        }
+                      },
                       "p": {
                         "docs": {},
                         "a": {
@@ -12920,7 +12974,7 @@
                     "docs": {
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.03773584905660377
+                        "tf": 0.03225806451612903
                       }
                     }
                   }
@@ -14147,17 +14201,21 @@
                             "ref": "components/TimelineComponent.html",
                             "tf": 0.007575757575757576
                           },
+                          "injectables/AuthGuard.html": {
+                            "ref": "injectables/AuthGuard.html",
+                            "tf": 0.014084507042253521
+                          },
                           "injectables/NameListService.html": {
                             "ref": "injectables/NameListService.html",
                             "tf": 0.008064516129032258
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.018867924528301886
+                            "tf": 0.006535947712418301
                           },
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
-                            "tf": 0.018867924528301886
+                            "tf": 0.016129032258064516
                           },
                           "classes/Job.html": {
                             "ref": "classes/Job.html",
@@ -14549,7 +14607,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.013071895424836602
                       }
                     }
                   }
@@ -15089,6 +15147,14 @@
               "docs": {},
               "r": {
                 "docs": {},
+                "i": {
+                  "docs": {
+                    "pipes/KeysPipe.html": {
+                      "ref": "pipes/KeysPipe.html",
+                      "tf": 0.03225806451612903
+                    }
+                  }
+                },
                 "y": {
                   "docs": {},
                   ".": {
@@ -15101,7 +15167,7 @@
                           "docs": {
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.03773584905660377
+                              "tf": 0.03225806451612903
                             }
                           }
                         }
@@ -15117,7 +15183,7 @@
                             "docs": {
                               "pipes/KeysPipe.html": {
                                 "ref": "pipes/KeysPipe.html",
-                                "tf": 0.03773584905660377
+                                "tf": 0.03225806451612903
                               }
                             }
                           }
@@ -15352,7 +15418,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.016666666666666666
+                        "tf": 0.014084507042253521
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -15364,11 +15430,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.009433962264150943
+                        "tf": 0.006535947712418301
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.016129032258064516
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -15461,7 +15527,7 @@
                         },
                         "pipes/KeysPipe.html": {
                           "ref": "pipes/KeysPipe.html",
-                          "tf": 0.018867924528301886
+                          "tf": 0.016129032258064516
                         },
                         "classes/Job.html": {
                           "ref": "classes/Job.html",
@@ -15633,10 +15699,16 @@
                         "u": {
                           "docs": {},
                           "s": {
-                            "docs": {
-                              "pipes/KeysPipe.html": {
-                                "ref": "pipes/KeysPipe.html",
-                                "tf": 0.018867924528301886
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "g": {
+                                "docs": {
+                                  "pipes/KeysPipe.html": {
+                                    "ref": "pipes/KeysPipe.html",
+                                    "tf": 0.016129032258064516
+                                  }
+                                }
                               }
                             }
                           }
@@ -16054,7 +16126,7 @@
                 "docs": {
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.03773584905660377
+                    "tf": 0.03225806451612903
                   }
                 }
               }
@@ -16385,7 +16457,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.014084507042253521
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -16397,11 +16469,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.009433962264150943
+                    "tf": 0.006535947712418301
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.018867924528301886
+                    "tf": 0.016129032258064516
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -16755,7 +16827,12 @@
                 "a": {
                   "docs": {},
                   "t": {
-                    "docs": {},
+                    "docs": {
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.0392156862745098
+                      }
+                    },
                     "t": {
                       "docs": {
                         "components/ChartComponent.html": {
@@ -17190,7 +17267,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.02830188679245283
+                        "tf": 0.0196078431372549
                       }
                     },
                     "(": {
@@ -17209,7 +17286,7 @@
                             },
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.018867924528301886
+                              "tf": 0.013071895424836602
                             }
                           },
                           ":": {
@@ -17545,7 +17622,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.018867924528301886
+                                "tf": 0.013071895424836602
                               }
                             }
                           }
@@ -17725,7 +17802,7 @@
                                       "docs": {
                                         "injectables/AuthGuard.html": {
                                           "ref": "injectables/AuthGuard.html",
-                                          "tf": 0.016666666666666666
+                                          "tf": 0.014084507042253521
                                         }
                                       }
                                     }
@@ -17926,6 +18003,26 @@
                     "components/ChartComponent.html": {
                       "ref": "components/ChartComponent.html",
                       "tf": 0.0017094017094017094
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.013071895424836602
+                      }
                     }
                   }
                 }
@@ -18222,7 +18319,7 @@
                       "docs": {
                         "injectables/AuthGuard.html": {
                           "ref": "injectables/AuthGuard.html",
-                          "tf": 0.016666666666666666
+                          "tf": 0.014084507042253521
                         }
                       }
                     }
@@ -18325,7 +18422,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.03773584905660377
+                    "tf": 0.026143790849673203
                   }
                 },
                 "s": {
@@ -18493,7 +18590,7 @@
                                                                                                                               "docs": {
                                                                                                                                 "injectables/AuthGuard.html": {
                                                                                                                                   "ref": "injectables/AuthGuard.html",
-                                                                                                                                  "tf": 0.016666666666666666
+                                                                                                                                  "tf": 0.028169014084507043
                                                                                                                                 }
                                                                                                                               }
                                                                                                                             }
@@ -18721,7 +18818,12 @@
                                                                                             "m": {
                                                                                               "docs": {},
                                                                                               "l": {
-                                                                                                "docs": {},
+                                                                                                "docs": {
+                                                                                                  "injectables/OarApiService.html": {
+                                                                                                    "ref": "injectables/OarApiService.html",
+                                                                                                    "tf": 0.006535947712418301
+                                                                                                  }
+                                                                                                },
                                                                                                 "#": {
                                                                                                   "docs": {},
                                                                                                   "g": {
@@ -18733,6 +18835,23 @@
                                                                                                           "injectables/AuthenticationService.html": {
                                                                                                             "ref": "injectables/AuthenticationService.html",
                                                                                                             "tf": 0.00423728813559322
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                },
+                                                                                                "t": {
+                                                                                                  "docs": {},
+                                                                                                  "o": {
+                                                                                                    "docs": {},
+                                                                                                    "d": {
+                                                                                                      "docs": {},
+                                                                                                      "o": {
+                                                                                                        "docs": {
+                                                                                                          "injectables/OarApiService.html": {
+                                                                                                            "ref": "injectables/OarApiService.html",
+                                                                                                            "tf": 0.006535947712418301
                                                                                                           }
                                                                                                         }
                                                                                                       }
@@ -19313,7 +19432,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.1
+                        "tf": 0.08450704225352113
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -19325,11 +19444,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.04716981132075472
+                        "tf": 0.032679738562091505
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.016129032258064516
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -19369,11 +19488,11 @@
                             },
                             "injectables/AuthGuard.html": {
                               "ref": "injectables/AuthGuard.html",
-                              "tf": 0.016666666666666666
+                              "tf": 0.014084507042253521
                             },
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.018867924528301886
+                              "tf": 0.016129032258064516
                             },
                             "classes/Job.html": {
                               "ref": "classes/Job.html",
@@ -19640,7 +19759,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 5.05
+                        "tf": 5.042253521126761
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -19652,7 +19771,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 5.028301886792453
+                        "tf": 5.019607843137255
                       }
                     }
                   }
@@ -19852,7 +19971,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.04225352112676056
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -19864,11 +19983,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.009433962264150943
+                    "tf": 0.0196078431372549
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.018867924528301886
+                    "tf": 0.016129032258064516
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -21446,7 +21565,7 @@
               },
               "injectables/OarApiService.html": {
                 "ref": "injectables/OarApiService.html",
-                "tf": 0.009433962264150943
+                "tf": 0.013071895424836602
               },
               "classes/Job.html": {
                 "ref": "classes/Job.html",
@@ -21490,6 +21609,29 @@
                       "components/JobsComponent.html": {
                         "ref": "components/JobsComponent.html",
                         "tf": 0.005847953216374269
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "injectables/OarApiService.html": {
+                            "ref": "injectables/OarApiService.html",
+                            "tf": 0.006535947712418301
+                          }
+                        }
                       }
                     }
                   }
@@ -21790,7 +21932,7 @@
                 },
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.018867924528301886
+                  "tf": 0.0392156862745098
                 },
                 "classes/Job.html": {
                   "ref": "classes/Job.html",
@@ -21953,7 +22095,7 @@
                           "docs": {
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.009433962264150943
+                              "tf": 0.006535947712418301
                             }
                           }
                         }
@@ -22271,7 +22413,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.009433962264150943
+                    "tf": 0.0457516339869281
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -22534,7 +22676,7 @@
                 },
                 "pipes/KeysPipe.html": {
                   "ref": "pipes/KeysPipe.html",
-                  "tf": 0.11320754716981132
+                  "tf": 0.12903225806451613
                 }
               },
               "s": {
@@ -22551,7 +22693,7 @@
                         },
                         "pipes/KeysPipe.html": {
                           "ref": "pipes/KeysPipe.html",
-                          "tf": 5.037735849056604
+                          "tf": 5.032258064516129
                         }
                       }
                     }
@@ -22579,7 +22721,7 @@
                                     "docs": {
                                       "pipes/KeysPipe.html": {
                                         "ref": "pipes/KeysPipe.html",
-                                        "tf": 0.018867924528301886
+                                        "tf": 0.016129032258064516
                                       }
                                     }
                                   }
@@ -22602,7 +22744,7 @@
                         "docs": {
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
-                            "tf": 0.018867924528301886
+                            "tf": 0.016129032258064516
                           }
                         }
                       }
@@ -22991,7 +23133,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.03773584905660377
+                    "tf": 0.03225806451612903
                   }
                 },
                 ".": {
@@ -23405,7 +23547,7 @@
                 },
                 "injectables/AuthGuard.html": {
                   "ref": "injectables/AuthGuard.html",
-                  "tf": 0.016666666666666666
+                  "tf": 0.04225352112676056
                 },
                 "injectables/AuthenticationService.html": {
                   "ref": "injectables/AuthenticationService.html",
@@ -23434,7 +23576,7 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.009433962264150943
+                      "tf": 0.006535947712418301
                     }
                   },
                   ".": {
@@ -23935,7 +24077,7 @@
                                                       },
                                                       "injectables/OarApiService.html": {
                                                         "ref": "injectables/OarApiService.html",
-                                                        "tf": 0.009433962264150943
+                                                        "tf": 0.006535947712418301
                                                       }
                                                     }
                                                   }
@@ -24517,7 +24659,7 @@
                     },
                     "injectables/AuthGuard.html": {
                       "ref": "injectables/AuthGuard.html",
-                      "tf": 0.03333333333333333
+                      "tf": 0.028169014084507043
                     },
                     "injectables/AuthenticationService.html": {
                       "ref": "injectables/AuthenticationService.html",
@@ -24529,7 +24671,7 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.018867924528301886
+                      "tf": 0.013071895424836602
                     },
                     "routes.html": {
                       "ref": "routes.html",
@@ -24537,7 +24679,7 @@
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.03773584905660377
+                      "tf": 0.03225806451612903
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -24839,7 +24981,7 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.02830188679245283
+                      "tf": 0.0196078431372549
                     }
                   }
                 },
@@ -24904,7 +25046,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.016666666666666666
+                        "tf": 0.014084507042253521
                       },
                       "injectables/NameListService.html": {
                         "ref": "injectables/NameListService.html",
@@ -25114,7 +25256,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.016666666666666666
+                        "tf": 0.014084507042253521
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -25126,7 +25268,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.009433962264150943
+                        "tf": 0.006535947712418301
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -25837,7 +25979,7 @@
               "docs": {
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.009433962264150943
+                  "tf": 0.006535947712418301
                 }
               }
             }
@@ -26581,6 +26723,35 @@
                   }
                 }
               }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "=": {
+                    "docs": {},
+                    "\"": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "pipes/KeysPipe.html": {
+                                "ref": "pipes/KeysPipe.html",
+                                "tf": 0.03225806451612903
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "u": {
@@ -26913,6 +27084,10 @@
                   "ref": "modules/SharedModule.html",
                   "tf": 0.011904761904761904
                 },
+                "injectables/OarApiService.html": {
+                  "ref": "injectables/OarApiService.html",
+                  "tf": 0.013071895424836602
+                },
                 "classes/Job.html": {
                   "ref": "classes/Job.html",
                   "tf": 0.0035460992907801418
@@ -26962,7 +27137,7 @@
                                   },
                                   "injectables/OarApiService.html": {
                                     "ref": "injectables/OarApiService.html",
-                                    "tf": 5.018867924528302
+                                    "tf": 5.0130718954248366
                                   }
                                 }
                               }
@@ -26989,6 +27164,10 @@
                       "components/BSComponentComponent.html": {
                         "ref": "components/BSComponentComponent.html",
                         "tf": 0.0011350737797956867
+                      },
+                      "pipes/KeysPipe.html": {
+                        "ref": "pipes/KeysPipe.html",
+                        "tf": 0.03225806451612903
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -27154,7 +27333,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.009433962264150943
+                        "tf": 0.006535947712418301
                       }
                     },
                     "a": {
@@ -27858,17 +28037,6 @@
                               }
                             }
                           }
-                        }
-                      }
-                    }
-                  },
-                  "e": {
-                    "docs": {},
-                    "t": {
-                      "docs": {
-                        "injectables/OarApiService.html": {
-                          "ref": "injectables/OarApiService.html",
-                          "tf": 0.018867924528301886
                         }
                       }
                     }
@@ -28582,7 +28750,7 @@
                                         },
                                         "injectables/AuthGuard.html": {
                                           "ref": "injectables/AuthGuard.html",
-                                          "tf": 0.016666666666666666
+                                          "tf": 0.014084507042253521
                                         }
                                       }
                                     }
@@ -28605,7 +28773,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.009433962264150943
+                    "tf": 0.006535947712418301
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -28650,7 +28818,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.016666666666666666
+                        "tf": 0.014084507042253521
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -28662,7 +28830,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.0660377358490566
+                        "tf": 0.0457516339869281
                       },
                       "classes/User.html": {
                         "ref": "classes/User.html",
@@ -28690,7 +28858,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 5.0754716981132075
+                    "tf": 5.064516129032258
                   }
                 },
                 "(": {
@@ -28705,7 +28873,7 @@
                           "docs": {
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.018867924528301886
+                              "tf": 0.016129032258064516
                             }
                           }
                         }
@@ -28719,7 +28887,7 @@
                     "docs": {
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.016129032258064516
                       }
                     }
                   }
@@ -28744,7 +28912,7 @@
                                   "docs": {
                                     "pipes/KeysPipe.html": {
                                       "ref": "pipes/KeysPipe.html",
-                                      "tf": 0.03773584905660377
+                                      "tf": 0.03225806451612903
                                     }
                                   }
                                 }
@@ -29445,7 +29613,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.03333333333333333
+                        "tf": 0.028169014084507043
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -29457,7 +29625,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.013071895424836602
                       },
                       "routes.html": {
                         "ref": "routes.html",
@@ -29465,7 +29633,7 @@
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.03773584905660377
+                        "tf": 0.03225806451612903
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -29662,6 +29830,10 @@
                           "ref": "injectables/NameListService.html",
                           "tf": 0.016129032258064516
                         },
+                        "injectables/OarApiService.html": {
+                          "ref": "injectables/OarApiService.html",
+                          "tf": 0.013071895424836602
+                        },
                         "classes/Resource.html": {
                           "ref": "classes/Resource.html",
                           "tf": 5.010050251256281
@@ -29808,7 +29980,7 @@
                                     "docs": {
                                       "injectables/OarApiService.html": {
                                         "ref": "injectables/OarApiService.html",
-                                        "tf": 0.009433962264150943
+                                        "tf": 0.006535947712418301
                                       }
                                     }
                                   }
@@ -29982,7 +30154,7 @@
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.02830188679245283
+                            "tf": 0.0196078431372549
                           }
                         }
                       }
@@ -30016,7 +30188,7 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.009433962264150943
+                          "tf": 0.006535947712418301
                         }
                       }
                     }
@@ -30096,7 +30268,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.03333333333333333
+                        "tf": 0.028169014084507043
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -30108,11 +30280,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.05660377358490566
+                        "tf": 0.05228758169934641
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
-                        "tf": 0.05660377358490566
+                        "tf": 0.04838709677419355
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -30421,7 +30593,7 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.05
+                        "tf": 0.04225352112676056
                       },
                       "injectables/AuthenticationService.html": {
                         "ref": "injectables/AuthenticationService.html",
@@ -30959,7 +31131,7 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.009433962264150943
+                          "tf": 0.006535947712418301
                         }
                       }
                     }
@@ -31006,7 +31178,7 @@
                                                     },
                                                     "injectables/OarApiService.html": {
                                                       "ref": "injectables/OarApiService.html",
-                                                      "tf": 0.009433962264150943
+                                                      "tf": 0.006535947712418301
                                                     }
                                                   }
                                                 }
@@ -31462,11 +31634,15 @@
                       },
                       "injectables/AuthGuard.html": {
                         "ref": "injectables/AuthGuard.html",
-                        "tf": 0.016666666666666666
+                        "tf": 0.014084507042253521
                       },
                       "injectables/NameListService.html": {
                         "ref": "injectables/NameListService.html",
                         "tf": 0.016129032258064516
+                      },
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.013071895424836602
                       }
                     }
                   }
@@ -32021,7 +32197,7 @@
                 "docs": {
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.014084507042253521
                   }
                 }
               }
@@ -32319,7 +32495,7 @@
                               },
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.009433962264150943
+                                "tf": 0.006535947712418301
                               }
                             }
                           }
@@ -32916,7 +33092,7 @@
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.009433962264150943
+                            "tf": 0.006535947712418301
                           },
                           "classes/Job.html": {
                             "ref": "classes/Job.html",
@@ -33907,7 +34083,7 @@
                                                                           "docs": {
                                                                             "pipes/KeysPipe.html": {
                                                                               "ref": "pipes/KeysPipe.html",
-                                                                              "tf": 0.018867924528301886
+                                                                              "tf": 0.016129032258064516
                                                                             }
                                                                           }
                                                                         }
@@ -34451,7 +34627,7 @@
                                                                       "docs": {
                                                                         "injectables/AuthGuard.html": {
                                                                           "ref": "injectables/AuthGuard.html",
-                                                                          "tf": 0.016666666666666666
+                                                                          "tf": 0.014084507042253521
                                                                         }
                                                                       },
                                                                       "e": {
@@ -34556,7 +34732,7 @@
                                                           "docs": {
                                                             "injectables/OarApiService.html": {
                                                               "ref": "injectables/OarApiService.html",
-                                                              "tf": 0.009433962264150943
+                                                              "tf": 0.006535947712418301
                                                             },
                                                             "classes/Job.html": {
                                                               "ref": "classes/Job.html",
@@ -35267,7 +35443,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.018867924528301886
+                        "tf": 0.013071895424836602
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -36104,7 +36280,7 @@
                     },
                     "injectables/AuthGuard.html": {
                       "ref": "injectables/AuthGuard.html",
-                      "tf": 0.016666666666666666
+                      "tf": 0.014084507042253521
                     },
                     "injectables/AuthenticationService.html": {
                       "ref": "injectables/AuthenticationService.html",
@@ -36116,11 +36292,11 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.009433962264150943
+                      "tf": 0.006535947712418301
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
-                      "tf": 0.018867924528301886
+                      "tf": 0.016129032258064516
                     },
                     "classes/Job.html": {
                       "ref": "classes/Job.html",
@@ -37836,7 +38012,7 @@
                                                           "docs": {
                                                             "injectables/AuthGuard.html": {
                                                               "ref": "injectables/AuthGuard.html",
-                                                              "tf": 0.016666666666666666
+                                                              "tf": 0.014084507042253521
                                                             }
                                                           }
                                                         }
@@ -38173,7 +38349,7 @@
                                                             "docs": {
                                                               "injectables/AuthGuard.html": {
                                                                 "ref": "injectables/AuthGuard.html",
-                                                                "tf": 0.016666666666666666
+                                                                "tf": 0.014084507042253521
                                                               }
                                                             }
                                                           },
@@ -39387,7 +39563,7 @@
                                     "docs": {
                                       "injectables/OarApiService.html": {
                                         "ref": "injectables/OarApiService.html",
-                                        "tf": 0.02830188679245283
+                                        "tf": 0.0196078431372549
                                       }
                                     }
                                   }
@@ -39409,7 +39585,7 @@
                                       "docs": {
                                         "injectables/OarApiService.html": {
                                           "ref": "injectables/OarApiService.html",
-                                          "tf": 0.02830188679245283
+                                          "tf": 0.0196078431372549
                                         }
                                       }
                                     }
@@ -39880,7 +40056,7 @@
                         "docs": {
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.009433962264150943
+                            "tf": 0.006535947712418301
                           }
                         }
                       }
@@ -39983,7 +40159,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.009433962264150943
+                                "tf": 0.006535947712418301
                               }
                             },
                             "f": {
@@ -40592,7 +40768,7 @@
                               "docs": {
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.009433962264150943
+                                  "tf": 0.006535947712418301
                                 }
                               }
                             }
@@ -40614,7 +40790,7 @@
                                       "docs": {
                                         "injectables/OarApiService.html": {
                                           "ref": "injectables/OarApiService.html",
-                                          "tf": 0.009433962264150943
+                                          "tf": 0.006535947712418301
                                         }
                                       }
                                     }
@@ -40645,7 +40821,7 @@
                                   "docs": {
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.02830188679245283
+                                      "tf": 0.0196078431372549
                                     }
                                   },
                                   "(": {
@@ -41729,33 +41905,6 @@
                 }
               }
             },
-            "d": {
-              "docs": {},
-              "o": {
-                "docs": {
-                  "injectables/OarApiService.html": {
-                    "ref": "injectables/OarApiService.html",
-                    "tf": 0.018867924528301886
-                  },
-                  "classes/Job.html": {
-                    "ref": "classes/Job.html",
-                    "tf": 0.0070921985815602835
-                  },
-                  "classes/JobEvent.html": {
-                    "ref": "classes/JobEvent.html",
-                    "tf": 0.0070921985815602835
-                  },
-                  "classes/Resource.html": {
-                    "ref": "classes/Resource.html",
-                    "tf": 0.03015075376884422
-                  },
-                  "interfaces/Serializable.html": {
-                    "ref": "interfaces/Serializable.html",
-                    "tf": 0.04580152671755725
-                  }
-                }
-              }
-            },
             "c": {
               "docs": {},
               "h": {
@@ -41780,6 +41929,29 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {},
+              "o": {
+                "docs": {
+                  "classes/Job.html": {
+                    "ref": "classes/Job.html",
+                    "tf": 0.0070921985815602835
+                  },
+                  "classes/JobEvent.html": {
+                    "ref": "classes/JobEvent.html",
+                    "tf": 0.0070921985815602835
+                  },
+                  "classes/Resource.html": {
+                    "ref": "classes/Resource.html",
+                    "tf": 0.03015075376884422
+                  },
+                  "interfaces/Serializable.html": {
+                    "ref": "interfaces/Serializable.html",
+                    "tf": 0.04580152671755725
                   }
                 }
               }
@@ -41958,7 +42130,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.014084507042253521
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -41970,7 +42142,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.02830188679245283
+                    "tf": 0.0196078431372549
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -42442,7 +42614,7 @@
                                               "docs": {
                                                 "pipes/KeysPipe.html": {
                                                   "ref": "pipes/KeysPipe.html",
-                                                  "tf": 0.018867924528301886
+                                                  "tf": 0.016129032258064516
                                                 }
                                               }
                                             }
@@ -42565,10 +42737,6 @@
               "injectables/NameListService.html": {
                 "ref": "injectables/NameListService.html",
                 "tf": 0.008064516129032258
-              },
-              "pipes/KeysPipe.html": {
-                "ref": "pipes/KeysPipe.html",
-                "tf": 0.018867924528301886
               }
             },
             "e": {
@@ -42602,7 +42770,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.028169014084507043
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -42659,6 +42827,20 @@
                         "classes/User.html": {
                           "ref": "classes/User.html",
                           "tf": 0.047619047619047616
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "injectables/AuthGuard.html": {
+                          "ref": "injectables/AuthGuard.html",
+                          "tf": 0.014084507042253521
                         }
                       }
                     }
@@ -42854,7 +43036,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.009433962264150943
+                        "tf": 0.006535947712418301
                       }
                     }
                   }
@@ -42876,7 +43058,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.009433962264150943
+                                "tf": 0.006535947712418301
                               }
                             }
                           }
@@ -42957,7 +43139,7 @@
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
-                    "tf": 0.03773584905660377
+                    "tf": 0.03225806451612903
                   }
                 },
                 "e": {
@@ -42972,7 +43154,7 @@
                           "docs": {
                             "pipes/KeysPipe.html": {
                               "ref": "pipes/KeysPipe.html",
-                              "tf": 0.018867924528301886
+                              "tf": 0.016129032258064516
                             }
                           }
                         }
@@ -43330,7 +43512,7 @@
                   },
                   "injectables/AuthGuard.html": {
                     "ref": "injectables/AuthGuard.html",
-                    "tf": 0.016666666666666666
+                    "tf": 0.014084507042253521
                   },
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
@@ -43338,7 +43520,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.02830188679245283
+                    "tf": 0.0196078431372549
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -43701,7 +43883,7 @@
                   "docs": {
                     "injectables/AuthGuard.html": {
                       "ref": "injectables/AuthGuard.html",
-                      "tf": 0.016666666666666666
+                      "tf": 0.014084507042253521
                     }
                   }
                 }
@@ -44267,6 +44449,100 @@
                 }
               }
             }
+          },
+          "_": {
+            "docs": {
+              "injectables/AuthGuard.html": {
+                "ref": "injectables/AuthGuard.html",
+                "tf": 0.014084507042253521
+              },
+              "injectables/OarApiService.html": {
+                "ref": "injectables/OarApiService.html",
+                "tf": 0.032679738562091505
+              },
+              "pipes/KeysPipe.html": {
+                "ref": "pipes/KeysPipe.html",
+                "tf": 0.016129032258064516
+              }
+            },
+            "m": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {
+                      "injectables/AuthGuard.html": {
+                        "ref": "injectables/AuthGuard.html",
+                        "tf": 0.014084507042253521
+                      },
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.006535947712418301
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "injectables/OarApiService.html": {
+                            "ref": "injectables/OarApiService.html",
+                            "tf": 0.0196078431372549
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "o": {
+                    "docs": {
+                      "injectables/OarApiService.html": {
+                        "ref": "injectables/OarApiService.html",
+                        "tf": 0.006535947712418301
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "pipes/KeysPipe.html": {
+                        "ref": "pipes/KeysPipe.html",
+                        "tf": 0.016129032258064516
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "q": {
@@ -44478,7 +44754,7 @@
           }
         }
       },
-      "length": 3471
+      "length": 3494
     },
     "corpusTokens": [
       "0",
@@ -44628,6 +44904,11 @@
       "880000",
       "9",
       "947",
+      "__",
+      "__more",
+      "__return",
+      "__todo",
+      "__usag",
       "_auth",
       "_auth:authenticationservic",
       "_cache:ani",
@@ -44637,6 +44918,7 @@
       "_router.url",
       "aboutcompon",
       "access",
+      "accessmor",
       "activatedrout",
       "add",
       "addalert",
@@ -44931,6 +45213,7 @@
       "credit",
       "css",
       "cssnano.d.t",
+      "current",
       "currentpag",
       "currentpage:numb",
       "custom",
@@ -45014,7 +45297,7 @@
       "each",
       "element",
       "element.component.html",
-      "element.us",
+      "element.usag",
       "element/bselement.component.t",
       "element/bselement.modul",
       "element/bselement.module.t",
@@ -45022,6 +45305,7 @@
       "enabl",
       "end",
       "ensembl",
+      "entri",
       "entry.key",
       "entry.valu",
       "env",
@@ -45074,6 +45358,7 @@
       "for(let",
       "forbidden",
       "form",
+      "format",
       "formatt",
       "formbuild",
       "formcompon",
@@ -45110,6 +45395,7 @@
       "getuser():us",
       "getusernam",
       "git",
+      "global",
       "go",
       "gotojob",
       "gotojob(id",
@@ -45157,7 +45443,9 @@
       "html",
       "http",
       "http://learnangular2.com/form",
+      "http://oar.imag.fr/docs/latest/user/api.html",
       "http://oar.imag.fr/docs/latest/user/api.html#get",
+      "http://oar.imag.fr/docs/latest/user/api.htmltodo",
       "http://stackoverflow.com/a/22886730",
       "httpmodul",
       "https://angular.io/docs/ts/latest/guide/router.html#!#guard",
@@ -45165,6 +45453,7 @@
       "id",
       "id:str",
       "idaho",
+      "idreturn",
       "if(data.authenticated_us",
       "ig",
       "illinoi",
@@ -45408,6 +45697,7 @@
       "nextfinauddecis",
       "nextstat",
       "ng2",
+      "ngfor=\"let",
       "ngmodul",
       "ngoninit",
       "node",
@@ -45465,7 +45755,6 @@
       "paginationmodul",
       "painlessli",
       "param",
-      "paramet",
       "params['id",
       "password",
       "path",
@@ -45955,6 +46244,7 @@
       "user(usernam",
       "user.getpassword",
       "user.getusernam",
+      "usermor",
       "usernam",
       "usevalu",
       "utah",
@@ -46219,7 +46509,7 @@
     "injectables/AuthGuard.html": {
       "url": "injectables/AuthGuard.html",
       "title": "injectable - AuthGuard",
-      "body": "\n                   \n\n\n\n\n\n  Injectables\n  AuthGuard\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/auth/auth-guard.service.ts\n        \n\n\n        \n            Methods\n            \n                \n                        \n                            canActivate\n                            \n                                    Return type:     void\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Injectable } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { CanActivate } from '@angular/router';\nimport { Message } from 'primeng/primeng';\n\n// Import our authentication service\nimport { AuthenticationService } from './authentification.service';\n\n\n/*\n*  AuthGuard : https://angular.io/docs/ts/latest/guide/router.html#!#guards   \n*/\n\n@Injectable()\nexport class AuthGuard implements CanActivate {\n\n  constructor(private auth: AuthenticationService, private router: Router) { }\n\n  canActivate() {\n    // If user is not logged in we'll send them to the homepage \n    let bool = this.auth.getIsLoggedValue();\n    if (!bool) {\n      this.router.navigate(['403']);\n    }\n\n    return bool;\n  }\n\n}\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \n\n\n\n\n\n  Injectables\n  AuthGuard\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/auth/auth-guard.service.ts\n        \n\n            \n                Description\n            \n            \n                Authguard for logged usermore info : https://angular.io/docs/ts/latest/guide/router.html#!#guards\n            \n\n        \n            Methods\n            \n                \n                        \n                            canActivate\n                            \n                                    Return type:     void\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Injectable } from '@angular/core';\nimport { Router } from '@angular/router';\nimport { CanActivate } from '@angular/router';\nimport { Message } from 'primeng/primeng';\n\n// Import our authentication service\nimport { AuthenticationService } from './authentification.service';\n\n\n/**\n *   Authguard for logged user\n * \n *   __more info :__ https://angular.io/docs/ts/latest/guide/router.html#!#guards\n */\n\n@Injectable()\nexport class AuthGuard implements CanActivate {\n\n  constructor(private auth: AuthenticationService, private router: Router) { }\n\n  canActivate() {\n    // If user is not logged in we'll send them to the homepage \n    let bool = this.auth.getIsLoggedValue();\n    if (!bool) {\n      this.router.navigate(['403']);\n    }\n\n    return bool;\n  }\n\n}\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "injectables/AuthenticationService.html": {
       "url": "injectables/AuthenticationService.html",
@@ -46234,7 +46524,7 @@
     "injectables/OarApiService.html": {
       "url": "injectables/OarApiService.html",
       "title": "injectable - OarApiService",
-      "body": "\n                   \n\n\n\n\n\n  Injectables\n  OarApiService\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/oar-api/oar-api.service.ts\n        \n\n\n        \n            Methods\n            \n                \n                        \n                            getJobs\n                            \n                                    Return type:     void\n\n                            \n                        \n                        \n                            getJob\n                            \n                                    Signature: getJob(id: string)\n                                    Return type:     void\n\n                            \n                        \n                        \n                            getResources\n                            \n                                    Return type:     void\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Http, Response } from '@angular/http';\nimport { Observable } from 'rxjs/Rx';\nimport { Injectable }     from '@angular/core';\nimport { Job } from '../../shared/oar-api/model/job';\nimport 'rxjs/add/operator/map';\n\n@Injectable()\nexport class OarApiService {\n    constructor(\n        private http: Http\n    ){}\n\n    private login = 'docker';\n    private mdp = 'docker';\n    private baseLogin = 'http://' + this.login + ':' + this.mdp + '@';\n\n    private baseUrlOar = 'localhost:46668/oarapi-priv/';\n    private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';\n    private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';\n    \n     /*\n    *    TODO : Parameters, Description      \n    */ \n    getJobs() {        \n        return this.http.get(\n            this.urlJobs\n        ).map(res => res.json());\n    }\n    \n    /*\n    *    TODO : Parameters, Description      \n    */ \n    getJob(id: string) {\n        return this.http.get(\n            this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'\n        ).map(res => res.json());\n    }\n\n    getResources() {\n          return this.http.get(\n            this.urlResources\n        ).map(res => res.json());\n    }\n\n\n}\n\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \n\n\n\n\n\n  Injectables\n  OarApiService\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/oar-api/oar-api.service.ts\n        \n\n            \n                Description\n            \n            \n                Service for OAR API AccessMore info about the API : http://oar.imag.fr/docs/latest/user/api.htmlTODO : Config global\n            \n\n        \n            Methods\n            \n                \n                        \n                            getJobs\n                            \n                                    Return type:     void\n\n                                    Get all current jobs\nreturn format : JSON\n\n                            \n                        \n                        \n                            getJob\n                            \n                                    Signature: getJob(id: string)\n                                    Return type:     void\n\n                                    Get a job by its idreturn format : JSON\n\n                            \n                        \n                        \n                            getResources\n                            \n                                    Return type:     void\n\n                                    Get all resources\nreturn format : JSON\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Http, Response } from '@angular/http';\nimport { Observable } from 'rxjs/Rx';\nimport { Injectable }     from '@angular/core';\nimport { Job } from '../../shared/oar-api/model/job';\nimport 'rxjs/add/operator/map';\n\n/**\n *     Service for OAR API Access\n *     __More info about the API :__ http://oar.imag.fr/docs/latest/user/api.html\n * \n *     __TODO :__ Config global\n */\n@Injectable()\nexport class OarApiService {\n    constructor(\n        private http: Http\n    ){}\n\n    private login = 'docker';\n    private mdp = 'docker';\n    private baseLogin = 'http://' + this.login + ':' + this.mdp + '@';\n\n    private baseUrlOar = 'localhost:46668/oarapi-priv/';\n    private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';\n    private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';\n    \n    /**\n     *     Get all current jobs\n     *     __return format :__ JSON\n     */\n    getJobs() {        \n        return this.http.get(\n            this.urlJobs\n        ).map(res => res.json());\n    }\n    \n    /**\n    *    Get a job by its id   \n    *    __return format :__ JSON\n    */ \n    getJob(id: string) {\n        return this.http.get(\n            this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'\n        ).map(res => res.json());\n    }\n\n    /**\n     *     Get all resources\n     *     __return format :__ JSON\n     */\n    getResources() {\n          return this.http.get(\n            this.urlResources\n        ).map(res => res.json());\n    }\n\n\n}\n\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "routes.html": {
       "url": "routes.html",
@@ -46244,7 +46534,7 @@
     "pipes/KeysPipe.html": {
       "url": "pipes/KeysPipe.html",
       "title": "pipe - KeysPipe",
-      "body": "\n                   \n\n\n\n\n\n\n  Pipes\n  KeysPipe\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/dashboard/jobs/keys-pipe.ts\n        \n\n            \n                Description\n            \n            \n                Custom pipe that return a list of key for each element.Used like that :              {{ entry.key }}        {{ entry.value}}      \n            \n    \n    \n        import { Pipe, PipeTransform } from '@angular/core';\n/**\n * Custom pipe that return a list of key for each element.\n * \n * Used like that :\n*       \n          {{ entry.key }}\n          {{ entry.value}}\n        \n */\n@Pipe({name: 'keys'})\nexport class KeysPipe implements PipeTransform {\n  transform(value:any, args:string[]) : any {\n    let keys:any[] = [];\n    for (let key in value) {\n      keys.push({key: key, value: value[key]});\n    }\n    return keys;\n  }\n}\n    \n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \n\n\n\n\n\n\n  Pipes\n  KeysPipe\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/dashboard/jobs/keys-pipe.ts\n        \n\n            \n                Description\n            \n            \n                Custom pipe that return a list of key for each element.Usage :ngFor=\"let entry of object | keys\"    {{ entry.key }}    {{ entry.value}}\n            \n    \n    \n        import { Pipe, PipeTransform } from '@angular/core';\n\n/**\n * Custom pipe that return a list of key for each element.\n * \n * __Usage :__\n*     \n      *ngFor=\"let entry of object | keys\"\n\n          {{ entry.key }}\n          {{ entry.value}}\n\n */\n@Pipe({name: 'keys'})\nexport class KeysPipe implements PipeTransform {\n  transform(value:any, args:string[]) : any {\n    let keys:any[] = [];\n    for (let key in value) {\n      keys.push({key: key, value: value[key]});\n    }\n    return keys;\n  }\n}\n    \n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "classes/Job.html": {
       "url": "classes/Job.html",

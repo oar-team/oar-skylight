@@ -610,6 +610,12 @@
             <code>src/client/app/shared/auth/auth-guard.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Authguard for logged user</p><br><p><strong>more info :</strong> <a href="https://angular.io/docs/ts/latest/guide/router.html#!#guards">https://angular.io/docs/ts/latest/guide/router.html#!#guards</a></p>
+            </p>
 
         <section>
             <h3 id="methods">Methods</h3>
@@ -637,9 +643,11 @@ import { Message } from &#x27;primeng/primeng&#x27;;
 import { AuthenticationService } from &#x27;./authentification.service&#x27;;
 
 
-/*
-*  AuthGuard : https://angular.io/docs/ts/latest/guide/router.html#!#guards   
-*/
+/**
+ *   Authguard for logged user
+ * 
+ *   __more info :__ https://angular.io/docs/ts/latest/guide/router.html#!#guards
+ */
 
 @Injectable()
 export class AuthGuard implements CanActivate {

@@ -615,19 +615,22 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Custom pipe that return a list of key for each element.</p><br><p>Used like that :<br>      <tr *ngFor="let entry of object | keys"><br>        <td>{{ entry.key }}</td><br>        <td>{{ entry.value}}</td><br>      </tr></p>
+                <p>Custom pipe that return a list of key for each element.</p><br><p><strong>Usage :</strong></p><br><pre><code class="hljs undefined">ngFor="let entry of object | keys"<br><br>    {{ entry.key }}<br>    {{ entry.value}}</code></pre>
             </p>
     </div>
     <div class="tab-pane fade tab-source-code" id="source">
         <pre><code class="hljs javascript">import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
+
 /**
  * Custom pipe that return a list of key for each element.
  * 
- * Used like that :
-*       &lt;tr *ngFor&#x3D;&quot;let entry of object | keys&quot;&gt;
-          &lt;td&gt;{{ entry.key }}&lt;/td&gt;
-          &lt;td&gt;{{ entry.value}}&lt;/td&gt;
-        &lt;/tr&gt;
+ * __Usage :__
+*     
+      *ngFor&#x3D;&quot;let entry of object | keys&quot;
+
+          {{ entry.key }}
+          {{ entry.value}}
+
  */
 @Pipe({name: &#x27;keys&#x27;})
 export class KeysPipe implements PipeTransform {

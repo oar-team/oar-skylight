@@ -610,6 +610,12 @@
             <code>src/client/app/shared/oar-api/oar-api.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Service for OAR API Access<br><strong>More info about the API :</strong> <a href="http://oar.imag.fr/docs/latest/user/api.html">http://oar.imag.fr/docs/latest/user/api.html</a></p><br><p><strong>TODO :</strong> Config global</p>
+            </p>
 
         <section>
             <h3 id="methods">Methods</h3>
@@ -620,6 +626,9 @@
                             <td class="col-md-9">
                                     <div><i>Return type: </i>    <code>void</code>
 <code></code></div>
+                                    <div class="io-description"><p>Get all current jobs
+<strong>return format :</strong> JSON</p>
+</div>
                             </td>
                         </tr>
                         <tr>
@@ -628,6 +637,8 @@
                                     <div><i>Signature: </i><code>getJob(id: string)</code></div>
                                     <div><i>Return type: </i>    <code>void</code>
 <code></code></div>
+                                    <div class="io-description"><p>Get a job by its id<br><strong>return format :</strong> JSON</p>
+</div>
                             </td>
                         </tr>
                         <tr>
@@ -635,6 +646,9 @@
                             <td class="col-md-9">
                                     <div><i>Return type: </i>    <code>void</code>
 <code></code></div>
+                                    <div class="io-description"><p>Get all resources
+<strong>return format :</strong> JSON</p>
+</div>
                             </td>
                         </tr>
                 </tbody>
@@ -649,6 +663,12 @@ import { Injectable }     from &#x27;@angular/core&#x27;;
 import { Job } from &#x27;../../shared/oar-api/model/job&#x27;;
 import &#x27;rxjs/add/operator/map&#x27;;
 
+/**
+ *     Service for OAR API Access
+ *     __More info about the API :__ http://oar.imag.fr/docs/latest/user/api.html
+ * 
+ *     __TODO :__ Config global
+ */
 @Injectable()
 export class OarApiService {
     constructor(
@@ -663,17 +683,19 @@ export class OarApiService {
     private urlResources &#x3D;  this.baseLogin + this.baseUrlOar + &#x27;resources.json&#x27;;
     private urlJobs &#x3D; this.baseLogin + this.baseUrlOar + &#x27;jobs.json&#x27;;
     
-     /*
-    *    TODO : Parameters, Description      
-    */ 
+    /**
+     *     Get all current jobs
+     *     __return format :__ JSON
+     */
     getJobs() {        
         return this.http.get(
             this.urlJobs
         ).map(res &#x3D;&gt; res.json());
     }
     
-    /*
-    *    TODO : Parameters, Description      
+    /**
+    *    Get a job by its id   
+    *    __return format :__ JSON
     */ 
     getJob(id: string) {
         return this.http.get(
@@ -681,6 +703,10 @@ export class OarApiService {
         ).map(res &#x3D;&gt; res.json());
     }
 
+    /**
+     *     Get all resources
+     *     __return format :__ JSON
+     */
     getResources() {
           return this.http.get(
             this.urlResources

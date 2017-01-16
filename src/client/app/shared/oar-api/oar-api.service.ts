@@ -4,6 +4,12 @@ import { Injectable }     from '@angular/core';
 import { Job } from '../../shared/oar-api/model/job';
 import 'rxjs/add/operator/map';
 
+/**
+ *     Service for OAR API Access
+ *     __More info about the API :__ http://oar.imag.fr/docs/latest/user/api.html
+ * 
+ *     __TODO :__ Config global
+ */
 @Injectable()
 export class OarApiService {
     constructor(
@@ -18,17 +24,19 @@ export class OarApiService {
     private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';
     private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';
     
-     /*
-    *    TODO : Parameters, Description      
-    */ 
+    /**
+     *     Get all current jobs
+     *     __return format :__ JSON
+     */
     getJobs() {        
         return this.http.get(
             this.urlJobs
         ).map(res => res.json());
     }
     
-    /*
-    *    TODO : Parameters, Description      
+    /**
+    *    Get a job by its id   
+    *    __return format :__ JSON
     */ 
     getJob(id: string) {
         return this.http.get(
@@ -36,6 +44,10 @@ export class OarApiService {
         ).map(res => res.json());
     }
 
+    /**
+     *     Get all resources
+     *     __return format :__ JSON
+     */
     getResources() {
           return this.http.get(
             this.urlResources
