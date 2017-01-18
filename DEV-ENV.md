@@ -6,7 +6,7 @@
 ## Environnement de developpement
 
 ###  1) Visual Studio Code  <a name="env-dev"></a>
-Nous utiliserons comme IDE Visual Studio Code (VSC). Léger et performant c’est une excellent outils qui n'est pas en reste face aux plus gros. De plus Microsoft étant derrière TypeScript et Angular2 nous avons l’assurance d’une bonne intégration. 
+Nous utiliserons comme IDE Visual Studio Code (VSC). Léger et performant c’est une excellent outils qui n'est pas en reste face aux plus gros. De plus Microsoft étant derrière TypeScript nous avons l’assurance d’une bonne intégration. 
 VSC est disponible sur toutes les plateformes.
 
 - En savoir plus : https://johnpapa.net/visual-studio-code/
@@ -93,4 +93,3 @@ https://github.com/oar-team/oar-docker
 ## Webpack 
 https://semaphoreci.com/community/tutorials/setting-up-angular-2-with-webpack
 
-## OAR-API
