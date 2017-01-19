@@ -1,9 +1,9 @@
 import {EnvConfig} from './env-config.interface';
 
 const BaseConfig: EnvConfig = {
-  // Sample API url
-  API: 'https://demo.com',
-  API_PROTOCOLE: 'http'
+  ENV: 'DEV',
+  API_PROTOCOLE: 'https',
+  API: 'localhost:46668/'
 };
 
 export = BaseConfig;
