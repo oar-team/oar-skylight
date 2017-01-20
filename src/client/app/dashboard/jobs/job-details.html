@@ -1,11 +1,31 @@
 <h2>Job : {{id}} - Details </h2>
 
+<div class="row" *ngIf="job">
+    <div class="col-xl-4">
+           <table class="table table-striped table-hover table-bordered">
+           <tr>
+               <td> {{ job.id }}</td>
+           </tr>
+           <tr>    
+               <td> {{ job.owner }}</td>
+           </tr>
+           <tr>
+               <td> {{ job.state }}</td>
+           </tr>
+           <tr>      
+               <td> {{ job.exitCode }}</td>
+           </tr>
+
+
+        </table>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-xl-8">
         
         <button class="btn btn-secondary dropdown-toggle" type="button" (click)="loadDetails()" id="showDetailsButton">{{ messageButton }}</button>
-        <br>
+        <br> <br>
         <table class="table table-striped table-hover table-bordered">
            <tr *ngFor="let entry of job.json | keys">
                <td>{{ entry.key }}</td>
@@ -18,7 +38,7 @@
         <div class="btn-group-vertical" role="group" aria-label="..." >
             <button type="button" class="btn btn-lg btn-secondary"  
                 *ngFor="let link of job.links" (click)="onClickLink(link)">
-                <span *ngIf="link.title !== '' ">{{ link.title }}</span>
+                <span *ngIf="link.title">{{ link.title }}</span>
             </button>
         </div>
     </div>
