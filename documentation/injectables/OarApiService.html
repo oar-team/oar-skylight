@@ -241,6 +241,9 @@
                                 <li class="link">
                                     <a href="./injectables/OarApiService.html"  class="active" >OarApiService</a>
                                 </li>
+                                <li class="link">
+                                    <a href="./injectables/TodoStore.html" >TodoStore</a>
+                                </li>
                         </ul>
                     </li>
             
@@ -524,6 +527,9 @@
                                        <li class="link">
                                            <a href="./injectables/OarApiService.html"  class="active" >OarApiService</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="./injectables/TodoStore.html" >TodoStore</a>
+                                       </li>
                                </ul>
                            </li>
                    
@@ -675,6 +681,7 @@ export class OarApiService {
         private http: Http
     ){}
 
+    
     private login &#x3D; &#x27;docker&#x27;;
     private mdp &#x3D; &#x27;docker&#x27;;
     private baseLogin &#x3D; &#x27;http://&#x27; + this.login + &#x27;:&#x27; + this.mdp + &#x27;@&#x27;;
@@ -700,8 +707,9 @@ export class OarApiService {
     getJob(id: string) {
         return this.http.get(
             this.baseLogin + this.baseUrlOar + &#x27;jobs/&#x27; + id + &#x27;.json&#x27;
-        ).map(res &#x3D;&gt; res.json());
+        );
     }
+    
 
     /**
      *     Get all resources

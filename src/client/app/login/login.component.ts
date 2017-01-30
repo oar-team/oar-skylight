@@ -4,6 +4,7 @@ import { Router, NavigationCancel, Event as NavigationEvent } from '@angular/rou
 import { Message, MessagesModule } from 'primeng/primeng';
 import { AuthenticationService } from '../shared/auth/authentification.service';
 import { User } from '../shared/classes/user';
+import { JobEvent } from '../shared/oar-api/model/job';
 
 /**
 *	This class represents the lazy loaded LoginComponent.
@@ -26,7 +27,7 @@ export class LoginComponent {
 	//the JSON file with whoAmI information in it
 	private whoAmI: JSON;
 	// Array of last events with their url
-	private events = [];
+	private events: any = [];
 
 	// Controls and validations for the login form
 	public loginForm = this._formBuilder.group({
@@ -37,7 +38,7 @@ export class LoginComponent {
 	constructor(private _formBuilder: FormBuilder, private _auth: AuthenticationService, private _router: Router) {
 
 		this._router.events.pairwise().subscribe((events) => {
-            this.events = events;
+            this.events= events;
         });
 
 		if (_router.url == "/403") {
@@ -48,7 +49,7 @@ export class LoginComponent {
 
 	}
 
-	doLogin(event) {
+	doLogin(event: JSON) {
 
 		let username = this.loginForm.value.username;
 		let password = this.loginForm.value.password;
@@ -66,7 +67,7 @@ export class LoginComponent {
 				// Check in router event if a route has been canceled. 
 				// If it has, we want to redirect to this route
 				// Else we redirect to dashboard/home
-				this.events.forEach((event: NavigationEvent) => {
+				this.events.forEach((event:any) => {
 					if (event instanceof NavigationCancel) {
 						console.log();
 						url = event.url;

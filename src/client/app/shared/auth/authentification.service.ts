@@ -67,7 +67,7 @@ export class AuthenticationService {
 
 
   //  Getter for isLogged
-  getIsLogged():BehaviorSubject<Boolean> {
+  getIsLogged():BehaviorSubject<boolean> {
     return this.isLogged;
   }
 
@@ -76,14 +76,14 @@ export class AuthenticationService {
   *    Request the Api if the user is logged.
   *    Return isLogged. Subscribe to get the value 
   */
-  getIsLoggedWhoAmI():BehaviorSubject<Boolean> {
+  getIsLoggedWhoAmI():BehaviorSubject<boolean> {
     this.requestWhoAmI();
 
     return this.isLogged;
   }
 
   //  Getter for isLogged value
-  getIsLoggedValue():Boolean {
+  getIsLoggedValue():boolean {
     return this.isLogged.getValue();
   }
 

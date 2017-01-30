@@ -2815,6 +2815,78 @@
           "urlresourc",
           "void"
         ],
+        "injectables/TodoStore.html": [
+          "1",
+          "2",
+          "_job",
+          "addjob",
+          "addjob(id",
+          "addjob(id:string):observ",
+          "angular",
+          "angular/cor",
+          "angular/http",
+          "angular2",
+          "api.servic",
+          "api/model/job",
+          "api/oar",
+          "app",
+          "behaviorsubject",
+          "behaviorsubject(list",
+          "build",
+          "class",
+          "console.log(error",
+          "constructor(priv",
+          "data",
+          "descript",
+          "error",
+          "export",
+          "file",
+          "http",
+          "https://dzone.com/articles/how",
+          "immut",
+          "import",
+          "info",
+          "inject",
+          "job",
+          "job().deserialize(json",
+          "joboarapiservic",
+          "json",
+          "list",
+          "load",
+          "loadinitialdata",
+          "match",
+          "method",
+          "more",
+          "new",
+          "oar",
+          "oarapiservic",
+          "ob",
+          "obs.subscrib",
+          "observ",
+          "privat",
+          "respons",
+          "result",
+          "return",
+          "rxjs/observ",
+          "rxjs/rx",
+          "rxjs/subject",
+          "signatur",
+          "sourc",
+          "src/client/app/shared/stores/job",
+          "store",
+          "stores.t",
+          "string",
+          "subject",
+          "this._jobs.getvalue().push",
+          "this._jobs.next",
+          "this.joboarapiservice.getjob(id",
+          "this.loadinitialdata",
+          "todostor",
+          "type",
+          "us",
+          "userspac",
+          "void"
+        ],
         "routes.html": [
           "compon",
           "logincompon",
@@ -3409,7 +3481,7 @@
           "ye"
         ]
       },
-      "length": 51
+      "length": 52
     },
     "tokenStore": {
       "root": {
@@ -3859,6 +3931,10 @@
             "components/TimelineComponent.html": {
               "ref": "components/TimelineComponent.html",
               "tf": 0.007575757575757576
+            },
+            "injectables/TodoStore.html": {
+              "ref": "injectables/TodoStore.html",
+              "tf": 0.01834862385321101
             }
           },
           ".": {
@@ -4218,6 +4294,10 @@
             "components/JobsComponent.html": {
               "ref": "components/JobsComponent.html",
               "tf": 0.005847953216374269
+            },
+            "injectables/TodoStore.html": {
+              "ref": "injectables/TodoStore.html",
+              "tf": 0.01834862385321101
             }
           },
           ".": {
@@ -4694,7 +4774,7 @@
             },
             "overview.html": {
               "ref": "overview.html",
-              "tf": 0.11538461538461539
+              "tf": 0.07692307692307693
             },
             "components/BSComponentComponent.html": {
               "ref": "components/BSComponentComponent.html",
@@ -4829,7 +4909,7 @@
           "docs": {
             "overview.html": {
               "ref": "overview.html",
-              "tf": 0.038461538461538464
+              "tf": 0.07692307692307693
             },
             "components/BSComponentComponent.html": {
               "ref": "components/BSComponentComponent.html",
@@ -5119,6 +5199,10 @@
                       "components/JobsComponent.html": {
                         "ref": "components/JobsComponent.html",
                         "tf": 0.005847953216374269
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.009174311926605505
                       }
                     },
                     "(": {
@@ -5147,6 +5231,67 @@
                                         "components/JobsComponent.html": {
                                           "ref": "components/JobsComponent.html",
                                           "tf": 0.005847953216374269
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "i": {
+                        "docs": {},
+                        "d": {
+                          "docs": {
+                            "injectables/TodoStore.html": {
+                              "ref": "injectables/TodoStore.html",
+                              "tf": 0.009174311926605505
+                            }
+                          },
+                          ":": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {},
+                                        ")": {
+                                          "docs": {},
+                                          ":": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "b": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "r": {
+                                                      "docs": {},
+                                                      "v": {
+                                                        "docs": {
+                                                          "injectables/TodoStore.html": {
+                                                            "ref": "injectables/TodoStore.html",
+                                                            "tf": 0.009174311926605505
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
@@ -5472,6 +5617,10 @@
                           "modules/ResourcesModule.html": {
                             "ref": "modules/ResourcesModule.html",
                             "tf": 0.02
+                          },
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 0.01834862385321101
                           }
                         }
                       },
@@ -5479,6 +5628,10 @@
                         "index.html": {
                           "ref": "index.html",
                           "tf": 0.007352941176470588
+                        },
+                        "injectables/TodoStore.html": {
+                          "ref": "injectables/TodoStore.html",
+                          "tf": 0.01834862385321101
                         }
                       },
                       "/": {
@@ -5695,7 +5848,11 @@
                                 },
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.006535947712418301
+                                  "tf": 0.006622516556291391
+                                },
+                                "injectables/TodoStore.html": {
+                                  "ref": "injectables/TodoStore.html",
+                                  "tf": 0.009174311926605505
                                 },
                                 "pipes/KeysPipe.html": {
                                   "ref": "pipes/KeysPipe.html",
@@ -5727,7 +5884,11 @@
                                   },
                                   "injectables/OarApiService.html": {
                                     "ref": "injectables/OarApiService.html",
-                                    "tf": 0.006535947712418301
+                                    "tf": 0.006622516556291391
+                                  },
+                                  "injectables/TodoStore.html": {
+                                    "ref": "injectables/TodoStore.html",
+                                    "tf": 0.009174311926605505
                                   }
                                 }
                               }
@@ -5941,7 +6102,7 @@
                 },
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.026143790849673203
+                  "tf": 0.026490066225165563
                 },
                 "classes/Link.html": {
                   "ref": "classes/Link.html",
@@ -6010,7 +6171,11 @@
                                     },
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.006535947712418301
+                                      "tf": 0.006622516556291391
+                                    },
+                                    "injectables/TodoStore.html": {
+                                      "ref": "injectables/TodoStore.html",
+                                      "tf": 0.009174311926605505
                                     }
                                   },
                                   ".": {
@@ -6136,7 +6301,11 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.006535947712418301
+                          "tf": 0.006622516556291391
+                        },
+                        "injectables/TodoStore.html": {
+                          "ref": "injectables/TodoStore.html",
+                          "tf": 0.009174311926605505
                         }
                       }
                     }
@@ -6168,6 +6337,10 @@
                               "components/ResourcesComponent.html": {
                                 "ref": "components/ResourcesComponent.html",
                                 "tf": 0.012345679012345678
+                              },
+                              "injectables/TodoStore.html": {
+                                "ref": "injectables/TodoStore.html",
+                                "tf": 0.009174311926605505
                               }
                             },
                             "e": {
@@ -6178,7 +6351,7 @@
                                   "docs": {
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.006535947712418301
+                                      "tf": 0.006622516556291391
                                     }
                                   }
                                 }
@@ -6350,6 +6523,10 @@
                 "injectables/NameListService.html": {
                   "ref": "injectables/NameListService.html",
                   "tf": 0.008064516129032258
+                },
+                "injectables/TodoStore.html": {
+                  "ref": "injectables/TodoStore.html",
+                  "tf": 0.01834862385321101
                 },
                 "classes/Link.html": {
                   "ref": "classes/Link.html",
@@ -7837,7 +8014,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
                       }
                     },
                     "m": {
@@ -7848,7 +8025,7 @@
                           "docs": {
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.006535947712418301
+                              "tf": 0.006622516556291391
                             }
                           }
                         }
@@ -8070,7 +8247,7 @@
                           "docs": {
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.006535947712418301
+                              "tf": 0.006622516556291391
                             }
                           }
                         }
@@ -8092,7 +8269,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.006535947712418301
+                                "tf": 0.006622516556291391
                               }
                             }
                           }
@@ -8260,6 +8437,10 @@
                                         "injectables/AuthenticationService.html": {
                                           "ref": "injectables/AuthenticationService.html",
                                           "tf": 0.01694915254237288
+                                        },
+                                        "injectables/TodoStore.html": {
+                                          "ref": "injectables/TodoStore.html",
+                                          "tf": 0.01834862385321101
                                         }
                                       },
                                       "(": {
@@ -8275,6 +8456,10 @@
                                                   "components/JobsComponent.html": {
                                                     "ref": "components/JobsComponent.html",
                                                     "tf": 0.005847953216374269
+                                                  },
+                                                  "injectables/TodoStore.html": {
+                                                    "ref": "injectables/TodoStore.html",
+                                                    "tf": 0.009174311926605505
                                                   }
                                                 }
                                               }
@@ -9028,6 +9213,10 @@
                     "index.html": {
                       "ref": "index.html",
                       "tf": 0.00980392156862745
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.01834862385321101
                     }
                   },
                   ".": {
@@ -11138,7 +11327,11 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.006535947712418301
+                      "tf": 0.006622516556291391
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.009174311926605505
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
@@ -11772,7 +11965,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
                       },
                       "interfaces/EnvConfig.html": {
                         "ref": "interfaces/EnvConfig.html",
@@ -12041,6 +12234,10 @@
                                             "injectables/AuthenticationService.html": {
                                               "ref": "injectables/AuthenticationService.html",
                                               "tf": 0.00847457627118644
+                                            },
+                                            "injectables/TodoStore.html": {
+                                              "ref": "injectables/TodoStore.html",
+                                              "tf": 0.009174311926605505
                                             }
                                           }
                                         }
@@ -12189,7 +12386,7 @@
                                 },
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.006535947712418301
+                                  "tf": 0.006622516556291391
                                 },
                                 "classes/Job.html": {
                                   "ref": "classes/Job.html",
@@ -12337,6 +12534,10 @@
                                           "injectables/NameListService.html": {
                                             "ref": "injectables/NameListService.html",
                                             "tf": 0.008064516129032258
+                                          },
+                                          "injectables/TodoStore.html": {
+                                            "ref": "injectables/TodoStore.html",
+                                            "tf": 0.009174311926605505
                                           }
                                         }
                                       }
@@ -12919,7 +13120,7 @@
                       "docs": {
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.013071895424836602
+                          "tf": 0.013245033112582781
                         }
                       },
                       "p": {
@@ -13476,6 +13677,10 @@
                   "injectables/AuthenticationService.html": {
                     "ref": "injectables/AuthenticationService.html",
                     "tf": 0.00847457627118644
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.01834862385321101
                   }
                 },
                 "t": {
@@ -14211,7 +14416,11 @@
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.006535947712418301
+                            "tf": 0.006622516556291391
+                          },
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 0.009174311926605505
                           },
                           "pipes/KeysPipe.html": {
                             "ref": "pipes/KeysPipe.html",
@@ -14607,7 +14816,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
                       }
                     }
                   }
@@ -15430,7 +15639,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.009174311926605505
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
@@ -16015,6 +16228,10 @@
                     "injectables/NameListService.html": {
                       "ref": "injectables/NameListService.html",
                       "tf": 0.03225806451612903
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.009174311926605505
                     }
                   },
                   ".": {
@@ -16469,7 +16686,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.006535947712418301
+                    "tf": 0.006622516556291391
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
@@ -16830,7 +17051,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.0392156862745098
+                        "tf": 0.039735099337748346
                       }
                     },
                     "t": {
@@ -17267,7 +17488,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.0196078431372549
+                        "tf": 0.019867549668874173
                       }
                     },
                     "(": {
@@ -17286,7 +17507,7 @@
                             },
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.013071895424836602
+                              "tf": 0.013245033112582781
                             }
                           },
                           ":": {
@@ -17622,7 +17843,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.013071895424836602
+                                "tf": 0.013245033112582781
                               }
                             }
                           }
@@ -18021,7 +18242,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
                       }
                     }
                   }
@@ -18422,7 +18643,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.026143790849673203
+                    "tf": 0.026490066225165563
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
                   }
                 },
                 "s": {
@@ -18643,6 +18868,77 @@
                               }
                             }
                           }
+                        },
+                        "d": {
+                          "docs": {},
+                          "z": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  ".": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "/": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "/": {
+                                                              "docs": {},
+                                                              "h": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "w": {
+                                                                    "docs": {
+                                                                      "injectables/TodoStore.html": {
+                                                                        "ref": "injectables/TodoStore.html",
+                                                                        "tf": 0.01834862385321101
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
                         }
                       }
                     }
@@ -18821,7 +19117,7 @@
                                                                                                 "docs": {
                                                                                                   "injectables/OarApiService.html": {
                                                                                                     "ref": "injectables/OarApiService.html",
-                                                                                                    "tf": 0.006535947712418301
+                                                                                                    "tf": 0.006622516556291391
                                                                                                   }
                                                                                                 },
                                                                                                 "#": {
@@ -18851,7 +19147,7 @@
                                                                                                         "docs": {
                                                                                                           "injectables/OarApiService.html": {
                                                                                                             "ref": "injectables/OarApiService.html",
-                                                                                                            "tf": 0.006535947712418301
+                                                                                                            "tf": 0.006622516556291391
                                                                                                           }
                                                                                                         }
                                                                                                       }
@@ -19444,7 +19740,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.032679738562091505
+                        "tf": 0.033112582781456956
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.07339449541284404
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
@@ -19556,6 +19856,10 @@
                     "components/JobsComponent.html": {
                       "ref": "components/JobsComponent.html",
                       "tf": 0.005847953216374269
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.009174311926605505
                     }
                   }
                 }
@@ -19771,7 +20075,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 5.019607843137255
+                        "tf": 5.0198675496688745
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 5.027522935779817
                       }
                     }
                   }
@@ -19983,7 +20291,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.0196078431372549
+                    "tf": 0.019867549668874173
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.027522935779816515
                   },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
@@ -21565,7 +21877,7 @@
               },
               "injectables/OarApiService.html": {
                 "ref": "injectables/OarApiService.html",
-                "tf": 0.013071895424836602
+                "tf": 0.013245033112582781
               },
               "classes/Job.html": {
                 "ref": "classes/Job.html",
@@ -21629,7 +21941,7 @@
                         "docs": {
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.006535947712418301
+                            "tf": 0.006622516556291391
                           }
                         }
                       }
@@ -21932,7 +22244,11 @@
                 },
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.0392156862745098
+                  "tf": 0.039735099337748346
+                },
+                "injectables/TodoStore.html": {
+                  "ref": "injectables/TodoStore.html",
+                  "tf": 0.009174311926605505
                 },
                 "classes/Job.html": {
                   "ref": "classes/Job.html",
@@ -22095,7 +22411,7 @@
                           "docs": {
                             "injectables/OarApiService.html": {
                               "ref": "injectables/OarApiService.html",
-                              "tf": 0.006535947712418301
+                              "tf": 0.006622516556291391
                             }
                           }
                         }
@@ -22211,6 +22527,10 @@
                                                       "components/JobsComponent.html": {
                                                         "ref": "components/JobsComponent.html",
                                                         "tf": 0.005847953216374269
+                                                      },
+                                                      "injectables/TodoStore.html": {
+                                                        "ref": "injectables/TodoStore.html",
+                                                        "tf": 0.009174311926605505
                                                       }
                                                     }
                                                   }
@@ -22218,6 +22538,47 @@
                                               }
                                             }
                                           }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "o": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "p": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "v": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {
+                                        "injectables/TodoStore.html": {
+                                          "ref": "injectables/TodoStore.html",
+                                          "tf": 0.009174311926605505
                                         }
                                       }
                                     }
@@ -22413,7 +22774,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.0457516339869281
+                    "tf": 0.046357615894039736
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -23131,6 +23496,10 @@
                     "ref": "components/JobsComponent.html",
                     "tf": 0.005847953216374269
                   },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
+                  },
                   "pipes/KeysPipe.html": {
                     "ref": "pipes/KeysPipe.html",
                     "tf": 0.03225806451612903
@@ -23366,6 +23735,10 @@
                   "components/TimelineComponent.html": {
                     "ref": "components/TimelineComponent.html",
                     "tf": 0.015151515151515152
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.01834862385321101
                   }
                 },
                 "e": {
@@ -23536,6 +23909,44 @@
                       }
                     }
                   }
+                },
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {
+                                        "injectables/TodoStore.html": {
+                                          "ref": "injectables/TodoStore.html",
+                                          "tf": 0.01834862385321101
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -23576,7 +23987,7 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.006535947712418301
+                      "tf": 0.006622516556291391
                     }
                   },
                   ".": {
@@ -24077,7 +24488,7 @@
                                                       },
                                                       "injectables/OarApiService.html": {
                                                         "ref": "injectables/OarApiService.html",
-                                                        "tf": 0.006535947712418301
+                                                        "tf": 0.006622516556291391
                                                       }
                                                     }
                                                   }
@@ -24671,7 +25082,11 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.013071895424836602
+                      "tf": 0.013245033112582781
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.01834862385321101
                     },
                     "routes.html": {
                       "ref": "routes.html",
@@ -24981,7 +25396,7 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.0196078431372549
+                      "tf": 0.013245033112582781
                     }
                   }
                 },
@@ -25268,7 +25683,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.009174311926605505
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -25751,6 +26170,10 @@
                   "components/LoginComponent.html": {
                     "ref": "components/LoginComponent.html",
                     "tf": 0.005208333333333333
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.01834862385321101
                   }
                 }
               }
@@ -25979,7 +26402,7 @@
               "docs": {
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.006535947712418301
+                  "tf": 0.006622516556291391
                 }
               }
             }
@@ -26222,6 +26645,10 @@
                 "injectables/NameListService.html": {
                   "ref": "injectables/NameListService.html",
                   "tf": 0.008064516129032258
+                },
+                "injectables/TodoStore.html": {
+                  "ref": "injectables/TodoStore.html",
+                  "tf": 0.01834862385321101
                 },
                 "classes/Job.html": {
                   "ref": "classes/Job.html",
@@ -27086,7 +27513,11 @@
                 },
                 "injectables/OarApiService.html": {
                   "ref": "injectables/OarApiService.html",
-                  "tf": 0.013071895424836602
+                  "tf": 0.013245033112582781
+                },
+                "injectables/TodoStore.html": {
+                  "ref": "injectables/TodoStore.html",
+                  "tf": 0.01834862385321101
                 },
                 "classes/Job.html": {
                   "ref": "classes/Job.html",
@@ -27137,7 +27568,11 @@
                                   },
                                   "injectables/OarApiService.html": {
                                     "ref": "injectables/OarApiService.html",
-                                    "tf": 5.0130718954248366
+                                    "tf": 5.013245033112582
+                                  },
+                                  "injectables/TodoStore.html": {
+                                    "ref": "injectables/TodoStore.html",
+                                    "tf": 0.01834862385321101
                                   }
                                 }
                               }
@@ -27152,7 +27587,12 @@
             }
           },
           "b": {
-            "docs": {},
+            "docs": {
+              "injectables/TodoStore.html": {
+                "ref": "injectables/TodoStore.html",
+                "tf": 0.01834862385321101
+              }
+            },
             "j": {
               "docs": {},
               "e": {
@@ -27333,7 +27773,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.03669724770642202
                       }
                     },
                     "a": {
@@ -27384,6 +27828,38 @@
                                         }
                                       }
                                     }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              ".": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "b": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "b": {
+                                "docs": {
+                                  "injectables/TodoStore.html": {
+                                    "ref": "injectables/TodoStore.html",
+                                    "tf": 0.009174311926605505
                                   }
                                 }
                               }
@@ -28773,7 +29249,7 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.006535947712418301
+                    "tf": 0.006622516556291391
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -28830,7 +29306,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.0457516339869281
+                        "tf": 0.046357615894039736
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.009174311926605505
                       },
                       "classes/User.html": {
                         "ref": "classes/User.html",
@@ -29625,7 +30105,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.01834862385321101
                       },
                       "routes.html": {
                         "ref": "routes.html",
@@ -29832,7 +30316,7 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.013071895424836602
+                          "tf": 0.013245033112582781
                         },
                         "classes/Resource.html": {
                           "ref": "classes/Resource.html",
@@ -29980,7 +30464,7 @@
                                     "docs": {
                                       "injectables/OarApiService.html": {
                                         "ref": "injectables/OarApiService.html",
-                                        "tf": 0.006535947712418301
+                                        "tf": 0.006622516556291391
                                       }
                                     }
                                   }
@@ -30154,7 +30638,7 @@
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.0196078431372549
+                            "tf": 0.013245033112582781
                           }
                         }
                       }
@@ -30188,7 +30672,11 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.006535947712418301
+                          "tf": 0.006622516556291391
+                        },
+                        "injectables/TodoStore.html": {
+                          "ref": "injectables/TodoStore.html",
+                          "tf": 0.009174311926605505
                         }
                       }
                     }
@@ -30280,7 +30768,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.05228758169934641
+                        "tf": 0.052980132450331126
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.027522935779816515
                       },
                       "pipes/KeysPipe.html": {
                         "ref": "pipes/KeysPipe.html",
@@ -31105,6 +31597,10 @@
                                 "injectables/NameListService.html": {
                                   "ref": "injectables/NameListService.html",
                                   "tf": 0.008064516129032258
+                                },
+                                "injectables/TodoStore.html": {
+                                  "ref": "injectables/TodoStore.html",
+                                  "tf": 0.009174311926605505
                                 }
                               }
                             }
@@ -31131,7 +31627,11 @@
                         },
                         "injectables/OarApiService.html": {
                           "ref": "injectables/OarApiService.html",
-                          "tf": 0.006535947712418301
+                          "tf": 0.006622516556291391
+                        },
+                        "injectables/TodoStore.html": {
+                          "ref": "injectables/TodoStore.html",
+                          "tf": 0.009174311926605505
                         }
                       }
                     }
@@ -31178,7 +31678,7 @@
                                                     },
                                                     "injectables/OarApiService.html": {
                                                       "ref": "injectables/OarApiService.html",
-                                                      "tf": 0.006535947712418301
+                                                      "tf": 0.006622516556291391
                                                     }
                                                   }
                                                 }
@@ -31208,6 +31708,32 @@
                                         }
                                       }
                                     }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "s": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "b": {
+                        "docs": {},
+                        "j": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "injectables/TodoStore.html": {
+                                    "ref": "injectables/TodoStore.html",
+                                    "tf": 0.009174311926605505
                                   }
                                 }
                               }
@@ -31642,7 +32168,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
                       }
                     }
                   }
@@ -32495,7 +33021,7 @@
                               },
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.006535947712418301
+                                "tf": 0.006622516556291391
                               }
                             }
                           }
@@ -33092,7 +33618,11 @@
                           },
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.006535947712418301
+                            "tf": 0.006622516556291391
+                          },
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 0.009174311926605505
                           },
                           "classes/Job.html": {
                             "ref": "classes/Job.html",
@@ -34555,6 +35085,38 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "t": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "s": {
+                                                                "docs": {},
+                                                                "/": {
+                                                                  "docs": {},
+                                                                  "j": {
+                                                                    "docs": {},
+                                                                    "o": {
+                                                                      "docs": {},
+                                                                      "b": {
+                                                                        "docs": {
+                                                                          "injectables/TodoStore.html": {
+                                                                            "ref": "injectables/TodoStore.html",
+                                                                            "tf": 0.009174311926605505
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
                                                       }
                                                     },
                                                     "t": {
@@ -34732,7 +35294,7 @@
                                                           "docs": {
                                                             "injectables/OarApiService.html": {
                                                               "ref": "injectables/OarApiService.html",
-                                                              "tf": 0.006535947712418301
+                                                              "tf": 0.006622516556291391
                                                             },
                                                             "classes/Job.html": {
                                                               "ref": "classes/Job.html",
@@ -35443,7 +36005,11 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.013071895424836602
+                        "tf": 0.013245033112582781
+                      },
+                      "injectables/TodoStore.html": {
+                        "ref": "injectables/TodoStore.html",
+                        "tf": 0.009174311926605505
                       },
                       "classes/Job.html": {
                         "ref": "classes/Job.html",
@@ -35567,6 +36133,59 @@
                 }
               }
             },
+            "o": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.01834862385321101
+                    }
+                  },
+                  "s": {
+                    "docs": {},
+                    ".": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 0.009174311926605505
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "p": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "m": {
+                      "docs": {
+                        "classes/Job.html": {
+                          "ref": "classes/Job.html",
+                          "tf": 0.0035460992907801418
+                        },
+                        "classes/JobEvent.html": {
+                          "ref": "classes/JobEvent.html",
+                          "tf": 0.0035460992907801418
+                        },
+                        "interfaces/Serializable.html": {
+                          "ref": "interfaces/Serializable.html",
+                          "tf": 0.003787878787878788
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "d": {
               "docs": {},
               "e": {
@@ -35625,34 +36244,6 @@
                               "tf": 0.003787878787878788
                             }
                           }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "o": {
-              "docs": {},
-              "p": {
-                "docs": {},
-                "t": {
-                  "docs": {},
-                  "i": {
-                    "docs": {},
-                    "m": {
-                      "docs": {
-                        "classes/Job.html": {
-                          "ref": "classes/Job.html",
-                          "tf": 0.0035460992907801418
-                        },
-                        "classes/JobEvent.html": {
-                          "ref": "classes/JobEvent.html",
-                          "tf": 0.0035460992907801418
-                        },
-                        "interfaces/Serializable.html": {
-                          "ref": "interfaces/Serializable.html",
-                          "tf": 0.003787878787878788
                         }
                       }
                     }
@@ -35960,6 +36551,10 @@
                         "injectables/AuthenticationService.html": {
                           "ref": "injectables/AuthenticationService.html",
                           "tf": 0.00423728813559322
+                        },
+                        "injectables/TodoStore.html": {
+                          "ref": "injectables/TodoStore.html",
+                          "tf": 0.009174311926605505
                         }
                       }
                     }
@@ -36292,7 +36887,11 @@
                     },
                     "injectables/OarApiService.html": {
                       "ref": "injectables/OarApiService.html",
-                      "tf": 0.006535947712418301
+                      "tf": 0.006622516556291391
+                    },
+                    "injectables/TodoStore.html": {
+                      "ref": "injectables/TodoStore.html",
+                      "tf": 0.009174311926605505
                     },
                     "pipes/KeysPipe.html": {
                       "ref": "pipes/KeysPipe.html",
@@ -37617,6 +38216,88 @@
                                               }
                                             }
                                           }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "j": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "b": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            ".": {
+                              "docs": {},
+                              "g": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "v": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "(": {
+                                                "docs": {},
+                                                ")": {
+                                                  "docs": {},
+                                                  ".": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "u": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "h": {
+                                                            "docs": {
+                                                              "injectables/TodoStore.html": {
+                                                                "ref": "injectables/TodoStore.html",
+                                                                "tf": 0.009174311926605505
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "n": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "x": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "injectables/TodoStore.html": {
+                                          "ref": "injectables/TodoStore.html",
+                                          "tf": 0.009174311926605505
                                         }
                                       }
                                     }
@@ -39563,7 +40244,7 @@
                                     "docs": {
                                       "injectables/OarApiService.html": {
                                         "ref": "injectables/OarApiService.html",
-                                        "tf": 0.0196078431372549
+                                        "tf": 0.019867549668874173
                                       }
                                     }
                                   }
@@ -39585,7 +40266,7 @@
                                       "docs": {
                                         "injectables/OarApiService.html": {
                                           "ref": "injectables/OarApiService.html",
-                                          "tf": 0.0196078431372549
+                                          "tf": 0.019867549668874173
                                         }
                                       }
                                     }
@@ -39916,6 +40597,80 @@
                             }
                           }
                         },
+                        "o": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "v": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  ".": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "j": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "b": {
+                                                                "docs": {},
+                                                                "(": {
+                                                                  "docs": {},
+                                                                  "i": {
+                                                                    "docs": {},
+                                                                    "d": {
+                                                                      "docs": {
+                                                                        "injectables/TodoStore.html": {
+                                                                          "ref": "injectables/TodoStore.html",
+                                                                          "tf": 0.009174311926605505
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
                         "i": {
                           "docs": {},
                           "d": {
@@ -40056,7 +40811,7 @@
                         "docs": {
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.006535947712418301
+                            "tf": 0.006622516556291391
                           }
                         }
                       }
@@ -40148,6 +40903,44 @@
                                 }
                               }
                             }
+                          },
+                          "i": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {
+                                                  "injectables/TodoStore.html": {
+                                                    "ref": "injectables/TodoStore.html",
+                                                    "tf": 0.009174311926605505
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
                           }
                         }
                       },
@@ -40159,7 +40952,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.006535947712418301
+                                "tf": 0.006622516556291391
                               }
                             },
                             "f": {
@@ -40768,7 +41561,7 @@
                               "docs": {
                                 "injectables/OarApiService.html": {
                                   "ref": "injectables/OarApiService.html",
-                                  "tf": 0.006535947712418301
+                                  "tf": 0.006622516556291391
                                 }
                               }
                             }
@@ -40790,7 +41583,7 @@
                                       "docs": {
                                         "injectables/OarApiService.html": {
                                           "ref": "injectables/OarApiService.html",
-                                          "tf": 0.006535947712418301
+                                          "tf": 0.006622516556291391
                                         }
                                       }
                                     }
@@ -40821,7 +41614,7 @@
                                   "docs": {
                                     "injectables/OarApiService.html": {
                                       "ref": "injectables/OarApiService.html",
-                                      "tf": 0.0196078431372549
+                                      "tf": 0.019867549668874173
                                     }
                                   },
                                   "(": {
@@ -41905,6 +42698,46 @@
                 }
               }
             },
+            "d": {
+              "docs": {},
+              "o": {
+                "docs": {
+                  "classes/Job.html": {
+                    "ref": "classes/Job.html",
+                    "tf": 0.0070921985815602835
+                  },
+                  "classes/JobEvent.html": {
+                    "ref": "classes/JobEvent.html",
+                    "tf": 0.0070921985815602835
+                  },
+                  "classes/Resource.html": {
+                    "ref": "classes/Resource.html",
+                    "tf": 0.03015075376884422
+                  },
+                  "interfaces/Serializable.html": {
+                    "ref": "interfaces/Serializable.html",
+                    "tf": 0.04580152671755725
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "r": {
+                        "docs": {
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 5.018348623853211
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
             "c": {
               "docs": {},
               "h": {
@@ -41929,29 +42762,6 @@
                         }
                       }
                     }
-                  }
-                }
-              }
-            },
-            "d": {
-              "docs": {},
-              "o": {
-                "docs": {
-                  "classes/Job.html": {
-                    "ref": "classes/Job.html",
-                    "tf": 0.0070921985815602835
-                  },
-                  "classes/JobEvent.html": {
-                    "ref": "classes/JobEvent.html",
-                    "tf": 0.0070921985815602835
-                  },
-                  "classes/Resource.html": {
-                    "ref": "classes/Resource.html",
-                    "tf": 0.03015075376884422
-                  },
-                  "interfaces/Serializable.html": {
-                    "ref": "interfaces/Serializable.html",
-                    "tf": 0.04580152671755725
                   }
                 }
               }
@@ -42142,7 +42952,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.0196078431372549
+                    "tf": 0.019867549668874173
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.01834862385321101
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -42737,6 +43551,10 @@
               "injectables/NameListService.html": {
                 "ref": "injectables/NameListService.html",
                 "tf": 0.008064516129032258
+              },
+              "injectables/TodoStore.html": {
+                "ref": "injectables/TodoStore.html",
+                "tf": 0.01834862385321101
               }
             },
             "e": {
@@ -42912,6 +43730,23 @@
                       }
                     }
                   }
+                },
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "injectables/TodoStore.html": {
+                            "ref": "injectables/TodoStore.html",
+                            "tf": 0.01834862385321101
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -43036,7 +43871,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
                       }
                     }
                   }
@@ -43058,7 +43893,7 @@
                             "docs": {
                               "injectables/OarApiService.html": {
                                 "ref": "injectables/OarApiService.html",
-                                "tf": 0.006535947712418301
+                                "tf": 0.006622516556291391
                               }
                             }
                           }
@@ -43520,7 +44355,11 @@
                   },
                   "injectables/OarApiService.html": {
                     "ref": "injectables/OarApiService.html",
-                    "tf": 0.0196078431372549
+                    "tf": 0.019867549668874173
+                  },
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
                   },
                   "classes/Job.html": {
                     "ref": "classes/Job.html",
@@ -44458,7 +45297,7 @@
               },
               "injectables/OarApiService.html": {
                 "ref": "injectables/OarApiService.html",
-                "tf": 0.032679738562091505
+                "tf": 0.033112582781456956
               },
               "pipes/KeysPipe.html": {
                 "ref": "pipes/KeysPipe.html",
@@ -44479,7 +45318,7 @@
                       },
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
                       }
                     }
                   }
@@ -44500,7 +45339,7 @@
                         "docs": {
                           "injectables/OarApiService.html": {
                             "ref": "injectables/OarApiService.html",
-                            "tf": 0.0196078431372549
+                            "tf": 0.019867549668874173
                           }
                         }
                       }
@@ -44519,7 +45358,7 @@
                     "docs": {
                       "injectables/OarApiService.html": {
                         "ref": "injectables/OarApiService.html",
-                        "tf": 0.006535947712418301
+                        "tf": 0.006622516556291391
                       }
                     }
                   }
@@ -44539,6 +45378,20 @@
                         "tf": 0.016129032258064516
                       }
                     }
+                  }
+                }
+              }
+            }
+          },
+          "j": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "b": {
+                "docs": {
+                  "injectables/TodoStore.html": {
+                    "ref": "injectables/TodoStore.html",
+                    "tf": 0.009174311926605505
                   }
                 }
               }
@@ -44754,7 +45607,7 @@
           }
         }
       },
-      "length": 3494
+      "length": 3564
     },
     "corpusTokens": [
       "0",
@@ -44913,6 +45766,7 @@
       "_auth:authenticationservic",
       "_cache:ani",
       "_formbuild",
+      "_job",
       "_prevcontext:ani",
       "_router",
       "_router.url",
@@ -44926,6 +45780,8 @@
       "addexpandclass",
       "addexpandclass(el",
       "addjob",
+      "addjob(id",
+      "addjob(id:string):observ",
       "addjob(json",
       "addjob(json:ani",
       "admin",
@@ -45449,6 +46305,7 @@
       "http://stackoverflow.com/a/22886730",
       "httpmodul",
       "https://angular.io/docs/ts/latest/guide/router.html#!#guard",
+      "https://dzone.com/articles/how",
       "https://github.com/start",
       "id",
       "id:str",
@@ -45544,6 +46401,7 @@
       "jobev",
       "jobevent().deserialize(el",
       "jobid",
+      "joboarapiservic",
       "jobs.compon",
       "jobs.html",
       "jobs.json",
@@ -45600,6 +46458,7 @@
       "load",
       "loaddetail",
       "loader.d.t",
+      "loadinitialdata",
       "loadjob",
       "loadjobs(data",
       "loadjobs(data:ani",
@@ -45716,9 +46575,11 @@
       "o",
       "oar",
       "oarapiservic",
+      "ob",
       "object",
       "object.assign(jlink",
       "object.create(link.prototyp",
+      "obs.subscrib",
       "observ",
       "observable.throw(errmsg",
       "oceania",
@@ -45868,6 +46729,7 @@
       "rxjs/add/operator/map",
       "rxjs/observ",
       "rxjs/rx",
+      "rxjs/subject",
       "récupèr",
       "same",
       "sampl",
@@ -45993,6 +46855,7 @@
       "src/client/app/shared/oar",
       "src/client/app/shared/shared.module.t",
       "src/client/app/shared/sidebar/sidebar.t",
+      "src/client/app/shared/stores/job",
       "src/client/app/shared/topnav/topnav.t",
       "src/client/app/signup/signup.component.t",
       "src/client/app/signup/signup.module.t",
@@ -46016,6 +46879,8 @@
       "stderrfil",
       "stdoutfil",
       "stoptim",
+      "store",
+      "stores.t",
       "strapui",
       "stream.d.t",
       "string",
@@ -46067,6 +46932,8 @@
       "this._auth.login(us",
       "this._cach",
       "this._formbuilder.group",
+      "this._jobs.getvalue().push",
+      "this._jobs.next",
       "this._router.events.pairwise().subscribe((ev",
       "this._router.navigate([url",
       "this.addjob(data",
@@ -46115,11 +46982,13 @@
       "this.isuserlogged(data",
       "this.job",
       "this.jobid",
+      "this.joboarapiservice.getjob(id",
       "this.jobs.getvalue().toarray",
       "this.jobs.next(this.jobs.getvalue().push(j",
       "this.json",
       "this.link",
       "this.links.push(link",
+      "this.loadinitialdata",
       "this.loadjobs(data",
       "this.loadresources(data",
       "this.login",
@@ -46190,6 +47059,7 @@
       "title:str",
       "tocheck",
       "todo",
+      "todostor",
       "toggl",
       "toggled(open",
       "toggled(open:boolean):void",
@@ -46246,6 +47116,7 @@
       "user.getusernam",
       "usermor",
       "usernam",
+      "userspac",
       "usevalu",
       "utah",
       "util",
@@ -46324,7 +47195,7 @@
     "overview.html": {
       "url": "overview.html",
       "title": "overview - overview",
-      "body": "\n                   \nOverview\n\n    \n            Your browser does not support SVG\n    \n    \n        Zoom in\n        Reset\n        Zoom out\n    \n\n\n    \n            \n                \n                    \n                        \n                        \n                            15 modules\n                        \n                    \n                \n            \n            \n                \n                    \n                        \n                        20 components\n                    \n                \n            \n            \n                \n                    \n                        \n                        4 injectables\n                    \n                \n            \n            \n                \n                    \n                        \n                        1 pipe\n                    \n                \n            \n            \n                \n                    \n                        \n                        5 classes\n                    \n                \n            \n            \n                \n                    \n                        \n                        4 interfaces\n                    \n                \n            \n            \n                \n                    \n                        \n                        \n                            4 routes\n                        \n                    \n                \n            \n    \n\n\n\n\n\n\n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \nOverview\n\n    \n            Your browser does not support SVG\n    \n    \n        Zoom in\n        Reset\n        Zoom out\n    \n\n\n    \n            \n                \n                    \n                        \n                        \n                            15 modules\n                        \n                    \n                \n            \n            \n                \n                    \n                        \n                        20 components\n                    \n                \n            \n            \n                \n                    \n                        \n                        5 injectables\n                    \n                \n            \n            \n                \n                    \n                        \n                        1 pipe\n                    \n                \n            \n            \n                \n                    \n                        \n                        5 classes\n                    \n                \n            \n            \n                \n                    \n                        \n                        4 interfaces\n                    \n                \n            \n            \n                \n                    \n                        \n                        \n                            4 routes\n                        \n                    \n                \n            \n    \n\n\n\n\n\n\n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "modules.html": {
       "url": "modules.html",
@@ -46524,7 +47395,12 @@
     "injectables/OarApiService.html": {
       "url": "injectables/OarApiService.html",
       "title": "injectable - OarApiService",
-      "body": "\n                   \n\n\n\n\n\n  Injectables\n  OarApiService\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/oar-api/oar-api.service.ts\n        \n\n            \n                Description\n            \n            \n                Service for OAR API AccessMore info about the API : http://oar.imag.fr/docs/latest/user/api.htmlTODO : Config global\n            \n\n        \n            Methods\n            \n                \n                        \n                            getJobs\n                            \n                                    Return type:     void\n\n                                    Get all current jobs\nreturn format : JSON\n\n                            \n                        \n                        \n                            getJob\n                            \n                                    Signature: getJob(id: string)\n                                    Return type:     void\n\n                                    Get a job by its idreturn format : JSON\n\n                            \n                        \n                        \n                            getResources\n                            \n                                    Return type:     void\n\n                                    Get all resources\nreturn format : JSON\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Http, Response } from '@angular/http';\nimport { Observable } from 'rxjs/Rx';\nimport { Injectable }     from '@angular/core';\nimport { Job } from '../../shared/oar-api/model/job';\nimport 'rxjs/add/operator/map';\n\n/**\n *     Service for OAR API Access\n *     __More info about the API :__ http://oar.imag.fr/docs/latest/user/api.html\n * \n *     __TODO :__ Config global\n */\n@Injectable()\nexport class OarApiService {\n    constructor(\n        private http: Http\n    ){}\n\n    private login = 'docker';\n    private mdp = 'docker';\n    private baseLogin = 'http://' + this.login + ':' + this.mdp + '@';\n\n    private baseUrlOar = 'localhost:46668/oarapi-priv/';\n    private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';\n    private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';\n    \n    /**\n     *     Get all current jobs\n     *     __return format :__ JSON\n     */\n    getJobs() {        \n        return this.http.get(\n            this.urlJobs\n        ).map(res => res.json());\n    }\n    \n    /**\n    *    Get a job by its id   \n    *    __return format :__ JSON\n    */ \n    getJob(id: string) {\n        return this.http.get(\n            this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'\n        ).map(res => res.json());\n    }\n\n    /**\n     *     Get all resources\n     *     __return format :__ JSON\n     */\n    getResources() {\n          return this.http.get(\n            this.urlResources\n        ).map(res => res.json());\n    }\n\n\n}\n\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+      "body": "\n                   \n\n\n\n\n\n  Injectables\n  OarApiService\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/oar-api/oar-api.service.ts\n        \n\n            \n                Description\n            \n            \n                Service for OAR API AccessMore info about the API : http://oar.imag.fr/docs/latest/user/api.htmlTODO : Config global\n            \n\n        \n            Methods\n            \n                \n                        \n                            getJobs\n                            \n                                    Return type:     void\n\n                                    Get all current jobs\nreturn format : JSON\n\n                            \n                        \n                        \n                            getJob\n                            \n                                    Signature: getJob(id: string)\n                                    Return type:     void\n\n                                    Get a job by its idreturn format : JSON\n\n                            \n                        \n                        \n                            getResources\n                            \n                                    Return type:     void\n\n                                    Get all resources\nreturn format : JSON\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import { Http, Response } from '@angular/http';\nimport { Observable } from 'rxjs/Rx';\nimport { Injectable }     from '@angular/core';\nimport { Job } from '../../shared/oar-api/model/job';\nimport 'rxjs/add/operator/map';\n\n/**\n *     Service for OAR API Access\n *     __More info about the API :__ http://oar.imag.fr/docs/latest/user/api.html\n * \n *     __TODO :__ Config global\n */\n@Injectable()\nexport class OarApiService {\n    constructor(\n        private http: Http\n    ){}\n\n    \n    private login = 'docker';\n    private mdp = 'docker';\n    private baseLogin = 'http://' + this.login + ':' + this.mdp + '@';\n\n    private baseUrlOar = 'localhost:46668/oarapi-priv/';\n    private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';\n    private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';\n    \n    /**\n     *     Get all current jobs\n     *     __return format :__ JSON\n     */\n    getJobs() {        \n        return this.http.get(\n            this.urlJobs\n        ).map(res => res.json());\n    }\n    \n    /**\n    *    Get a job by its id   \n    *    __return format :__ JSON\n    */ \n    getJob(id: string) {\n        return this.http.get(\n            this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'\n        );\n    }\n    \n\n    /**\n     *     Get all resources\n     *     __return format :__ JSON\n     */\n    getResources() {\n          return this.http.get(\n            this.urlResources\n        ).map(res => res.json());\n    }\n\n\n}\n\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
+    },
+    "injectables/TodoStore.html": {
+      "url": "injectables/TodoStore.html",
+      "title": "injectable - TodoStore",
+      "body": "\n                   \n\n\n\n\n\n  Injectables\n  TodoStore\n\n\n\n    \n        Infos\n    \n    \n        Source\n    \n\n\n\n    \n        \n            File\n        \n        \n            src/client/app/shared/stores/job-stores.ts\n        \n\n            \n                Description\n            \n            \n                more about info about stores in Angular2 : https://dzone.com/articles/how-to-build-angular-2-apps-using-observable-data-1\n            \n\n        \n            Methods\n            \n                \n                        \n                            loadInitialData\n                            \n                                    Return type:     void\n\n                                    load from userspace ?\n\n                            \n                        \n                        \n                            addJob\n                            \n                                    Signature: addJob(id: string)\n                                    Return type:     Observable\n\n                            \n                        \n                \n            \n        \n\n    \n    \n        import {Injectable} from '@angular/core';\nimport { OarApiService }  from \"../oar-api/oar-api.service\";\nimport {Observable} from \"rxjs/Observable\";\nimport {Subject} from \"rxjs/Subject\";\nimport {Job} from \"../oar-api/model/job\";\nimport { Http, Response } from '@angular/http';\nimport {List} from 'immutable';\nimport {BehaviorSubject} from \"rxjs/Rx\";\n\n/**\n *     more about info about stores in Angular2 : https://dzone.com/articles/how-to-build-angular-2-apps-using-observable-data-1\n */\n@Injectable()\nexport class TodoStore {\n    private _jobs: BehaviorSubject> = new BehaviorSubject(List ([]));\n    \n    constructor(private jobOarApiService: OarApiService) {\n        this.loadInitialData();\n    }\n    \n    /**\n     * load from userspace ?\n     */\n    loadInitialData() {\n        \n    }\n\n    addJob(id:string):Observable {\n\n        let obs = this.jobOarApiService.getJob(id);\n\n        obs.subscribe(\n            json =>  this._jobs.next(\n                this._jobs.getValue().push(\n                    new Job().deserialize(json)\n                )\n            ),\n            error => console.log(error)\n        );\n\n        return obs\n    }\n\n}\n    \n\n\n\n\n\n\n                   \n    \n         results matching \"\"\n        \n    \n    \n        No results matching \"\"\n    \n\n"
     },
     "routes.html": {
       "url": "routes.html",
