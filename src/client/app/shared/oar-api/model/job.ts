@@ -34,7 +34,7 @@ export class JobEvent {
 }
 
 
-/*
+/**
 * TODO : Description Job
 */
 export class Job {
@@ -103,7 +103,6 @@ export class Job {
         this.wantedResources=	input.wanted_resources;
         
         // Link implementation for a Job
-
         for(let element of input.links) {
             let link:Link = new Link().deserialize(element);
             

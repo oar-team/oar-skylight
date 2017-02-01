@@ -42,7 +42,7 @@ export class OarApiService {
     getJob(id: string) {
         return this.http.get(
             this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'
-        );
+        ).map(res => res.json());
     }
     
 

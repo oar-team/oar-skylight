@@ -13,7 +13,7 @@ import {BehaviorSubject} from "rxjs/Rx";
  *     more about info about stores in Angular2 : https://dzone.com/articles/how-to-build-angular-2-apps-using-observable-data-1
  */
 @Injectable()
-export class TodoStore {
+export class JobsStore {
     private _jobs: BehaviorSubject<List<Job>> = new BehaviorSubject(List ([]));
     
     constructor(private jobOarApiService: OarApiService) {

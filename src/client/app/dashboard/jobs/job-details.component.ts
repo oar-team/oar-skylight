@@ -35,7 +35,7 @@ export class JobDetails {
     }
 
 
-    /*
+    /**
     *    Récupère le json d'un job
     */
     getJob(id: string) {
@@ -48,11 +48,13 @@ export class JobDetails {
             );
     }
 
-    /*
+    /**
     *  Populate job with json
     */
     setJob(json: any) {
+        console.log(json);
         this.job = new Job().deserialize(json);
+        console.log(this.job);
     }
 
     loadDetails() {
@@ -69,7 +71,6 @@ export class JobDetails {
     }
 
     onClickLink(link: Link) {
-
         console.log('route : ' + link.href);
     }
 
