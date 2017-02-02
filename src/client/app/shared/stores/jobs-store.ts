@@ -29,7 +29,6 @@ export class JobsStore {
     }
 
     addJob(id:string) {
-    console.log('trying to add job.id :' + id);
     
         let obs = this.jobOarApiService.getJob(id);
         
@@ -64,11 +63,18 @@ export class JobsStore {
     }
     
     /**
+     * return a Job given an id
+     */
+    getJob(id:string): Job {
+        return this._jobs.getValue().find(
+            (job) => job.id.toString() === id
+        )
+    }
+    
+    /**
      * Check if a job exist in the List
      */
     containsJob(id:string, arr :Array<Job>):boolean {
-
-       console.log(arr);
 
        return arr.some(
            (job) => job.id.toString() === id

@@ -18,8 +18,8 @@ import { AuthenticationService } from '../../shared/auth/authentification.servic
 
 export class JobsComponent {
     
-    jobs : List<Job> = List ([]);
-
+    //jobs : List<Job> = List ([]);
+        jobs : Array<Job> = [];
     constructor(
         private apiService: OarApiService,
         private router: Router,
@@ -35,7 +35,7 @@ export class JobsComponent {
 
         // tofix
         this.jobStore.jobs.subscribe(
-            jobList => this.jobs = jobList,
+            jobList => this.jobs = jobList.toArray(),
             err => console.log(err)
         );
 

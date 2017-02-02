@@ -31,9 +31,8 @@ export class JobDetails {
     ngOnInit() {
         this.route.params.subscribe(params => {
             this.id = +params['id']; // (+) converts string 'id' to a number
+            this.job = this.jobStore.getJob(this.id.toString());
         });
-
-
     }
 
 
@@ -59,7 +58,7 @@ export class JobDetails {
         console.log(this.job);
     }
 
-    loadDetails() {
+    getDetails() {
 
         if (this.buttonState == 0) {
             this.buttonState = 1;
@@ -68,7 +67,6 @@ export class JobDetails {
         } else {
             this.buttonState = 0;
             this.messageButton = "Display details";
-            this.job = new Job();
         }
     }
 
