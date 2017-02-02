@@ -111,7 +111,6 @@ export class Job {
             *  we split on "/jobs" to avoid trouble and then add "jobs" to form a link route that look like : jobs/1/nodes
             */
             let arrStr = link.api_href.split('/jobs');
-            console.log(arrStr);
             link.href = 'jobs' + arrStr[1];
 
             this.links.push(link);

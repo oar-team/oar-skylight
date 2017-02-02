@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 import { OarApiService } from '../../shared/oar-api/oar-api.service';
+import { JobsStore } from '../../shared/stores/jobs-store';
 import { Job } from '../../shared/oar-api/model/job';
 import { Link } from '../../shared/oar-api/model/link';
 
@@ -20,7 +21,8 @@ export class JobDetails {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private apiService: OarApiService
+        private apiService: OarApiService,
+        private jobStore: JobsStore,
     ) {
         this.job = new Job();
         this.buttonState = 0;

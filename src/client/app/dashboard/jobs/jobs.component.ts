@@ -6,6 +6,8 @@ import { List} from 'immutable/';
 import { Observable } from "rxjs/Observable";
 import { BehaviorSubject } from "rxjs/Rx";
 import { Router } from '@angular/router';
+import { JobsStore } from '../../shared/stores/jobs-store';
+import { AuthenticationService } from '../../shared/auth/authentification.service';
 
 @Component({
 	moduleId: module.id,
@@ -16,66 +18,57 @@ import { Router } from '@angular/router';
 
 export class JobsComponent {
     
-    jobs :BehaviorSubject<List<Job>> = new BehaviorSubject(List([]));
+    jobs : List<Job> = List ([]);
 
     constructor(
         private apiService: OarApiService,
-        private router: Router    
+        private router: Router,
+        private jobStore: JobsStore,
+        private AuthService: AuthenticationService  
     ){  
     }
-    
+    /**
+     * 
+     * TODO : Change ngFor of jobs to ngFor of mf.data
+     */
     ngOnInit() {
-        
-        this.apiService.getJobs()
+
+        // tofix
+        this.jobStore.jobs.subscribe(
+            jobList => this.jobs = jobList,
+            err => console.log(err)
+        );
+
+
+         this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
             .subscribe(
                 data => this.loadJobs(data),
                 error => console.log(error)
             );
-
-        let arrayId = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-        
-        arrayId.forEach(element => {
-            this.apiService.getJob(element)
-                .subscribe(
-                    data =>  this.addJob(data),
-                    error => console.log(error)
-                );
-        });
-
+       
     }
 
     getJobs(){
-       return this.jobs.getValue().toArray();
+        return this.jobStore.jobs.subscribe(
+            value => this.jobs = value
+        );
     }
     
-    // Charge un ensemble de jobss
+    // Charge un ensemble de jobs
     loadJobs(data:any) {
-        for(let items of data.items) {
-            let id:string = "" + items.id;
-            this.getJob(id);
+        for(let jsonJob of data.items) {
+            //let j:Job = new Job().deserialize(jsonJob);   
+            this.getJob(jsonJob.id)
         }
     }
     
-    /*
-    *    Récupère le json d'un job
+    /**
+    *   
     */    
     getJob(id:string){
-        let jsonJob:any;
-
-        this.apiService.getJob(id)
-            .subscribe(
-                data =>  this.addJob(data),
-                error => console.log(error)
-            );
+         this.jobStore.addJob(id);
     }
     
-    /*
-    *    Ajout un job à this.jobs
-    */
-    addJob(json:any) {
-            let j:Job = new Job().deserialize(json);
-            this.jobs.next(this.jobs.getValue().push(j));
-    }
     
     gotoJob(id:string) {
         this.router.navigate(['dashboard/jobs/' + id]);

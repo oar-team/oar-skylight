@@ -45,6 +45,16 @@ export class OarApiService {
         ).map(res => res.json());
     }
     
+    /**
+     * Get the jobs of a given username
+     */
+    getUserJobs(username: string) {
+        return this.http.get(
+            this.urlJobs + "?owner=" + username + "&state=Terminated,Running,Waiting"
+        ).map(res => res.json());
+
+    }
+    
 
     /**
      *     Get all resources
