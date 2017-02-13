@@ -1,4 +1,4 @@
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Injectable }     from '@angular/core';
 import { Job } from '../../shared/oar-api/model/job';
@@ -50,6 +50,8 @@ export class OarApiService {
      */
     getUserJobs(username: string) {
         return this.http.get(
+
+            //    TODO : Parameters for states
             this.urlJobs + "?owner=" + username + "&state=Terminated,Running,Waiting"
         ).map(res => res.json());
 
@@ -64,6 +66,24 @@ export class OarApiService {
           return this.http.get(
             this.urlResources
         ).map(res => res.json());
+    }
+    
+
+    /**
+     * TEST
+     */
+    getMedia() {
+
+        let urlStd = 'http://localhost:46668/oarapi-priv/media/~/OAR.Test_job.14.stderr';
+        
+         let headers = new Headers();         
+        headers.append('Content-Type', 'text/html');
+        
+        return this.http.get(
+            urlStd, { headers: headers }
+        ).map(res => res);
+        
+
     }
 
 

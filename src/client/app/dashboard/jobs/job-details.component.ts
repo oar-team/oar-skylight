@@ -14,6 +14,7 @@ import { Link } from '../../shared/oar-api/model/link';
 
 export class JobDetails {
     id: number;
+    stdout: string = "Hello";
     job: Job;
     buttonState: Number;
     messageButton = "Display details";
@@ -22,7 +23,7 @@ export class JobDetails {
         private route: ActivatedRoute,
         private router: Router,
         private apiService: OarApiService,
-        private jobStore: JobsStore,
+        private jobStore: JobsStore
     ) {
         this.job = new Job();
         this.buttonState = 0;
@@ -33,6 +34,7 @@ export class JobDetails {
             this.id = +params['id']; // (+) converts string 'id' to a number
             this.job = this.jobStore.getJob(this.id.toString());
         });
+
     }
 
 
@@ -59,15 +61,20 @@ export class JobDetails {
     }
 
     getDetails() {
+        
+        this.apiService.getMedia().subscribe(
+            res => console.log(res),
+            err => console.log(err)
+        );
 
-        if (this.buttonState == 0) {
-            this.buttonState = 1;
-            this.messageButton = "Hide Details";
-            this.getJob(this.id.toString());
-        } else {
-            this.buttonState = 0;
-            this.messageButton = "Display details";
-        }
+        // if (this.buttonState == 0) {
+        //     this.buttonState = 1;
+        //     this.messageButton = "Hide Details";
+        //     this.getJob(this.id.toString());
+        // } else {
+        //     this.buttonState = 0;
+        //     this.messageButton = "Display details";
+        // }
     }
 
     onClickLink(link: Link) {

@@ -64,6 +64,8 @@ export class JobsStore {
     
     /**
      * return a Job given an id
+     * 
+     * todo : if job doesn't exist, do a request
      */
     getJob(id:string): Job {
         return this._jobs.getValue().find(
