@@ -40,7 +40,7 @@ dist/dev
 dist/tmp
 dev
 docs
-documentation/
+documentation/*
 lib
 test
 tmp
