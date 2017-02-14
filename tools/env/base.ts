@@ -1,8 +1,8 @@
 import {EnvConfig} from './env-config.interface';
 
 const BaseConfig: EnvConfig = {
-  ENV: 'DEV',
-  API_PROTOCOLE: 'https',
+  ENV: 'BASE',
+  API_PROTOCOLE: 'http',
   API: 'localhost:46668/'
 };
 

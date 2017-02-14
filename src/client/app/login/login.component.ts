@@ -8,7 +8,7 @@ import { JobEvent } from '../shared/oar-api/model/job';
 
 /**
 *	This class represents the lazy loaded LoginComponent.
-* 	
+*
 *	More info : http://learnangular2.com/forms/
 */
 
@@ -62,9 +62,10 @@ export class LoginComponent {
 		let url = 'dashboard/home';
 
 		// Subscribe to isUserLogged. We can't use getIsLoggedValue because of asynchronous request.
-		this._auth.getIsLogged().subscribe((bool) => {
+		this._auth.getIsLogged().subscribe(
+		  (bool) => {
 			if (bool) {
-				// Check in router event if a route has been canceled. 
+				// Check in router event if a route has been canceled.
 				// If it has, we want to redirect to this route
 				// Else we redirect to dashboard/home
 				this.events.forEach((event:any) => {
