@@ -68,6 +68,7 @@ export class Job {
     public types: String[];
     public walltime: number;
     public wantedResources: string;
+
     constructor() {
         this.links = new Array<Link>();
         this.events = new Array<JobEvent>();

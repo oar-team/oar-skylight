@@ -22,7 +22,7 @@ import {SidebarComponent} from '../shared/index';
 
 @NgModule({
     imports: [
-        CommonModule,
+      CommonModule,
     	RouterModule,
     	DropdownModule,
         ModalModule,

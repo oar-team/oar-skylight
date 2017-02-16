@@ -2,10 +2,7 @@
 
 import {Injectable} from '@angular/core';
 import { OarApiService }  from "../oar-api/oar-api.service";
-import {Observable} from "rxjs/Observable";
-import {Subject} from "rxjs/Subject";
 import {Job} from "../oar-api/model/job";
-import { Http, Response } from '@angular/http';
 import {List} from 'immutable';
 import {BehaviorSubject} from "rxjs/Rx";
 

@@ -1,8 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
-import {Router, ActivatedRoute, RouterLink} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 import {OarApiService} from '../../shared/oar-api/oar-api.service';
 import {JobsStore} from '../../shared/stores/jobs-store';
 import {Job} from '../../shared/oar-api/model/job';
+import { UserConfigStore } from '../../shared/stores/user-config-store';
 import {Link} from '../../shared/oar-api/model/link';
 
 @Component({
@@ -20,6 +21,7 @@ export class JobDetails {
   job: Job;
   buttonState: Number;
   messageButton = "Display details";
+  jobParamtersToDisplay :string[];
 
   // Use to display sorted values
   jobKeys : String[];
@@ -27,10 +29,17 @@ export class JobDetails {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private apiService: OarApiService,
-              private jobStore: JobsStore) {
+              private jobStore: JobsStore,
+              private userConfig: UserConfigStore) {
     this.job = new Job();
     this.buttonState = 1;
     this.jobKeys = [];
+    this.jobParamtersToDisplay = [];
+
+    this.userConfig.getConfigObs().subscribe(
+      config => this.jobParamtersToDisplay = config.jobDetailProperties,
+      err => console.log(err)
+    );
   }
 
   ngOnInit() {
@@ -83,6 +92,10 @@ export class JobDetails {
 
   onClickLink(link: Link) {
     console.log('route : ' + link.href);
+  }
+
+  addPropertyToPref(property:string) {
+    this.userConfig.addJobDetailsProperty(property);
   }
 
 }
