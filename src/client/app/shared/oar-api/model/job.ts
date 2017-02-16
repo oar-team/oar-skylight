@@ -1,6 +1,6 @@
 import { Link } from './link';
 
-/* 
+/*
 *  About json to object in typescript :
 *    http://stackoverflow.com/a/22886730 : option 4
 */
@@ -9,7 +9,7 @@ interface Serializable<T> {
 }
 
 
-/*
+/**
 * TODO : Description JobEvent
 */
 export class JobEvent {
@@ -28,7 +28,7 @@ export class JobEvent {
         this.jobId = input.job_id;
         this.toCheck = input.to_check;
         this.type = input.type;
-    
+
         return this;
     }
 }
@@ -72,7 +72,7 @@ export class Job {
         this.links = new Array<Link>();
         this.events = new Array<JobEvent>();
     }
-    
+
     deserialize(input :any) {
         this.apiTimestamp   =	input.api_timestamp;
         this.arrayId        =	input.array_id;
@@ -101,11 +101,11 @@ export class Job {
         this.types          =	input.types;
         this.walltime       =	input.walltime;
         this.wantedResources=	input.wanted_resources;
-        
+
         // Link implementation for a Job
         for(let element of input.links) {
             let link:Link = new Link().deserialize(element);
-            
+
             /*
             *  Since we don't know where to split the string ("/oar-priv/" can change)
             *  we split on "/jobs" to avoid trouble and then add "jobs" to form a link route that look like : jobs/1/nodes
@@ -115,7 +115,7 @@ export class Job {
 
             this.links.push(link);
         }
-        
+
           for(let element of input.events) {
             this.events.push(new JobEvent().deserialize(element));
         }

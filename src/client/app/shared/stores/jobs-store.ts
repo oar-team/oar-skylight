@@ -16,25 +16,25 @@ import {BehaviorSubject} from "rxjs/Rx";
 export class JobsStore {
 
     private _jobs: BehaviorSubject<List<Job>> = new BehaviorSubject(List ([]));
-    
+
     constructor(private jobOarApiService: OarApiService) {
         //this.loadInitialData();
     }
-    
+
     /**
      * load from userspace ?
      */
     loadInitialData() {
-        
+
     }
 
     addJob(id:string) {
-    
+
         let obs = this.jobOarApiService.getJob(id);
-        
+
         obs.subscribe(
             json =>  this.addJobWithJob(
-                new Job().deserialize(json), 
+                new Job().deserialize(json),
                 this._jobs.getValue().toArray()
                 ),
             error => console.log(error)
@@ -42,16 +42,16 @@ export class JobsStore {
 
         return true
     }
-    
+
     /**
      * todo : return value ?
      */
     addJobWithJob(job:Job, arr :Array<Job>) {
-        
+
         if(! this.containsJob(job.id.toString(), arr)) {
             this._jobs.next(this._jobs.getValue().push(job));
         }
-        
+
         return this._jobs;
     }
 
@@ -61,10 +61,10 @@ export class JobsStore {
     get jobs() {
         return this._jobs.asObservable();
     }
-    
+
     /**
      * return a Job given an id
-     * 
+     *
      * todo : if job doesn't exist, do a request
      */
     getJob(id:string): Job {
@@ -72,7 +72,7 @@ export class JobsStore {
             (job) => job.id.toString() === id
         )
     }
-    
+
     /**
      * Check if a job exist in the List
      */
