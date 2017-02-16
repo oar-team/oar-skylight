@@ -21,12 +21,16 @@ export class JobDetails {
   buttonState: Number;
   messageButton = "Display details";
 
+  // Use to display sorted values
+  jobKeys : String[];
+
   constructor(private route: ActivatedRoute,
               private router: Router,
               private apiService: OarApiService,
               private jobStore: JobsStore) {
     this.job = new Job();
     this.buttonState = 1;
+    this.jobKeys = [];
   }
 
   ngOnInit() {
@@ -34,7 +38,8 @@ export class JobDetails {
       this.id = +params['id']; // (+) converts string 'id' to a number
       this.job = this.jobStore.getJob(this.id.toString());
 
-
+      this.jobKeys = Object.keys(this.job.json);
+      this.jobKeys.sort();
     });
 
   }

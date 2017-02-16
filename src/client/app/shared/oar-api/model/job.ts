@@ -121,6 +121,7 @@ export class Job {
         }
 
         this.json = input;
+
         return this;
     }
 

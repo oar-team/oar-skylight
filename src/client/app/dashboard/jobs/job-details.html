@@ -36,9 +36,9 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" (click)="getDetails()" id="showDetailsButton">{{ messageButton }}</button>
         <br> <br>
         <table class="table table-striped table-hover table-bordered" id="jobDetailsTable" #jobDetailsTable style="display:none;">
-           <tr *ngFor="let entry of job.json | keys">
-               <td>{{ entry.key }}</td>
-               <td>{{ entry.value}}</td>
+           <tr *ngFor="let key of jobKeys">
+               <td>{{ key }}</td>
+               <td>{{ job.json[key] }}</td>
            </tr>
         </table>
 
