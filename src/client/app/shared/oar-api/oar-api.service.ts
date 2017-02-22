@@ -26,7 +26,7 @@ export class OarApiService {
     private baseUrlOar = Config.API + 'oarapi-priv/';
     private urlResources =  this.baseLogin + this.baseUrlOar + 'resources.json';
     private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';
-    private _urlMedia = this.baseLogin + this.baseUrlOar + 'media/';
+    private _urlMedia = this.baseLogin + this.baseUrlOar + 'media';
 
   /**
      *     Get all current jobs

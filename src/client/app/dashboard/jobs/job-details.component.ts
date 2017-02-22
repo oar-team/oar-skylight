@@ -21,7 +21,7 @@ export class JobDetails {
   job: Job;
   buttonState: Number;
   messageButton = "Display details";
-  jobParamtersToDisplay :string[];
+  jobParametersToDisplay :string[];
 
   // Use to display sorted values
   jobKeys : String[];
@@ -34,10 +34,10 @@ export class JobDetails {
     this.job = new Job();
     this.buttonState = 1;
     this.jobKeys = [];
-    this.jobParamtersToDisplay = [];
+    this.jobParametersToDisplay = [];
 
     this.userConfig.getConfigObs().subscribe(
-      config => this.jobParamtersToDisplay = config.jobDetailProperties,
+      config => this.jobParametersToDisplay = config.jobDetailProperties,
       err => console.log(err)
     );
   }

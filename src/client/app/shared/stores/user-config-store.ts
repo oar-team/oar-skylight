@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, HostListener} from '@angular/core';
 import {OarApiService}  from "../oar-api/oar-api.service";
 import {Http, Headers, RequestOptions, Response} from '@angular/http';
 import { UserConfig } from './model/user-config';
@@ -11,22 +11,38 @@ import {BehaviorSubject, Observable} from "rxjs/Rx";
 export class UserConfigStore {
   private config: BehaviorSubject<UserConfig>;
   private urlMedia :string;
+  private urlConfig :string;
   constructor(private oarApiService: OarApiService,
               private http: Http) {
-    this.urlMedia = this.oarApiService.urlMedia + '~/.config/oar-skylight.json';
+    this.urlConfig = '/~/.oar-skylight/config.json';
+    this.urlMedia = this.oarApiService.urlMedia + this.urlConfig ;
     this.config = new BehaviorSubject(new UserConfig());
+
     this.loadConfig();
+
+
   }
 
+  // TODO : Save Config on window close
   saveConfig(config :UserConfig):Observable<Response> {
+
+    console.log(config);
     let blob = new Blob([JSON.stringify(config)]);
+    console.log(blob);
+    // Ajout de 'force' pour enregistré le fichier
+    let urlMediaForce = this.oarApiService.urlMedia + '/force' + this.urlConfig ;
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/octet-stream');
     let options: RequestOptions = new RequestOptions({headers: headers});
 
     let obs = this.http.post(
-      this.urlMedia, blob, options
+      urlMediaForce, blob, options
+    );
+
+    obs.subscribe(
+      (val) => console.log(val),
+      (err) => console.log(err)
     );
 
     return obs;
@@ -45,7 +61,7 @@ export class UserConfigStore {
       res => this.setConfigFromString(res.text()),
       err => console.log(err)
     );
-
+    return obs;
   }
 
   /**
@@ -67,11 +83,6 @@ export class UserConfigStore {
 
   getUserConfig() :UserConfig {
     return this.config.getValue();
-  }
-
-  saveRequest() {
-
-
   }
 
   addJobDetailsProperty(property:string) {

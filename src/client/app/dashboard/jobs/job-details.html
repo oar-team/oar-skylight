@@ -14,9 +14,9 @@
         <td>State</td>
         <td> {{ job.state }}</td>
       </tr>
-        <tr *ngFor="let param of jobParamtersToDisplay">
+        <tr *ngFor="let param of jobParametersToDisplay">
           <td>{{ param }}</td>
-          <td>{{ job[param] }}</td>
+          <td>{{ job.json[param] }}</td>
         </tr>
     </table>
   </div>
