@@ -1,0 +1,93 @@
+<div class="container-fluid">
+  Job Form
+
+  <div class="row">
+
+    <form [formGroup]="formNewJob">
+
+      <!-- COL 1 -->
+      <div class="col-lg-6">
+
+        <div class="form-group">
+
+          <label for="inputRessourcesJobForm">Nodes</label>
+          <input type="number"  class="form-control"  id="inputRessourcesJobForm"  value="1">
+          <small  class="form-text text-muted">Number of nodes</small>
+        </div>
+
+        <div class="form-group">
+
+          <label for="inputJobNameJobForm">Name</label>
+          <input type="text"  class="form-control"  id="inputJobNameJobForm" >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="inputRunJobForm">Program to run</label>
+          <input type="text"  class="form-control"  id="inputRunJobForm">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="inputTypesJobForm">Types</label>
+          <input type="text"  class="form-control"  id="inputTypesJobForm" formControlName="types">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="inputReservationDatesJobForm">Reservation dates</label>
+          <input type="text"  class="form-control"  id="inputReservationDatesJobForm">
+
+        </div>
+
+
+      </div>
+
+      <!-- COL 2 -->
+      <div class="col-lg-6">
+
+        <div class="form-group">
+
+          <label for="inputPropertiesJobForm">Properties</label>
+          <input type="text"  class="form-control"  id="inputPropertiesJobForm">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="inputCpuJobForm">CPU</label>
+          <input type="number"  class="form-control"  id="inputCpuJobForm" value="1" >
+
+        </div>
+
+
+
+        <div class="form-group">
+
+          <label for="inputWalltimeJobForm">Walltime</label>
+          <input type="time"  class="form-control"  id="inputWalltimeJobForm" value="00:30:00" name="time" step="600" >
+          <small  class="form-text text-muted">hours : minutes</small>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="inputDirectoryJobForm">Directory</label>
+          <input type="text"  class="form-control"  id="inputDirectoryJobForm">
+
+        </div>
+
+      </div>
+
+
+      <button type="submit" [disabled]="!formNewJob.valid" >Submit</button>
+    </form>
+
+  </div>
+
+</div>
