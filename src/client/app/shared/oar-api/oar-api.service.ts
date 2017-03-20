@@ -97,5 +97,26 @@ export class OarApiService {
       return this._urlMedia;
     }
 
+    postNewJob(resource :string, name :string, command:string, directory:string, property:string, type :string, reservation:string) :Observable<Response> {
+      let job = {
+        'resource': resource,
+        'name': name,
+        'command': command,
+        'directory': directory,
+        'property': property,
+        'type': type,
+        'reservation': reservation,
+      };
+
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+
+      return this.http.post(
+          this.baseLogin + this.baseUrlOar + "jobs",
+        JSON.stringify(job), { headers: headers }
+      )
+
+    }
+
 
 }

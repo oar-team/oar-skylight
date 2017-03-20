@@ -1,9 +1,9 @@
 <div class="container-fluid">
-  Job Form
+  <h1> New Job </h1>
 
   <div class="row">
 
-    <form [formGroup]="formNewJob">
+    <form #jobForm="ngForm" (ngSubmit)="submitNewJobForm()">
 
       <!-- COL 1 -->
       <div class="col-lg-6">
@@ -11,14 +11,14 @@
         <div class="form-group">
 
           <label for="inputRessourcesJobForm">Nodes</label>
-          <input type="number"  class="form-control"  id="inputRessourcesJobForm"  value="1">
-          <small  class="form-text text-muted">Number of nodes</small>
+          <input type="number" class="form-control" id="inputRessourcesJobForm" required  [(ngModel)]="jobTemplate.nodes" name="nodes">
+          <small class="form-text text-muted">Number of nodes</small>
         </div>
 
         <div class="form-group">
 
           <label for="inputJobNameJobForm">Name</label>
-          <input type="text"  class="form-control"  id="inputJobNameJobForm" >
+          <input type="text" class="form-control" id="inputJobNameJobForm" required  [(ngModel)]="jobTemplate.name" name="name">
 
         </div>
 
@@ -26,21 +26,21 @@
         <div class="form-group">
 
           <label for="inputRunJobForm">Program to run</label>
-          <input type="text"  class="form-control"  id="inputRunJobForm">
+          <input type="text" class="form-control" id="inputRunJobForm"  [(ngModel)]="jobTemplate.script" name="script">
 
         </div>
 
         <div class="form-group">
 
           <label for="inputTypesJobForm">Types</label>
-          <input type="text"  class="form-control"  id="inputTypesJobForm" formControlName="types">
+          <input type="text" class="form-control" id="inputTypesJobForm"  [(ngModel)]="jobTemplate.types" name="types">
 
         </div>
 
         <div class="form-group">
 
           <label for="inputReservationDatesJobForm">Reservation dates</label>
-          <input type="text"  class="form-control"  id="inputReservationDatesJobForm">
+          <input type="text" class="form-control" id="inputReservationDatesJobForm">
 
         </div>
 
@@ -53,24 +53,26 @@
         <div class="form-group">
 
           <label for="inputPropertiesJobForm">Properties</label>
-          <input type="text"  class="form-control"  id="inputPropertiesJobForm">
+          <input type="text" class="form-control" id="inputPropertiesJobForm">
 
         </div>
 
         <div class="form-group">
 
           <label for="inputCpuJobForm">CPU</label>
-          <input type="number"  class="form-control"  id="inputCpuJobForm" value="1" >
+          <input type="number" class="form-control" id="inputCpuJobForm" required  [(ngModel)]="jobTemplate.cpu" name="cpu">
 
         </div>
-
 
 
         <div class="form-group">
 
           <label for="inputWalltimeJobForm">Walltime</label>
-          <input type="time"  class="form-control"  id="inputWalltimeJobForm" value="00:30:00" name="time" step="600" >
-          <small  class="form-text text-muted">hours : minutes</small>
+          <input type="time" class="form-control" id="inputWalltimeJobForm" name="time" step="600"
+                 required
+                 [(ngModel)]="jobTemplate.walltime"
+                 name="walltime" >
+          <small class="form-text text-muted">hours : minutes</small>
 
         </div>
 
@@ -78,14 +80,27 @@
         <div class="form-group">
 
           <label for="inputDirectoryJobForm">Directory</label>
-          <input type="text"  class="form-control"  id="inputDirectoryJobForm">
+          <input type="text" class="form-control" id="inputDirectoryJobForm">
 
         </div>
 
       </div>
 
 
-      <button type="submit" [disabled]="!formNewJob.valid" >Submit</button>
+      <div class="col-lg-12 text-center">
+
+        <div class="row">
+
+          <div class="col-lg-2 offset-lg-6">
+
+            <button type="submit" class="btn btn-default" [class.disabled]="!jobForm.valid">Submit Job</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </form>
 
   </div>

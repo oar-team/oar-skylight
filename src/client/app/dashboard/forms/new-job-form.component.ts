@@ -1,30 +1,52 @@
-import {Component}  from '@angular/core';
-import {FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { Component}  from '@angular/core';
+import { JobFormTemplate } from './JobFormTemplate'
+import { OarApiService } from '../../shared/oar-api/oar-api.service'
+import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
   selector: 'new-job-form',
   templateUrl: './new-job-form.component.html'
 })
-/**
- * Reactive form for New Job
- *
- * **see more**: http://blog.angular-university.io/introduction-to-angular-2-forms-template-driven-vs-model-driven/
- */
+
+
 export class NewJobFormComponent {
 
-  formNewJob: FormGroup;
-  types = new FormControl()
+  jobTemplate : JobFormTemplate = new JobFormTemplate();
 
+  constructor (private oarApi :OarApiService, private router: Router) {
 
-  constructor(fb: FormBuilder) {
-    this.formNewJob = fb.group({
-      "types": this.types
-    });
   }
 
-  onSubmit() {
-    console.log(this.formNewJob);
+  /**
+   * Submit the job from the Form
+   * We use jobTemplate .getXXX() to format our request
+   */
+  submitNewJobForm() {
+    let resource = this.jobTemplate.getResource();
+    let name = this.jobTemplate.getName();
+    let command = this.jobTemplate.getCommand();
+    let directory = this.jobTemplate.getDirectory();
+    let property = this.jobTemplate.getProperty();
+    let type = this.jobTemplate.getType();
+    let reservation = this.jobTemplate.getReservation();
+
+    this.oarApi.postNewJob(resource, name, command, directory, property, type, reservation).subscribe(
+      result => this.redirect(result.json()),
+      err => console.log(err)
+    )
+  }
+
+  /**
+   * Redirect to the job detail page
+   * @param jsonResponse
+   */
+  redirect(jsonResponse :any) {
+    let jobId = jsonResponse.id;
+
+    if(jobId) {
+      this.router.navigate(['dashboard/jobs/' + jobId ])
+    }
   }
 
 }
