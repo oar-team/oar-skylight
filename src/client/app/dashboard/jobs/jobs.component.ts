@@ -15,14 +15,29 @@ import { AuthenticationService } from '../../shared/auth/authentification.servic
 
 export class JobsComponent {
 
-    jobs : List<Job> = List ([]);
+    jobs :any;
 
     constructor(
         private apiService: OarApiService,
         private router: Router,
         private jobStore: JobsStore,
-        private AuthService: AuthenticationService
+        private AuthService: AuthenticationService,
     ){
+
+      // tofix
+      this.jobStore.jobs.subscribe(
+        jobs => this.jobs = jobs.toArray(),
+        err => console.log(err)
+      )
+
+      // TODO : Decide to keep it ?
+      // Add user jobs to list
+      this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
+        .subscribe(
+          data => this.loadJobs(data),
+          error => console.log(error)
+        );
+
     }
     /**
      *
@@ -30,24 +45,12 @@ export class JobsComponent {
      */
     ngOnInit() {
 
-        // tofix
-        this.jobStore.jobs.subscribe(
-            jobList => this.jobs = jobList,
-            err => console.log(err)
-        );
-
-
-         this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
-            .subscribe(
-                data => this.loadJobs(data),
-                error => console.log(error)
-            );
 
     }
 
     getJobs(){
         return this.jobStore.jobs.subscribe(
-            value => this.jobs = value
+            jobList => this.jobs = jobList.toArray()
         );
     }
 
