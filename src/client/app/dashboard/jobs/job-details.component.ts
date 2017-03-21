@@ -3,8 +3,9 @@ import {Router, ActivatedRoute} from '@angular/router';
 import {OarApiService} from '../../shared/oar-api/oar-api.service';
 import {JobsStore} from '../../shared/stores/jobs-store';
 import {Job} from '../../shared/oar-api/model/job';
-import { UserConfigStore } from '../../shared/stores/user-config-store';
+import {UserConfigStore} from '../../shared/stores/user-config-store';
 import {Link} from '../../shared/oar-api/model/link';
+import {Observable} from "rxjs";
 
 @Component({
   moduleId: module.id,
@@ -21,10 +22,10 @@ export class JobDetails {
   job: Job;
   buttonState: Number;
   messageButton = "Display details";
-  jobParametersToDisplay :string[];
+  jobParametersToDisplay: string[];
 
   // Use to display sorted values
-  jobKeys : String[];
+  jobKeys: String[];
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -44,27 +45,54 @@ export class JobDetails {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.id = +params['id']; // (+) converts string 'id' to a number
+      let id = +params['id'];// (+) converts string 'id' to a number
+      this.id = id ;
       this.job = this.jobStore.getJob(this.id.toString());
 
-      this.jobKeys = Object.keys(this.job.json);
-      this.jobKeys.sort();
+      /**
+       * Hack for the case of new job not yet available
+       */
+      if (!this.job.json) {
+
+        this.getJob(id.toString()).subscribe(
+          () => {
+
+            // Sort on json keys (for clarity)
+            this.jobKeys = Object.keys(this.job.json);
+            this.jobKeys.sort();
+
+          }
+        )
+
+      } else {
+
+
+        // Sort on json keys (for clarity)
+        this.jobKeys = Object.keys(this.job.json);
+        this.jobKeys.sort();
+
+
+      }
+
     });
 
   }
 
 
   /**
-   *    Récupère le json d'un job
+   *    Get the json of a given job id
    */
-  getJob(id: string) {
+  getJob(id: string): Observable<any> {
     let jsonJob: any;
 
-    this.apiService.getJob(id)
-      .subscribe(
-        data => this.setJob(data),
-        error => console.log(error)
-      );
+    let obs = this.apiService.getJob(id)
+
+    obs.subscribe(
+      data => this.setJob(data),
+      error => console.log(error)
+    )
+
+    return obs
   }
 
   /**
@@ -94,7 +122,7 @@ export class JobDetails {
     console.log('route : ' + link.href);
   }
 
-  addPropertyToPref(property:string) {
+  addPropertyToPref(property: string) {
     this.userConfig.addJobDetailsProperty(property);
   }
 

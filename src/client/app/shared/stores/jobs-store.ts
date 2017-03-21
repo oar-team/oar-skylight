@@ -30,10 +30,8 @@ export class JobsStore {
   }
 
   initJobList(json: any) {
-
     // Update if there's anything to update
     if(json.items > 0) {
-
 
       let newJobs: List<Job> = List([]);
 
@@ -47,7 +45,7 @@ export class JobsStore {
     }
   }
 
-  addJob(id: string) {
+  addJob(id: string):Observable<any> {
 
     let obs = this.jobOarApiService.getJob(id);
 
@@ -59,7 +57,7 @@ export class JobsStore {
       error => console.log(error)
     );
 
-    return true
+    return obs
   }
 
   /**
@@ -86,17 +84,33 @@ export class JobsStore {
    *
    * todo : if job doesn't exist, do a request
    */
-  getJob(id: string): Job {
-    return this._jobs.getValue().find(
-      (job) => job.id.toString() === id
-    )
+   getJob(id: string):Job {
+
+    if(this.containsJob(id, this._jobs.getValue().toArray())) {
+
+      return this._jobs.getValue().find(
+        (job) => job.id.toString() === id
+      )
+
+    } else {
+      console.log('else')
+
+      let job :Job = new Job();
+      return job
+        // this.jobOarApiService.getJob(id).subscribe(
+        //   jobJson => {
+        //     return job.deserialize(jobJson)
+        //   }
+        // )
+    }
+
   }
 
   /**
    * Check if a job exist in the List
    */
-  containsJob(id: string, arr: Array<Job>): boolean {
-    return arr.some(
+  containsJob(id: string, jobs: Array<Job>): boolean {
+    return jobs.some(
       (job) => job.id.toString() === id
     )
   }
