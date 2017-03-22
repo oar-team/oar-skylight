@@ -24,7 +24,6 @@ export class JobsComponent {
         private AuthService: AuthenticationService,
     ){
 
-      // tofix
       this.jobStore.jobs.subscribe(
         jobs => this.jobs = jobs.toArray(),
         err => console.log(err)

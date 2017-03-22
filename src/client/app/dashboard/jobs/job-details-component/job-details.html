@@ -1,3 +1,5 @@
+<button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+
 <h2>Job : {{id}} - Details </h2>
 <div class="row" *ngIf="job">
   <div class="col-xl-4">
@@ -43,6 +45,15 @@
         <td>{{ key }}</td>
         <td>{{ job.json[key] }}</td>
         <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Add to favorite</a>
+            </div>
+          </div>
+
           <button (click)="addPropertyToPref(key)" title="Add this property to the default job display"><i
             class="fa fa-plus" aria-hidden="true"></i></button>
         </td>

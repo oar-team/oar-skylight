@@ -42,6 +42,7 @@ export class NewJobFormComponent {
    * @param jsonResponse
    */
   redirect(jsonResponse :any) {
+    console.log(jsonResponse);
     let jobId = jsonResponse.id;
 
     if(jobId) {
