@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
-import { JobsComponent } from './jobs.component';
-import { JobDetails } from './job-details.component';
+import { JobsComponent } from './jobs-component/jobs.component';
+import { JobDetails } from './job-details-component/job-details.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { DataTableModule } from "angular2-datatable/index";
 import { KeysPipe } from "./keys-pipe";

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { OarApiService } from '../../shared/oar-api/oar-api.service';
-import { Job } from '../../shared/oar-api/model/job';
+import { OarApiService } from '../../../shared/oar-api/oar-api.service';
+import { Job } from '../../../shared/oar-api/model/job';
 import { List} from 'immutable/';
 import { Router } from '@angular/router';
-import { JobsStore } from '../../shared/stores/jobs-store';
-import { AuthenticationService } from '../../shared/auth/authentification.service';
+import { JobsStore } from '../../../shared/stores/jobs-store';
+import { AuthenticationService } from '../../../shared/auth/authentification.service';
 
 @Component({
 	moduleId: module.id,
     selector: 'jobs-page',
-    templateUrl: './jobs.html',
+    templateUrl: 'jobs.html',
     providers: [OarApiService]
 })
 

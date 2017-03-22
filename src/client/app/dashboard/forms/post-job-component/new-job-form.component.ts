@@ -1,12 +1,12 @@
 import { Component}  from '@angular/core';
 import { JobFormTemplate } from './JobFormTemplate'
-import { OarApiService } from '../../shared/oar-api/oar-api.service'
+import { OarApiService } from '../../../shared/oar-api/oar-api.service'
 import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
   selector: 'new-job-form',
-  templateUrl: './new-job-form.component.html'
+  templateUrl: 'new-job-form.component.html'
 })
 
 

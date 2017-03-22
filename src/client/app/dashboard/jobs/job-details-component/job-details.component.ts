@@ -1,17 +1,17 @@
 import {Component, ViewChild} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-import {OarApiService} from '../../shared/oar-api/oar-api.service';
-import {JobsStore} from '../../shared/stores/jobs-store';
-import {Job} from '../../shared/oar-api/model/job';
-import {UserConfigStore} from '../../shared/stores/user-config-store';
-import {Link} from '../../shared/oar-api/model/link';
+import {OarApiService} from '../../../shared/oar-api/oar-api.service';
+import {JobsStore} from '../../../shared/stores/jobs-store';
+import {Job} from '../../../shared/oar-api/model/job';
+import {UserConfigStore} from '../../../shared/stores/user-config-store';
+import {Link} from '../../../shared/oar-api/model/link';
 import {Observable} from "rxjs";
 import {Location} from "@angular/common";
 
 @Component({
   moduleId: module.id,
   selector: 'job-details',
-  templateUrl: './job-details.html',
+  templateUrl: 'job-details.html',
   providers: [OarApiService]
 })
 
