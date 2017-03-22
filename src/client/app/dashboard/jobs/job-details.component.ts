@@ -6,6 +6,7 @@ import {Job} from '../../shared/oar-api/model/job';
 import {UserConfigStore} from '../../shared/stores/user-config-store';
 import {Link} from '../../shared/oar-api/model/link';
 import {Observable} from "rxjs";
+import {Location} from "@angular/common";
 
 @Component({
   moduleId: module.id,
@@ -31,7 +32,8 @@ export class JobDetails {
               private router: Router,
               private apiService: OarApiService,
               private jobStore: JobsStore,
-              private userConfig: UserConfigStore) {
+              private userConfig: UserConfigStore,
+              private location: Location) {
     this.job = new Job();
     this.buttonState = 1;
     this.jobKeys = [];
@@ -46,7 +48,7 @@ export class JobDetails {
   ngOnInit() {
     this.route.params.subscribe(params => {
       let id = +params['id'];// (+) converts string 'id' to a number
-      this.id = id ;
+      this.id = id;
       this.job = this.jobStore.getJob(this.id.toString());
 
       /**
@@ -124,6 +126,10 @@ export class JobDetails {
 
   addPropertyToPref(property: string) {
     this.userConfig.addJobDetailsProperty(property);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }
