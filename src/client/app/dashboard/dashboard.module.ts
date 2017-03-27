@@ -18,6 +18,7 @@ import { DashboardComponent } from './dashboard.component';
 
 import {TopNavComponent} from '../shared/index';
 import {SidebarComponent} from '../shared/index';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -35,10 +36,11 @@ import {SidebarComponent} from '../shared/index';
         BSElementModule,
         BlankPageModule,
         JobsModule,
-        ResourcesModule
+        ResourcesModule,
+      FormsModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
-    exports: [DashboardComponent, TopNavComponent, SidebarComponent]
+    exports: [DashboardComponent, TopNavComponent, SidebarComponent, FormsModule]
 })
 
 export class DashboardModule { }
