@@ -11,6 +11,7 @@ import { BSElementRoutes } from './bs-element/index';
 import { JobsRoutes } from './jobs/index';
 import { ResourcesRoute } from './resources/index';
 import { DashboardComponent } from './index';
+import { SearchRoute } from "./search/search.routes";
 
 export const DashboardRoutes: Route[] = [
   	{
@@ -22,6 +23,7 @@ export const DashboardRoutes: Route[] = [
 	    	...BSComponentRoutes,
         ...TableRoutes,
 	    	...BlankPageRoutes,
+        ...SearchRoute,
 			...JobsRoutes,
 			...ResourcesRoute,
         ...FormRoutes,

@@ -19,6 +19,7 @@ import { DashboardComponent } from './dashboard.component';
 import {TopNavComponent} from '../shared/index';
 import {SidebarComponent} from '../shared/index';
 import {FormsModule} from "@angular/forms";
+import {SearchModule} from "./search/search.module";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {FormsModule} from "@angular/forms";
         BlankPageModule,
         JobsModule,
         ResourcesModule,
-      FormsModule
+      FormsModule,
+      SearchModule
     ],
     declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
     exports: [DashboardComponent, TopNavComponent, SidebarComponent, FormsModule]
