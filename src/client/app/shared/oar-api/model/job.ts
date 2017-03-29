@@ -13,15 +13,15 @@ interface Serializable<T> {
 * TODO : Description JobEvent
 */
 export class JobEvent {
-     date: string;
-     description: string;
-     eventId: number;
-     jobId: number;
-     toCheck: string;
-     type: string;
+    date: string;
+    description: string;
+    eventId: number;
+    jobId: number;
+    toCheck: string;
+    type: string;
 
 
-    deserialize(input :any) {
+    deserialize(input: any) {
         this.date = input.date;
         this.description = input.description;
         this.eventId = input.event_id;
@@ -38,7 +38,7 @@ export class JobEvent {
 * TODO : Description Job
 */
 export class Job {
-    public json:any;
+    public json: any;
     public apiTimestamp: string;
     public arrayId: number;
     public arrayIndex: number;
@@ -74,38 +74,38 @@ export class Job {
         this.events = new Array<JobEvent>();
     }
 
-    deserialize(input :any) {
-        this.apiTimestamp   =	input.api_timestamp;
-        this.arrayId        =	input.array_id;
-        this.arrayIndex     =	input.array_index;
-        this.command        =	input.command;
-        this.cpusetName     =	input.cpuset_name;
-        this.exitCode       =	input.exit_code;
-        this.id             =	input.id;
-        this.initialRequest =	input.initial_request;
-        this.message        =	input.message;
-        this.name           =	input.name;
-        this.owner          =	input.owner;
-        this.project        =	input.project;
-        this.properties     =	input.properties;
-        this.queue          =	input.queue;
-        this.reservation    =	input.reservation;
-        this.resubmitJobId  =	input.resubmit_job_id;
-        this.scheduledStart =	input.scheduled_start;
-        this.startTime      =	input.start_time;
-        this.state          =	input.state;
-        this.stderrFile     =	input.stderr_file;
-        this.stdoutFile     =	input.stdout_file;
-        this.stopTime       =	input.stop_time;
-        this.submissionTime =	input.submission_time;
-        this.type           =	input.type;
-        this.types          =	input.types;
-        this.walltime       =	input.walltime;
-        this.wantedResources=	input.wanted_resources;
+    deserialize(input: any) {
+        this.apiTimestamp = input.api_timestamp;
+        this.arrayId = input.array_id;
+        this.arrayIndex = input.array_index;
+        this.command = input.command;
+        this.cpusetName = input.cpuset_name;
+        this.exitCode = input.exit_code;
+        this.id = input.id;
+        this.initialRequest = input.initial_request;
+        this.message = input.message;
+        this.name = input.name;
+        this.owner = input.owner;
+        this.project = input.project;
+        this.properties = input.properties;
+        this.queue = input.queue;
+        this.reservation = input.reservation;
+        this.resubmitJobId = input.resubmit_job_id;
+        this.scheduledStart = input.scheduled_start;
+        this.startTime = input.start_time;
+        this.state = input.state;
+        this.stderrFile = input.stderr_file;
+        this.stdoutFile = input.stdout_file;
+        this.stopTime = input.stop_time;
+        this.submissionTime = input.submission_time;
+        this.type = input.type;
+        this.types = input.types;
+        this.walltime = input.walltime;
+        this.wantedResources = input.wanted_resources;
 
         // Link implementation for a Job
-        for(let element of input.links) {
-            let link:Link = new Link().deserialize(element);
+        for (let element of input.links) {
+            let link: Link = new Link().deserialize(element);
 
             /*
             *  Since we don't know where to split the string ("/oar-priv/" can change)
@@ -117,8 +117,12 @@ export class Job {
             this.links.push(link);
         }
 
-          for(let element of input.events) {
-            this.events.push(new JobEvent().deserialize(element));
+        if (input.events) {
+
+            for (let element of input.events) {
+                this.events.push(new JobEvent().deserialize(element));
+            }
+
         }
 
         this.json = input;
