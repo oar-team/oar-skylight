@@ -25,7 +25,7 @@ export class JobDetails {
   messageButton = "Display details";
   jobParametersToDisplay: string[];
 
-  // Use to display sorted values
+  // Use to display sorted key values
   jobKeys: String[];
 
   constructor(private route: ActivatedRoute,
@@ -49,7 +49,9 @@ export class JobDetails {
     this.route.params.subscribe(params => {
       let id = +params['id'];// (+) converts string 'id' to a number
       this.id = id;
-      this.job = this.jobStore.getJob(this.id.toString());
+      this.jobStore.jobs.subscribe(
+        list => this.job = list.find( job => job.id == id)
+      );
 
       /**
        * Hack for the case of new job not yet available
