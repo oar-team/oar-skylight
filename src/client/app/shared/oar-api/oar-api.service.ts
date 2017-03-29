@@ -32,9 +32,18 @@ export class OarApiService {
      *     Get all current jobs
      *     __return format :__ JSON
      */
-    getJobs() {
+    getJobs()  :Observable<Response>{
         return this.http.get(
             this.urlJobs
+        ).map(res => res.json());
+    }
+    
+    /**
+     * Return a JSON of given job by id
+     */
+    getJobsById(ids :number[]) :Observable<Response>{
+        return this.http.get(
+            this.baseLogin + this.baseUrlOar + 'jobs.json?ids=' + ids.toString()
         ).map(res => res.json());
     }
 
@@ -42,7 +51,7 @@ export class OarApiService {
     *    Get a job by its id
     *    __return format :__ JSON
     */
-    getJob(id: string) {
+    getJob(id: string)  :Observable<Response>{
         return this.http.get(
             this.baseLogin + this.baseUrlOar + 'jobs/' + id + '.json'
         ).map(res => res.json());
@@ -51,7 +60,7 @@ export class OarApiService {
     /**
      * Get the jobs of a given username
      */
-    getUserJobs(username: string) {
+    getUserJobs(username: string)  :Observable<Response>{
         return this.http.get(
 
             //    TODO : Parameters for states
@@ -65,7 +74,7 @@ export class OarApiService {
      *     Get all resources
      *     __return format :__ JSON
      */
-    getResources() {
+    getResources()  :Observable<Response>{
           return this.http.get(
             this.urlResources
         ).map(res => res.json());
@@ -75,7 +84,7 @@ export class OarApiService {
     /**
      * TEST
      */
-    getMedia() {
+    getMedia()  :Observable<Response>{
 
         let urlStd = 'http://localhost:46668/oarapi-priv/media/~/OAR.Test_job.14.stderr';
 
