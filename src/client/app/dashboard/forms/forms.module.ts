@@ -18,5 +18,3 @@ import {FormsModule} from "@angular/forms";
 
 export class FormModule {
 }
-
-platformBrowserDynamic().bootstrapModule(FormModule);
