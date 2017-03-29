@@ -31,11 +31,11 @@ export class JobsComponent {
 
       // TODO : Decide to keep it ?
       // Add user jobs to list
-      this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
-        .subscribe(
-          data => this.loadJobs(data),
-          error => console.log(error)
-        );
+    //   this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
+    //     .subscribe(
+    //       data => this.loadJobs(data),
+    //       error => console.log(error)
+    //     );
 
     }
     /**
