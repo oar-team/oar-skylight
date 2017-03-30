@@ -1,7 +1,8 @@
-import { Component}  from '@angular/core';
+import { Component } from '@angular/core';
 import { JobFormTemplate } from './JobFormTemplate'
 import { OarApiService } from '../../../shared/oar-api/oar-api.service'
 import { Router } from '@angular/router';
+import { JobsStore } from '../../../shared/stores/jobs-store';
 
 @Component({
   moduleId: module.id,
@@ -12,9 +13,9 @@ import { Router } from '@angular/router';
 
 export class NewJobFormComponent {
 
-  jobTemplate : JobFormTemplate = new JobFormTemplate();
+  jobTemplate: JobFormTemplate = new JobFormTemplate();
 
-  constructor (private oarApi :OarApiService, private router: Router) {
+  constructor(private oarApi: OarApiService, private router: Router, private jobStore: JobsStore) {
 
   }
 
@@ -32,7 +33,15 @@ export class NewJobFormComponent {
     let reservation = this.jobTemplate.getReservation();
 
     this.oarApi.postNewJob(resource, name, command, directory, property, type, reservation).subscribe(
-      result => this.redirect(result.json()),
+      result => {
+        let jobId = result.json().id
+        if (jobId) {
+          this.jobStore.addJob(result.json().id).subscribe(
+            () => this.redirect(result.json()),
+            err => console.log(err),
+          )
+        }
+      },
       err => console.log(err)
     )
   }
@@ -41,12 +50,12 @@ export class NewJobFormComponent {
    * Redirect to the job detail page
    * @param jsonResponse
    */
-  redirect(jsonResponse :any) {
+  redirect(jsonResponse: any) {
     console.log(jsonResponse);
     let jobId = jsonResponse.id;
 
-    if(jobId) {
-      this.router.navigate(['dashboard/jobs/' + jobId ])
+    if (jobId) {
+      this.router.navigate(['dashboard/jobs/' + jobId])
     }
   }
 

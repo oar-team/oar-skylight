@@ -18,10 +18,10 @@ export class JobsStore {
     Observable.interval(4000)
       .mergeMap(() => this.jobOarApiService.getJobs())
       .subscribe(
-        json =>  {
-          this.initJobList(json)
-          this.updateJobs()
-        }
+      json => {
+        this.initJobList(json)
+        this.updateJobs()
+      }
       )
 
   }
@@ -33,7 +33,7 @@ export class JobsStore {
 
     let jobIds: number[] =
       this._jobs.getValue()
-        .filter(job => job.state != "Terminated")
+        .filter(job => job.state != "Terminated" && job.state != "Error")
         .map((job) => job.id).toArray();
 
     if (jobIds.length > 0) {
@@ -43,9 +43,15 @@ export class JobsStore {
 
           if (json.items.length > 0) {
 
-            json.items.forEach( (jsonJob: any) => {
-              let updatedJob: Job = new Job().deserialize(jsonJob);
-              this.addJobWithJob(updatedJob, this._jobs.getValue().toArray());
+            json.items.forEach((jsonJob: any) => {
+              let jobsInStore = this._jobs.getValue();
+
+              if (jobsInStore.find(job => job.id == +jsonJob.id).state != jsonJob.state) {
+                this.updateJob(jsonJob.id);
+              }
+
+              // let updatedJob: Job = new Job().deserialize(jsonJob);
+              // this.addJobWithJob(updatedJob, jobsInStore.toArray());
             })
           }
 
@@ -63,13 +69,28 @@ export class JobsStore {
 
   }
 
+  updateJob(id: string) {
+
+    this.jobOarApiService.getJob(id).subscribe(
+      jsonJob => {
+        let job: Job = new Job().deserialize(jsonJob);
+        console.log('new job : ', job);
+        this.addJobWithJob(job, this._jobs.getValue().toArray());
+      }
+    )
+  }
+
   initJobList(json: any) {
     // Update if there's something to update
     if (json.items.length > 0) {
-    
-      json.items.forEach( (jsonJob: any) => {
+
+      json.items.forEach((jsonJob: any) => {
         let job: Job = new Job().deserialize(jsonJob)
-        this.addJobWithJob(job, this._jobs.getValue().toArray())
+        if (! this.containsJob(job.id.toString(), this._jobs.getValue().toArray())) {
+
+          this.addJobWithJob(job, this._jobs.getValue().toArray())
+
+        }
       })
 
     }
@@ -100,7 +121,7 @@ export class JobsStore {
     } else {
       console.log('updating job-' + job.id + ' | state :' + job.state)
       arr[arr.findIndex(jobArr => jobArr.id == job.id)] = job;
-      
+
       this._jobs.next(List(arr));
     }
 
@@ -138,6 +159,10 @@ export class JobsStore {
       //   }
       // )
     }
+
+  }
+
+  getJobObs(id: string) {
 
   }
 
