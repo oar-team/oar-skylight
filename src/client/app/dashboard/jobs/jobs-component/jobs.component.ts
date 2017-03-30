@@ -28,15 +28,6 @@ export class JobsComponent {
         jobs => this.jobs = jobs.toArray(),
         err => console.log(err)
       )
-
-      // TODO : Decide to keep it ?
-      // Add user jobs to list
-    //   this.apiService.getUserJobs(this.AuthService.getUser().getUsername())
-    //     .subscribe(
-    //       data => this.loadJobs(data),
-    //       error => console.log(error)
-    //     );
-
     }
     /**
      *

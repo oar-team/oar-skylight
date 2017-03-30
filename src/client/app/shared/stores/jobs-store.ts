@@ -74,7 +74,6 @@ export class JobsStore {
     this.jobOarApiService.getJob(id).subscribe(
       jsonJob => {
         let job: Job = new Job().deserialize(jsonJob);
-        console.log('new job : ', job);
         this.addJobWithJob(job, this._jobs.getValue().toArray());
       }
     )
