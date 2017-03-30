@@ -84,9 +84,9 @@ export class OarApiService {
     /**
      * TEST
      */
-    getMedia()  :Observable<Response>{
+    getMedia(path :string)  :Observable<Response>{
 
-        let urlStd = 'http://localhost:46668/oarapi-priv/media/~/OAR.Test_job.14.stderr';
+        let urlStd = 'http://localhost:46668/oarapi-priv/media/~/' + path;
 
          let headers = new Headers();
         headers.append('Content-Type', 'text/html');

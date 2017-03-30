@@ -19,12 +19,11 @@ export class JobDetails {
 
   @ViewChild('jobDetailsTable') jobDetailsTable: any;
   id: number;
-  stdout: string = "Hello";
   job: Job;
   buttonState: Number;
   messageButton = "Display details";
   jobParametersToDisplay: string[];
-
+  stdOut :string ="";
   // Use to display sorted key values
   jobKeys: String[];
 
@@ -63,7 +62,15 @@ export class JobDetails {
     });
 
   }
+  
+  showStdOut() {
 
+    this.apiService.getMedia(this.job.stdoutFile).subscribe(
+      (res :any) => this.stdOut = res._body,
+      err => console.log(err)
+    )
+
+  }
 
   /**
    *    Get the json of a given job id

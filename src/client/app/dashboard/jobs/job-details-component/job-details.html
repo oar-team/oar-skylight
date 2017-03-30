@@ -28,10 +28,22 @@
               *ngFor="let link of job.links" (click)="onClickLink(link)">
         <span *ngIf="link.title">{{ link.title }}</span>
       </button>
+      <button *ngIf="job.stdoutFile" class="btn btn-lg btn-success" (click)="showStdOut()">
+        Show output
+      </button>
+      <button *ngIf="job.stderrFile" class="btn btn-lg btn-info">
+        Show error
+      </button>
     </div>
   </div>
 </div>
+<div class="row">
 
+  <section id="std">
+       {{ stdOut }}
+  </section>
+
+</div>
 <div class="row">
   <div class="col-xl-8">
 
