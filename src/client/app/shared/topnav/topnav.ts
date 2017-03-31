@@ -47,9 +47,7 @@ export class TopNavComponent {
    * @returns {boolean}
    */
 	search(form :NgForm ) {
-    console.log(form)
-    console.log(this.searchInput)
-    this.router.navigate(['dashboard/search', this.searchInput]);
+    this.router.navigate(['dashboard/jobs/', this.searchInput]);
 
     return false
   }
