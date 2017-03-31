@@ -1,5 +1,4 @@
 import { Route } from '@angular/router';
-
 import { JobsComponent, JobDetails } from './index';
 
 // Add the AuthGuard service
