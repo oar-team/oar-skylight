@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { OarApiService } from '../../../shared/oar-api/oar-api.service';
 import { JobsStore } from '../../../shared/stores/jobs-store';
@@ -12,10 +12,10 @@ import { Location } from "@angular/common";
   moduleId: module.id,
   selector: 'job-details',
   templateUrl: 'job-details.html',
-  providers: [OarApiService]
+  providers: [OarApiService],
 })
 
-export class JobDetails {
+export class JobDetails implements AfterViewInit {
 
   @ViewChild('jobDetailsTable') jobDetailsTable: any;
   id: number;
@@ -23,9 +23,10 @@ export class JobDetails {
   buttonState: Number;
   messageButton = "Display details";
   jobParametersToDisplay: string[];
-  stdOut :string ="";
+  displayStd: string = "";
   // Use to display sorted key values
   jobKeys: String[];
+  @ViewChild('code') codeElement: ElementRef;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -42,6 +43,7 @@ export class JobDetails {
       config => this.jobParametersToDisplay = config.jobDetailProperties,
       err => console.log(err)
     );
+
   }
 
   ngOnInit() {
@@ -51,25 +53,52 @@ export class JobDetails {
 
       this.jobStore.jobs.subscribe(
         list => {
-          console.log(list.find(job => job.id == id))
-          this.job = list.find(job => job.id == id)
+          if (list.find(job => job.id == id)) {
 
-          this.jobKeys = Object.keys(this.job.json);
-          this.jobKeys.sort();
+            this.job = list.find(job => job.id == id)
+
+            this.jobKeys = Object.keys(this.job.json);
+            this.jobKeys.sort();
+          } else {
+            this.jobStore.addJob(id.toString());
+          }
         }
       );
 
     });
 
   }
-  
+
+  ngAfterViewInit() {
+    //
+  }
+
   showStdOut() {
 
     this.apiService.getMedia(this.job.stdoutFile).subscribe(
-      (res :any) => this.stdOut = res._body,
+      (res: any) =>  { 
+  
+        this.displayStd = res._body
+      },
       err => console.log(err)
     )
 
+  }
+
+  showStdErr() {
+
+    this.apiService.getMedia(this.job.stderrFile).subscribe(
+      (res: any) =>  { 
+  
+        this.displayStd = res._body
+      },
+      err => console.log(err)
+    )
+
+  }
+
+  hideStd(){
+    this.displayStd = undefined;
   }
 
   /**

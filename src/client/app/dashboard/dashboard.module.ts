@@ -21,7 +21,6 @@ import {SidebarComponent} from '../shared/index';
 import {FormsModule} from "@angular/forms";
 import {SearchModule} from "./search/search.module";
 
-
 @NgModule({
     imports: [
       CommonModule,

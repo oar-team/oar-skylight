@@ -28,6 +28,7 @@ export class JobsComponent {
         jobs => this.jobs = jobs.toArray(),
         err => console.log(err)
       )
+
     }
     /**
      *
