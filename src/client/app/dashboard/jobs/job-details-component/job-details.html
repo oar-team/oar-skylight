@@ -16,10 +16,12 @@
         <td>State</td>
         <td> {{ job.state }}</td>
       </tr>
-      <tr *ngFor="let param of jobParametersToDisplay">
-        <td>{{ param }}</td>
-        <td>{{ job.json[param] }}</td>
-      </tr>
+      <ng-container *ngIf="job.json">
+        <tr *ngFor="let param of jobParametersToDisplay">
+          <td>{{ param }}</td>
+          <td>{{ job.json[param] }}</td>
+        </tr>
+      </ng-container>
     </table>
   </div>
   <div class="col-xl-4">
@@ -43,8 +45,8 @@
   <div class="col-md-8 offset-md-2">
 
     <pre>
-      <code highlight class="bash">
-        {{ displayStd }}
+      <code [innerHTML]="displayStd" highlight class="bash">
+        
       </code>
     </pre>
 

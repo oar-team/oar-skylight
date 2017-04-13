@@ -20,6 +20,10 @@ export class UserConfigStore {
 
     this.loadConfig();
 
+    this.config.subscribe(
+      change => this.saveConfig(change)
+    )
+
 
   }
 
@@ -59,7 +63,7 @@ export class UserConfigStore {
       this.urlMedia
     ).subscribe(
       res => this.setConfigFromString(res.text()),
-      err => console.log(err)
+      err => this.saveConfig(new UserConfig()) // Create cofig file if not found
     );
     return obs;
   }

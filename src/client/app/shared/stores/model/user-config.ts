@@ -33,8 +33,7 @@ export class UserConfig {
 
 
   deserialize(input :any) {
-    this._jobDetailProperties = input.jobDetailProperties;
-
+    this._jobDetailProperties = input._jobDetailProperties;
     return this;
   }
 
