@@ -6,7 +6,7 @@
         <a routerLink="/dashboard/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i> Dashboard
         </a>
-        <a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <!--<a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i> Charts
         </a>
         <a [routerLink]="['tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
             </li>
-        </div>
+        </div>-->
         <a [routerLink]="['jobs/form/new']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i> &nbsp;New Job
         </a>
@@ -47,6 +47,9 @@
         </a>
         <a [routerLink]="['resources']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i> &nbsp;Resources
+        </a>
+        <a [routerLink]="['search/']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-search"></i> &nbsp;Search
         </a>
     </ul>
 </nav>

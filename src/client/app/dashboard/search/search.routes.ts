@@ -5,5 +5,9 @@ export const SearchRoute: Route[] = [
 	{
 		path: 'search/:strSearch',
 		component: SearchComponent
+	},
+	{
+		path: 'search',
+		component: SearchComponent
 	}
 ];

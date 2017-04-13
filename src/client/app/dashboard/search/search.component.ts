@@ -1,6 +1,8 @@
-import {Component} from '@angular/core';
-import {OarApiService} from '../../shared/oar-api/oar-api.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Component } from '@angular/core';
+import { OarApiService } from '../../shared/oar-api/oar-api.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { Http, Response, Headers } from '@angular/http';
+import { SearchService } from '../../shared/services/search.service';
 
 @Component({
   moduleId: module.id,
@@ -12,17 +14,50 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class SearchComponent {
 
   search: string;
+  json: string = '';
+  jobList: any[] = [];
+
+  selectedValue = 'Id';
+  options: string[] = ['Name', 'Id', 'Date'];
 
   constructor(private apiService: OarApiService,
-              private router: Router,
-              private route: ActivatedRoute) {
+    private router: Router,
+    private http: Http,
+    private searchService: SearchService,
+    private route: ActivatedRoute) {
+
+
+    this.route.params.subscribe(params => {
+      console.log(params);
+      this.search = params['strSearch'];
+    });
   }
 
-  ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.search = params['strSearch'];
-      console.log(this.search);
-    })
+  searchRequestByName(name: string): void {
+
+    this.searchService.searchByName(name).subscribe(
+      (res: any) => this.jobList = res.items,
+        err => this.jobList = []
+    );
+  }
+
+  searchSubmit() {
+    switch (this.selectedValue) {
+      case 'Id':
+        this.gotoJob(this.search);
+        break;
+      case 'Name':
+        this.searchRequestByName(this.search);
+        break;
+      case 'Date':
+        this.searchRequestByName(this.search);
+        break;
+    }
+  }
+
+
+  gotoJob(id: string) {
+    this.router.navigate(['dashboard/jobs/' + id]);
   }
 
 }
