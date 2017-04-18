@@ -2,8 +2,8 @@ $topnav-background-color: #222;
 .sidebar{
     border-radius: 0;
     position: fixed;
-    z-index: 3;
-    top: 56px;
+    z-index: 1000;
+    top: 55px;
     left: 235px;
     width: 235px;
     margin-left: -235px;
@@ -14,12 +14,12 @@ $topnav-background-color: #222;
     bottom: 0;
     overflow-x: hidden;
     padding-bottom: 40px;
-    // -webkit-transition: all 0.2s ease-in-out;
-    //    -moz-transition: all 0.2s ease-in-out;
-    //     -ms-transition: all 0.2s ease-in-out;
-    //      -o-transition: all 0.2s ease-in-out;
-    //         transition: all 0.2s ease-in-out;
-    border-top: 1px solid rgba(255,255,255,0.3);
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    // border-top: 1px solid rgba(255,255,255,0.3);
     .list-group{
         a.list-group-item{
             background: $topnav-background-color;
@@ -97,10 +97,12 @@ $topnav-background-color: #222;
         list-style-type: none;
     }
     ul.submenu {
+        display: none;
         height: 0;
     }
     & .expand {
         ul.submenu {
+            display: block;
             list-style-type: none;
             height: auto;
             li {
@@ -111,5 +113,11 @@ $topnav-background-color: #222;
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 992px) {
+    .sidebar {
+        top: 54px;
+        left: 0px;
     }
 }
