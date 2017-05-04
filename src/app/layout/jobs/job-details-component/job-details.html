@@ -1,0 +1,93 @@
+<button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+
+<app-page-header [heading]="'Details'" [icon]="'fa-th-list'"></app-page-header>
+
+<h2>Job : {{id}} - Details </h2>
+<div class="row" *ngIf="job">
+    <div class="col-xl-4">
+        <table class="table table-striped table-hover table-bordered">
+            <tr>
+                <td>ID</td>
+                <td> {{ job.id }}</td>
+            </tr>
+            <tr>
+                <td>Owner</td>
+                <td> {{ job.owner }}</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td> {{ job.state }}</td>
+            </tr>
+            <ng-container *ngIf="job.json">
+                <tr *ngFor="let param of jobParametersToDisplay">
+                    <td>{{ param }}</td>
+                    <td>{{ job.json[param] }}</td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+    <div class="col-xl-4">
+        <div class="btn-group-vertical" role="group" aria-label="...">
+            <button type="button" class="btn btn-lg btn-secondary" *ngFor="let link of job.links" (click)="onClickLink(link)">
+        <span *ngIf="link.title">{{ link.title }}</span>
+      </button>
+            <button *ngIf="!displayStd" class="btn btn-lg btn-success" (click)="showStdOut()">
+        Show output
+      </button>
+            <button *ngIf="displayStd" class="btn btn-lg btn-success" (click)="hideStd()">
+        Hide output
+      </button>
+            <!--<button *ngIf="!displayStd" class="btn btn-lg btn-info">
+        Show error
+      </button>-->
+        </div>
+    </div>
+</div>
+<div class="row" [hidden]="!displayStd">
+    <div class="col-md-8 offset-md-2">
+
+        <pre>
+      <code [innerHTML]="displayStd" highlight class="bash">
+        
+      </code>
+    </pre>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-8 col-xs-12">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" (click)="getDetails()" id="showDetailsButton" title="Display this job properties">{{ messageButton }}
+    </button>
+        <br> <br>
+        <table class="table table-striped table-hover table-bordered" id="jobDetailsTable" #jobDetailsTable style="display:none;">
+            <tr *ngFor="let key of jobKeys">
+                <td>{{ key }}</td>
+                <td>{{ job.json[key] }}</td>
+                <td>
+
+                    <div ngbDropdown class="d-inline-block">
+                        <button class="btn btn-default" id="dropdownMenu" ngbDropdownToggle>Options</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item" (click)="addPropertyToPref(key)" title="Add this property to the default job display">
+                                <button class="dropdown-item">Add parameter to favorite</button>
+                            </a>
+                        </div>
+                    </div>
+                    <!--                
+                    <div class="btn-group" ngbDropdownToggle>
+                        <button id="single-button" type="button" class="btn btn-default">
+                          Options <span class="caret"></span>
+                        </button>
+                        <ul role="menu" aria-labelledby="single-button">
+                            <li role="menuitem"><a class="dropdown-item" (click)="addPropertyToPref(key)" title="Add this property to the default job display">Add parameter to favorite</a></li>
+                        </ul>
+                    </div>-->
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
