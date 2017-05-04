@@ -6,6 +6,10 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthenticationService } from './shared/services/auth/authentification.service';
+import { JobsStore } from './shared/stores/jobs-store';
+import { OarApiService } from './shared/services/oar-api';
+import { UserConfigStore } from './shared/stores/user-config-store';
+
 
 @NgModule({
     declarations: [
@@ -17,7 +21,7 @@ import { AuthenticationService } from './shared/services/auth/authentification.s
         HttpModule,
         AppRoutingModule
     ],
-    providers: [AuthenticationService],
+    providers: [AuthenticationService, JobsStore, OarApiService, UserConfigStore],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

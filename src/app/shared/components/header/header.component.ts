@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
-import { AuthenticationService } from '../../services/auth/authentification.service'; 
+import { AuthenticationService } from '../../services/auth/authentification.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -10,8 +11,12 @@ import { AuthenticationService } from '../../services/auth/authentification.serv
 export class HeaderComponent implements OnInit {
 
     public user: User;
+    public searchInput = '';
 
-    constructor(private _auth: AuthenticationService) {
+    constructor(
+        private _auth: AuthenticationService,
+        private router: Router
+    ) {
         this._auth.getUserObservable().subscribe(
             (user) => this.user = user
         );
@@ -27,5 +32,17 @@ export class HeaderComponent implements OnInit {
     rltAndLtr() {
         const dom: any = document.querySelector('body');
         dom.classList.toggle('rtl');
+    }
+
+
+	/**
+	 * Should always return false (else page is reloaded)
+	 * @param form
+	 * @returns {boolean}
+	 */
+    search(): boolean {
+        this.router.navigate(['search', this.searchInput]);
+
+        return false;
     }
 }

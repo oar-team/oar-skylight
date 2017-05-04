@@ -1,0 +1,46 @@
+<app-page-header [heading]="'Jobs'" [icon]="'fa-tasks'"></app-page-header>
+
+<table class="table table-striped" [mfData]="jobs" #mf="mfDataTable" [mfRowsOnPage]="25">
+    <thead>
+        <tr>
+            <th style="width: 10%">
+                <mfDefaultSorter by="id">ID</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="owner">Owner</mfDefaultSorter>
+            </th>
+            <th style="width: 30%">
+                <mfDefaultSorter by="message">Message</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+                <mfDefaultSorter by="message">Name</mfDefaultSorter>
+            </th>
+            <th style="width: 20%">
+                <mfDefaultSorter by="state">State</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of mf.data">
+            <td>{{item.id}}</td>
+            <td>{{item.owner}}</td>
+            <td>{{item.message}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.state}}</td>
+            <td>
+                <a [routerLink]="['/jobs/' + item.id]"><button class="btn btn-default">More</button></a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+
+        </tr>
+    </tfoot>
+</table>

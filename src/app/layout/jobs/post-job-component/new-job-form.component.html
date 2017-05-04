@@ -1,0 +1,107 @@
+<div class="container-fluid">
+    <h1> New Job </h1>
+
+
+    <form #jobForm="ngForm" (ngSubmit)="submitNewJobForm()">
+
+        <div class="row">
+            <!-- COL 1 -->
+            <div class="col-lg-6 col-xs-12">
+
+                <div class="form-group">
+
+                    <label for="inputRessourcesJobForm">Nodes</label>
+                    <input type="number" class="form-control" id="inputRessourcesJobForm" required [(ngModel)]="jobTemplate.nodes" name="nodes">
+                    <small class="form-text text-muted">Number of nodes</small>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="inputJobNameJobForm">Name</label>
+                    <input type="text" class="form-control" id="inputJobNameJobForm" required [(ngModel)]="jobTemplate.name" name="name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="inputRunJobForm">Program to run</label>
+                    <input type="text" class="form-control" id="inputRunJobForm" [(ngModel)]="jobTemplate.script" name="script">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="inputTypesJobForm">Types</label>
+                    <input type="text" class="form-control" id="inputTypesJobForm" [(ngModel)]="jobTemplate.types" name="types">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="inputReservationDatesJobForm">Reservation dates</label>
+                    <input type="text" class="form-control" id="inputReservationDatesJobForm">
+
+                </div>
+
+
+            </div>
+
+            <!-- COL 2 -->
+            <div class="col-lg-6  col-xs-12">
+
+                <div class="form-group">
+
+                    <label for="inputPropertiesJobForm">Properties</label>
+                    <input type="text" class="form-control" id="inputPropertiesJobForm">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="inputCpuJobForm">CPU</label>
+                    <input type="number" class="form-control" id="inputCpuJobForm" required [(ngModel)]="jobTemplate.cpu" name="cpu">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="inputWalltimeJobForm">Walltime</label>
+                    <input type="time" class="form-control" id="inputWalltimeJobForm" name="time" step="600" required [(ngModel)]="jobTemplate.walltime" name="walltime">
+                    <small class="form-text text-muted">hours : minutes</small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="inputDirectoryJobForm">Directory</label>
+                    <input type="text" class="form-control" id="inputDirectoryJobForm">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-lg-12 text-center">
+
+                <div class="row">
+
+                    <div class="col-lg-2 offset-lg-6">
+
+                        <button type="submit" class="btn btn-default" [class.disabled]="!jobForm.valid">Submit Job</button>
+
+                        <button type="button" (click)="demo()" class="btn btn-success">Demo</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+
+</div>
