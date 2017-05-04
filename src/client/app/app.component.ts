@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component, ViewContainerRef, HostListener } from '@angular/core';
 import { Config } from './shared/index';
 
 /**
@@ -18,4 +18,10 @@ export class AppComponent {
 		this.viewContainerRef = viewContainerRef;
 		console.log('Environment config', Config);
 	}
+
+
+  @HostListener('window:beforeunload', ['$event'])
+  hello($event :any) {
+    alert('hello');
+  }
 }

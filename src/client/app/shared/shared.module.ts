@@ -5,7 +5,11 @@ import { RouterModule } from '@angular/router';
 
 import { NameListService } from './name-list/index';
 import { OarApiService } from './oar-api/index';
+import { JobsStore } from './stores/jobs-store';
+import { UserConfigStore } from './stores/user-config-store';
 import { AuthenticationService } from './auth/authentification.service';
+import { SearchService } from './services/search.service';
+
 /**
 * Do not specify providers for modules that might be imported by a lazy loaded module.
 */
@@ -20,7 +24,7 @@ export class SharedModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [NameListService, AuthenticationService]
+            providers: [NameListService, AuthenticationService, SearchService, JobsStore, OarApiService, UserConfigStore]
         };
     }
 }

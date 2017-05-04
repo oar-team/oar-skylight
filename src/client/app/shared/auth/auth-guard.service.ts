@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { CanActivate,ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Message } from 'primeng/primeng';
-import {Observable} from 'rxjs/Rx';
+import { Observable } from 'rxjs/Rx';
 
 // Import our authentication service
 import { AuthenticationService } from './authentification.service';
@@ -21,14 +21,14 @@ export class AuthGuard implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-    ): boolean {
+  ): boolean {
     // If user is not logged in we'll send them to the homepage 
-    let bool:boolean = this.auth.getIsLoggedValue();
+    let bool: boolean = this.auth.getIsLoggedValue();
     if (!bool) {
       this.router.navigate(['403']);
     }
 
-    return bool ;
+    return bool;
   }
 
 }
