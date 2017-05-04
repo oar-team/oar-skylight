@@ -21,10 +21,10 @@ import { JobEvent } from '../shared/oar-api/model/job';
 export class LoginComponent {
 
 
-	//Errors shown on login form
+	// Errors shown on login form
 	private msgs: Message[] = [];
 
-	//the JSON file with whoAmI information in it
+	// the JSON file with whoAmI information in it
 	private whoAmI: JSON;
 	// Array of last events with their url
 	private events: any = [];
@@ -84,6 +84,6 @@ export class LoginComponent {
 		);
 
 
-	}
+	} 
 
 }
