@@ -1,8 +1,8 @@
+import { FmModule } from './file-manager/fm.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthenticationService } from './shared/services/auth/authentification.service';
@@ -19,6 +19,7 @@ import { UserConfigStore } from './shared/stores/user-config-store';
         BrowserModule,
         FormsModule,
         HttpModule,
+        FmModule,
         AppRoutingModule
     ],
     providers: [AuthenticationService, JobsStore, OarApiService, UserConfigStore],
