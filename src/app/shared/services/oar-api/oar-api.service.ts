@@ -19,7 +19,7 @@ export class OarApiService {
     private mdp = 'docker';
     private baseLogin = environment.API_PROTOCOLE + '://' + this.login + ':' + this.mdp + '@';
 
-    private baseUrlOar = environment.API + 'oarapi-priv/';
+    private baseUrlOar = environment.API_PROTOCOLE + '://'+ environment.API + 'oarapi-priv/';
     private urlResources = this.baseLogin + this.baseUrlOar + 'resources.json';
     private urlJobs = this.baseLogin + this.baseUrlOar + 'jobs.json';
     private _urlMedia = this.baseLogin + this.baseUrlOar + 'media';
@@ -88,7 +88,7 @@ export class OarApiService {
      */
     getMedia(path: string): Observable<Response> {
 
-        let urlStd = 'http://localhost:46668/oarapi-priv/media/~/' + path;
+        let urlStd = '/oarapi-priv/media/~/' + path;
 
         let headers = new Headers();
         headers.append('Content-Type', 'text/html');
@@ -96,8 +96,6 @@ export class OarApiService {
         return this.http.get(
             urlStd, { headers: headers }
         ).map(res => res);
-
-
     }
 
     /**
