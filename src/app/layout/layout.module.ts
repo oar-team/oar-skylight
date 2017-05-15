@@ -12,8 +12,8 @@ import { HeaderComponent, SidebarComponent } from '../shared';
     imports: [
         CommonModule,
         NgbDropdownModule.forRoot(),
-        FormsModule
-        TranslateModule
+        FormsModule,
+        TranslateModule,
         LayoutRoutingModule,
     ],
     declarations: [
