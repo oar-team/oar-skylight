@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/services/auth/auth-guard.service';
 import { FmModule } from './file-manager/fm.module';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpModule, Http} from '@angular/http';
@@ -7,7 +8,6 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthGuard } from './shared';
 import { AuthenticationService } from './shared/services/auth/authentification.service';
 import { JobsStore } from './shared/stores/jobs-store';
 import { OarApiService } from './shared/services/oar-api';
@@ -38,7 +38,7 @@ export function HttpLoaderFactory(http: Http) {
         FmModule,
         AppRoutingModule
     ],
-    providers: [AuthenticationService, JobsStore, OarApiService, UserConfigStore],
+    providers: [AuthenticationService, JobsStore, OarApiService, UserConfigStore, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
