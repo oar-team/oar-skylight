@@ -1,0 +1,46 @@
+<div class="padding">
+    <h1>File Manager</h1>
+    <app-fm-breadcrumb (goTo)="getDirectory($event)" [uri]="uri">
+
+    </app-fm-breadcrumb>
+    <table class="table table-striped" [mfData]="folderItems" #mf="mfDataTable" [mfRowsOnPage]="5">
+        <thead>
+            <tr>
+                <th style="width: 5%">
+                    <mfDefaultSorter by="type">Type</mfDefaultSorter>
+                </th>
+                <th style="width: 20%">
+                    <mfDefaultSorter by="name">Name</mfDefaultSorter>
+                </th>
+                <th style="width: 10%">
+                    <mfDefaultSorter by="mtime">Last updated</mfDefaultSorter>
+                </th>
+                <th style="width: 20%">
+                    <mfDefaultSorter by="size">Size</mfDefaultSorter>
+                </th>
+                <th style="width: 20%">
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of mf.data">
+                <td (click)="onClickItem(item)" class="pointer">
+                    <i class="fa fa-folder-o" aria-hidden="true" *ngIf="item.type == 'd'"></i>
+                    <i class="fa fa-file" aria-hidden="true" *ngIf="item.type == 'f'"></i>
+                </td>
+                <td (click)="onClickItem(item)" class="pointer">{{item.name}}</td>
+                <td (click)="onClickItem(item)" class="pointer">{{item.mtime | date:'jms' }}</td>
+                <td (click)="onClickItem(item)" class="pointer">{{item.size}}<span *ngIf="item.size"> ko</span></td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteItem(item)">
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <button type="button" class="btn btn-success">Add to this Folder</button>
+        </tfoot>
+    </table>
+</div>
