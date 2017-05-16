@@ -1,9 +1,10 @@
 <div class="padding">
     <h1>File Manager</h1>
-    <app-fm-breadcrumb (goTo)="getDirectory($event)" [uri]="uri">
 
+    <app-fm-breadcrumb (goTo)="getDirectory($event)" [uri]="uri">
     </app-fm-breadcrumb>
-    <table class="table table-striped" [mfData]="folderItems" #mf="mfDataTable" [mfRowsOnPage]="5">
+
+    <table class="table table-striped" [mfData]="folderItems | dataFilter : filterQuery" #mf="mfDataTable" [mfRowsOnPage]="5">
         <thead>
             <tr>
                 <th style="width: 5%">
@@ -20,6 +21,13 @@
                 </th>
                 <th style="width: 20%">
                     Action
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="5">
+                    Filter by name:
+                    <input class="form-control" [(ngModel)]="filterQuery" />
                 </th>
             </tr>
         </thead>
@@ -40,7 +48,26 @@
             </tr>
         </tbody>
         <tfoot>
-            <button type="button" class="btn btn-success">Add to this Folder</button>
+
+            <tr>
+                <td colspan="5">
+                    <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+
+                    <button type="button" class="btn btn-success">Add to this Folder</button>
+                </td>
+            </tr>
         </tfoot>
     </table>
 </div>
+
+<p-fileUpload name="demo[]" url="http://localhost:3000/upload" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="1000000">
+    <ng-template pTemplate type="content">
+        <ul *ngIf="uploadedFiles.length">
+            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+    </ng-template>
+</p-fileUpload>

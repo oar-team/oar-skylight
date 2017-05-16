@@ -12,6 +12,8 @@ export class FmComponent implements OnInit {
   private folderItems: FmItem[] = [];
   private uri: string;
   private filePreview: string;
+  private filterQuery: string = '';
+
   constructor(private media: MediaService) {
     this.uri = '~/';
     this.getDirectory(this.uri);
@@ -25,7 +27,6 @@ export class FmComponent implements OnInit {
       (res: any) => {
         const resBody = JSON.parse(res._body);
         this.folderItems = resBody.items;
-        console.log(this.folderItems);
       }
     );
 
@@ -61,6 +62,14 @@ export class FmComponent implements OnInit {
     const path = this.uri + item.name;
 
     return path;
+  }
+
+  uploadedFiles: any[] = [];
+
+  onUpload(event) {
+    for (let file of event.files) {
+      this.uploadedFiles.push(file);
+    }
   }
 
 
