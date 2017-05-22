@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../services/auth/authentification.service';
 import { Injectable, HostListener } from '@angular/core';
 import { OarApiService } from '../services/oar-api';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
@@ -13,6 +14,7 @@ export class UserConfigStore {
   private urlMedia: string;
   private urlConfig: string;
   constructor(private oarApiService: OarApiService,
+    private auth: AuthenticationService,
     private http: Http) {
     this.urlConfig = '/~/.oar-skylight/config.json';
     this.urlMedia = this.oarApiService.urlMedia + this.urlConfig;
@@ -38,6 +40,9 @@ export class UserConfigStore {
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/octet-stream');
+    headers.append('Authorization', 'Basic ' + btoa(this.auth.getUser().getUsername() + ':' + this.auth.getUser().getPassword()));
+
+
     let options: RequestOptions = new RequestOptions({ headers: headers });
 
     let obs = this.http.post(
@@ -58,9 +63,11 @@ export class UserConfigStore {
    * load ~/.config/oar-skylight.json
    */
   loadConfig() {
+    const headers = new Headers();
+    headers.append('Authorization', 'Basic ' + btoa(this.auth.getUser().getUsername() + ':' + this.auth.getUser().getPassword()));
 
     let obs = this.http.get(
-      this.urlMedia
+      this.urlMedia, {headers: headers}
     ).subscribe(
       res => this.setConfigFromString(res.text()),
       err => this.saveConfig(new UserConfig()) // Create cofig file if not found
@@ -92,5 +99,7 @@ export class UserConfigStore {
   addJobDetailsProperty(property: string) {
     this.config.next(this.getUserConfig().addJobDetailProperty(property));
   }
+
+
 
 }
