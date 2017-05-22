@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Router, } from '@angular/router';
 import { User } from '../../models/user';
@@ -11,9 +12,8 @@ export class AuthenticationService {
   private user: BehaviorSubject<User>;
   private isLogged: BehaviorSubject<boolean>;
 
-  // TODO : use config params
-  private urlProtocole = 'http' + '://';
-  private urlWhoAmI: string = "localhost:46668/oarapi-priv/";
+  private urlProtocole = environment.API_PROTOCOLE + '://';
+  private urlWhoAmI: string = this.urlProtocole + environment.API + 'oarapi-priv/' + 'whoami.json';
 
   constructor(private _router: Router,
     private http: Http,
@@ -47,7 +47,7 @@ export class AuthenticationService {
     this.user.next(user);
   }
 
-  
+
   /**
    * Action of clicking in the login button
    */
@@ -62,7 +62,6 @@ export class AuthenticationService {
    * Get WhoAmI data and call isUserLogged
    */
   requestWhoAmI() {
-    let user = this.getUser();
 
     this.doRequestWhoAmI().subscribe(
       data => this.isUserLogged(data),
@@ -78,7 +77,7 @@ export class AuthenticationService {
   isUserLogged(data: any) {
 
     console.log('isUserLogged');
-    if (data.authenticated_user == this.getUser().getUsername()) {
+    if (data.authenticated_user === this.getUser().getUsername()) {
       this.setIsLogged(true);
     } else {
       this.setIsLogged(false);
@@ -87,6 +86,7 @@ export class AuthenticationService {
 
   setIsLogged(value: boolean) {
     this.isLogged.next(value);
+    sessionStorage.setItem('isLogged', '' + value);
   }
 
 
@@ -108,26 +108,34 @@ export class AuthenticationService {
 
   //  Getter for isLogged value
   getIsLoggedValue(): boolean {
-    return this.isLogged.getValue();
+    let isLogged = false;
+
+    if (this.isLogged.getValue()) {
+      isLogged = this.isLogged.getValue();
+    } else if (sessionStorage.getItem('isLogged') === 'true') {
+      isLogged = true;
+    } else if (sessionStorage.getItem('isLogged') === 'false') {
+      isLogged = false;
+    }
+
+    return isLogged;
   }
 
-  /** Request WhoAmI to the API.
+  /** Request WhoAmI to the API. We check if we are correctly logged In
   * if not logged the authenticated user is an empty string ('')
   * Level of access: private
   * API doc: http://oar.imag.fr/docs/latest/user/api.html#get-whoami
   */
   doRequestWhoAmI() {
-    let headers = new Headers();
-    let user = this.user.getValue();
+    const headers = new Headers();
+    const user = this.user.getValue();
 
-    // headers.append("Authorization", "Basic " + btoa(user.getUsername() + ":" + user.getPassword()));
+    headers.append('Authorization', 'Basic ' + btoa(user.getUsername() + ':' + user.getPassword()));
     headers.append('Content-Type', 'application/json');
 
-    // We use login:password@url to avoid the browser response of 401 (Auth form)
-    return this.http.get(this.urlProtocole +
-      user.getUsername() + ':' + user.getPassword() + '@' + this.urlWhoAmI + "whoami.json", {
-        headers: headers
-      }
+    return this.http.get(this.urlWhoAmI, {
+      headers: headers
+    }
     ).map(res => res.json());
   }
 
