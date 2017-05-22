@@ -20,8 +20,8 @@ export class OarApiService {
     private mdp = 'docker';
 
     private baseUrlOar = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi-priv/';
-    private urlResources = this.baseUrlOar + 'resources.json';
-    private urlJobs = this.baseUrlOar + 'jobs.json';
+    private urlResources = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'resources.json';
+    private urlJobs = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'jobs.json';
     private _urlMedia = this.baseUrlOar + 'media';
 
     constructor(
@@ -36,7 +36,7 @@ export class OarApiService {
        *     __return format :__ JSON
        */
     getJobs(): Observable<Response> {
-        const url =  environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'jobs.json';
+        const url = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'jobs.json';
         return this.http.get(
             url
         ).map(res => res.json());
@@ -50,7 +50,7 @@ export class OarApiService {
         const headers = this.generateHeaders();
 
         return this.http.get(
-             this.baseUrlOar + 'jobs.json?ids=' + ids.toString(), {headers: headers}
+            this.baseUrlOar + 'jobs.json?ids=' + ids.toString(), { headers: headers }
         ).map(res => res.json());
     }
 
@@ -64,7 +64,7 @@ export class OarApiService {
 
 
         return this.http.get(
-            this.baseUrlOar + 'jobs/' + id + '.json', {headers: headers}
+            this.baseUrlOar + 'jobs/' + id + '.json', { headers: headers }
         ).map(res => res.json());
     }
 
@@ -80,7 +80,7 @@ export class OarApiService {
         return this.http.get(
 
             //    TODO : Parameters for states
-            this.urlJobs + '?owner=' + username + '&state=Terminated,Running,Waiting', {headers: headers}
+            this.urlJobs + '?owner=' + username + '&state=Terminated,Running,Waiting', { headers: headers }
         ).map(res => res.json());
 
     }
@@ -92,10 +92,8 @@ export class OarApiService {
      */
     getResources(): Observable<Response> {
 
-        const headers = this.generateHeaders();
-
         return this.http.get(
-            this.urlResources, {headers: headers}
+            this.urlResources
         ).map(res => res.json());
     }
 
@@ -130,7 +128,7 @@ export class OarApiService {
         const headers = this.generateHeaders();
 
         return this.http.post(
-             this.baseUrlOar + 'jobs',
+            this.baseUrlOar + 'jobs',
             JSON.stringify(job), { headers: headers }
         );
 
@@ -140,6 +138,7 @@ export class OarApiService {
 
         const headers: Headers = new Headers();
         headers.append('Authorization', 'Basic ' + btoa(this.auth.getUser().getUsername() + ':' + this.auth.getUser().getPassword()));
+
         headers.append('Content-Type', 'application/json');
         return headers;
     }

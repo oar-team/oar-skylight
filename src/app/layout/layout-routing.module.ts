@@ -1,3 +1,4 @@
+import { AuthGuard } from './../shared/services/auth/auth-guard.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
@@ -14,7 +15,7 @@ const routes: Routes = [
             { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
             { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
-            { path: 'jobs', loadChildren: './jobs/jobs.module.ts#JobsModule' },
+            { path: 'jobs', loadChildren: './jobs/jobs.module.ts#JobsModule', canActivate: [AuthGuard] },
             { path: 'resources', loadChildren: './resources/resources.module.ts#ResourcesModule' },
             { path: 'search', loadChildren: './search/search.module.ts#SearchModule' },
         ]
