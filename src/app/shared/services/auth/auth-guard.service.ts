@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Message } from 'primeng/primeng';
 import { Observable } from 'rxjs/Rx';
@@ -17,15 +17,17 @@ import { AuthenticationService } from './authentification.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-  constructor(private auth: AuthenticationService, private router: Router) { }
+  constructor(private auth: AuthenticationService, private router: Router, private route: ActivatedRoute) { }
 
   canActivate(next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): boolean {
-    // If user is not logged in we'll send them to the homepage 
+
+    // If user is not logged in we'll send them to the login page 
     let bool: boolean = this.auth.getIsLoggedValue();
+
     if (!bool) {
-      this.router.navigate(['403']);
+      this.router.navigate(['login'],  { relativeTo: this.route });
     }
 
     return bool;
