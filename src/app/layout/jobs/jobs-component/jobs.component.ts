@@ -28,7 +28,7 @@ export class JobsComponent {
             jobs => this.jobs = jobs.toArray(),
             err => console.log(err)
         );
-       console.log(this.router.config);
+        console.log(this.router.config);
 
     }
 
@@ -44,9 +44,14 @@ export class JobsComponent {
 
     // Charge un ensemble de jobs
     loadJobs(data: any) {
-        for (let jsonJob of data.items) {
-            // let j:Job = new Job().deserialize(jsonJob);
-            this.getJob(jsonJob.id)
+        if (this.AuthService.getIsLogged()) {
+
+            for (let jsonJob of data.items) {
+                // let j:Job = new Job().deserialize(jsonJob);
+                this.getJob(jsonJob.id)
+            }
+        } else {
+            console.log('loadJobs not logged')
         }
     }
 

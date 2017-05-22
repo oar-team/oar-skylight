@@ -1,17 +1,19 @@
 {
-    "name": "sb-admin-angular4-bootstrap4",
-    "version": "1.0.0",
+    "name": "oar-skylight",
+    "version": "0.0.1",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
         "start": "ng serve --ec=true",
         "build": "ng build  --prod",
+        "compodoc": "./node_modules/.bin/compodoc -p tsconfig.json",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
     "private": true,
     "dependencies": {
+        "@angular/animations": "^4.0.0",
         "@angular/common": "^4.0.0",
         "@angular/compiler": "^4.0.0",
         "@angular/core": "^4.0.0",
@@ -37,6 +39,7 @@
     "devDependencies": {
         "@angular/cli": "1.0.0",
         "@angular/compiler-cli": "^4.0.0",
+        "@compodoc/compodoc": "^1.0.0-beta.9",
         "@types/jasmine": "2.5.38",
         "@types/node": "~6.0.60",
         "codelyzer": "~2.0.0",
@@ -45,6 +48,7 @@
         "karma": "~1.4.1",
         "karma-chrome-launcher": "~2.0.0",
         "karma-cli": "~1.0.1",
+        "karma-coverage-istanbul-reporter": "^0.2.0",
         "karma-jasmine": "~1.1.0",
         "karma-jasmine-html-reporter": "^0.2.2",
         "karma-coverage-istanbul-reporter": "^0.2.0",

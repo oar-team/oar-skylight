@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -15,6 +15,7 @@ import { HeaderComponent, SidebarComponent } from '../shared';
         FormsModule,
         TranslateModule,
         LayoutRoutingModule,
+        NgbModule.forRoot(),
     ],
     declarations: [
         LayoutComponent,

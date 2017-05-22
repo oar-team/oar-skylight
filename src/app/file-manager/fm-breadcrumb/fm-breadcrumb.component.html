@@ -1,0 +1,6 @@
+<div class="d-flex flex-row">
+    <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+    <ul>
+        <li *ngFor="let el of elements"> <a (click)="goto(el.link)">{{ el.name }}</a> /</li>
+    </ul>
+</div>
