@@ -2,3 +2,19 @@
 button {
     cursor: pointer;
 }
+
+.padding {
+    padding: 1em;
+}
+
+tbody button {
+    padding: 2px 7px;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+td.type {
+    padding: 5px 1em;
+}

@@ -1,6 +1,8 @@
 import { FmItem } from './../models/fm-item.interface';
 import { MediaService } from './../../shared/services/media/media.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
+
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-fm',
@@ -8,19 +10,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fm.component.scss']
 })
 export class FmComponent implements OnInit {
-
+  
+  // Item list for the current directory
   private folderItems: FmItem[] = [];
+
+  // Current directory
   private uri: string;
   private filePreview: string;
+  // query for the datatable, use by data-filter.pipe
   private filterQuery: string = '';
+  private selectedFile: FmItem;
 
-  constructor(private media: MediaService) {
+  uploadedFiles: any[] = [];
+  private uploadUrl: string = '';
+
+  constructor(private media: MediaService, public activeModal: NgbActiveModal) {
     this.uri = '~/';
     this.getDirectory(this.uri);
   }
 
+  /**
+   *  Change the current directory given an URI
+   */
   getDirectory(uri: string) {
-    console.log('getDir', uri);
     this.uri = uri;
 
     this.media.list(uri).subscribe(
@@ -30,14 +42,27 @@ export class FmComponent implements OnInit {
       }
     );
 
+    this.uriChange();
+
   }
 
   ngOnInit() {
+    this.uriChange();
+  }
+
+
+  uriChange() {
+    this.uploadUrl = this.media.getBaseUrl() + this.uri;
   }
 
   onClickItem(item: FmItem) {
+
+    // if item is a folder, change current directory
     if (item.type === 'd') {
       this.getDirectory(this.uri + item.name);
+    } else {
+      // If item is a file, we select the file
+      this.selectedFile = item;
     }
 
   }
@@ -46,6 +71,10 @@ export class FmComponent implements OnInit {
     this.getDirectory(this.uri);
   }
 
+  /**
+   * Use media service to delete a file
+   * TODO : Display validation message before delete
+   */
   deleteItem(item: FmItem) {
 
     this.media.deleteMedia(this.generatePath(item)).subscribe(
@@ -54,6 +83,9 @@ export class FmComponent implements OnInit {
     );
   }
 
+  /**
+   * Generate an URI for a given item in the current folder
+   */
   private generatePath(item: FmItem) {
 
     if (this.uri.slice(-1) !== '/') {
@@ -64,12 +96,12 @@ export class FmComponent implements OnInit {
     return path;
   }
 
-  uploadedFiles: any[] = [];
 
-  onUpload(event) {
-    for (let file of event.files) {
-      this.uploadedFiles.push(file);
-    }
+  /**
+   * Emit an event with the URI of the selected File
+   */
+  selectFile(selectedFile: FmItem) {
+    this.activeModal.close(this.generatePath(selectedFile));
   }
 
 

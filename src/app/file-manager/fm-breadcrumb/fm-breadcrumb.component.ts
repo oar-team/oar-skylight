@@ -32,7 +32,6 @@ export class FmBreadcrumbComponent implements OnInit {
 
     arrSplit.forEach(item => {
 
-      console.log('item', item);
       let tempArray = this.uri.split('/');
       let link = '';
       const index = arrSplit.indexOf(item);
@@ -52,7 +51,6 @@ export class FmBreadcrumbComponent implements OnInit {
 
 
   goto(link: string) {
-    console.log('goto', link);
     this.goTo.next(link);
     this.uri = link;
   }

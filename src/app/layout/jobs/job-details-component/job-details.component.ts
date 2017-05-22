@@ -1,3 +1,4 @@
+import { MediaService } from './../../../shared/services/media/media.service';
 import { Component, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { JobsStore } from '../../../shared/stores/jobs-store';
@@ -30,6 +31,7 @@ export class JobDetails implements AfterViewInit {
   constructor(private route: ActivatedRoute,
     private router: Router,
     private apiService: OarApiService,
+    private media: MediaService,
     private jobStore: JobsStore,
     private userConfig: UserConfigStore,
     private location: Location) {
@@ -74,25 +76,24 @@ export class JobDetails implements AfterViewInit {
 
   showStdOut() {
 
-    this.apiService.getMedia(this.job.stdoutFile).subscribe(
+    this.media.getMedia(this.job.stdoutFile).subscribe(
       (res: any) => {
-
-        this.displayStd = res._body
+        this.displayStd = res._body;
       },
       err => console.log(err)
-    )
+    );
 
   }
 
   showStdErr() {
 
-    this.apiService.getMedia(this.job.stderrFile).subscribe(
+    this.media.getMedia(this.job.stderrFile).subscribe(
       (res: any) => {
 
-        this.displayStd = res._body
+        this.displayStd = res._body;
       },
       err => console.log(err)
-    )
+    );
 
   }
 
@@ -100,30 +101,6 @@ export class JobDetails implements AfterViewInit {
     this.displayStd = undefined;
   }
 
-  /**
-   *    Get the json of a given job id
-  //  */
-  // getJob(id: string): Observable<any> {
-  //   let jsonJob: any;
-
-  //   let obs = this.apiService.getJob(id)
-
-  //   obs.subscribe(
-  //     data => this.setJob(data),
-  //     error => console.log(error)
-  //   )
-
-  //   return obs
-  // }
-
-  /**
-   *  Populate job with json
-   */
-  // setJob(json: any) {
-  //   console.log(json);
-  //   this.job = new Job().deserialize(json);
-  //   console.log(this.job);
-  // }
 
   getDetails() {
 

@@ -1,3 +1,4 @@
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { DataFilterPipe } from './data-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { DataTableModule } from 'angular2-datatable/index';
@@ -15,7 +16,8 @@ import { FmBreadcrumbComponent } from './fm-breadcrumb/fm-breadcrumb.component';
     FileUploadModule,
     FormsModule
   ],
+  exports: [FmComponent, FmBreadcrumbComponent],
   declarations: [FmComponent, FmBreadcrumbComponent, DataFilterPipe],
-   providers: [MediaService]
+   providers: [MediaService, NgbActiveModal]
 })
 export class FmModule { }

@@ -1,5 +1,11 @@
-<div class="padding">
-    <h1>File Manager</h1>
+<div class="modal-header">
+    <h4 class="modal-title">File Manager</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <h1></h1>
 
     <app-fm-breadcrumb (goTo)="getDirectory($event)" [uri]="uri">
     </app-fm-breadcrumb>
@@ -10,16 +16,16 @@
                 <th style="width: 5%">
                     <mfDefaultSorter by="type">Type</mfDefaultSorter>
                 </th>
-                <th style="width: 20%">
+                <th style="width: 65%">
                     <mfDefaultSorter by="name">Name</mfDefaultSorter>
                 </th>
                 <th style="width: 10%">
                     <mfDefaultSorter by="mtime">Last updated</mfDefaultSorter>
                 </th>
-                <th style="width: 20%">
+                <th style="width: 10%">
                     <mfDefaultSorter by="size">Size</mfDefaultSorter>
                 </th>
-                <th style="width: 20%">
+                <th style="width: 10%">
                     Action
                 </th>
             </tr>
@@ -32,8 +38,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of mf.data">
-                <td (click)="onClickItem(item)" class="pointer">
+            <tr *ngIf="mf.data.length == 0">
+                <td colspan="5">
+                    <p>There's nothing here ...</p>
+                </td>
+            </tr>
+            <tr *ngFor="let item of mf.data" [class.table-active]="item === selectedFile">
+                <td (click)="onClickItem(item)" class="pointer type">
                     <i class="fa fa-folder-o" aria-hidden="true" *ngIf="item.type == 'd'"></i>
                     <i class="fa fa-file" aria-hidden="true" *ngIf="item.type == 'f'"></i>
                 </td>
@@ -55,19 +66,19 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="5">
-
+                <td>
                     <button type="button" class="btn btn-success">Add to this Folder</button>
+                </td>
+                <td colspan="3">
+                </td>
+                <td>
                 </td>
             </tr>
         </tfoot>
     </table>
 </div>
 
-<p-fileUpload name="demo[]" url="http://localhost:3000/upload" (onUpload)="onUpload($event)" multiple="multiple" accept="image/*" maxFileSize="1000000">
-    <ng-template pTemplate type="content">
-        <ul *ngIf="uploadedFiles.length">
-            <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
-        </ul>
-    </ng-template>
-</p-fileUpload>
+<div class="modal-footer">
+
+    <button type="button" class="btn" [disabled]="!selectedFile" (click)="selectFile(selectedFile)">Select File</button>
+</div>
