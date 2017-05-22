@@ -11,8 +11,6 @@ export class MediaService {
 
   }
 
-
-
   getMedia(path: string): Observable<Response> {
 
     const urlStd = this.baseUrl + '~/' + path;
@@ -47,5 +45,9 @@ export class MediaService {
       url, { headers: headers }
     ).map(res => res);
 
+  }
+
+  getBaseUrl() {
+    return this.baseUrl;
   }
 }

@@ -1,3 +1,5 @@
+import { FmComponent } from './../../../file-manager/fm/fm.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component } from '@angular/core';
 import { JobFormTemplate } from './JobFormTemplate';
 import { OarApiService } from '../../../shared/services/oar-api/oar-api.service';
@@ -15,7 +17,7 @@ export class NewJobFormComponent {
 
   jobTemplate: JobFormTemplate = new JobFormTemplate();
 
-  constructor(private oarApi: OarApiService, private router: Router, private jobStore: JobsStore) {
+  constructor(private oarApi: OarApiService, private router: Router, private jobStore: JobsStore, private modalService: NgbModal) {
 
   }
 
@@ -104,11 +106,19 @@ export class NewJobFormComponent {
           this.jobStore.addJob(result.json().id).subscribe(
             //() => this.redirect(result.json()),
             err => console.log(err),
-          )
+          );
         }
       },
       err => console.log(err)
     )
+  }
+
+  openFm() {
+    const modalRef = this.modalService.open(FmComponent, {size: 'lg'});
+    modalRef.result.then(filePath => {
+      this.jobTemplate.script = filePath;
+    })
+    .catch(err => console.log(err));
   }
 
 
