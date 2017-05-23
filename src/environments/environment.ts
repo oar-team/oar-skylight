@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   API_PROTOCOLE: 'http',
-  API: 'localhost:46668/'
+  API: 'localhost:46668/',
+  POLLING: 30000
 };

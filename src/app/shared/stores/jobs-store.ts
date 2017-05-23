@@ -1,3 +1,4 @@
+import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Job, OarApiService } from '../services/oar-api';
 import { List } from 'immutable';
@@ -14,14 +15,13 @@ export class JobsStore {
   constructor(private jobOarApiService: OarApiService) {
     // this.loadInitialData();
 
-    Observable.interval(4000)
+    Observable.interval(environment.POLLING)
       .mergeMap(() => this.jobOarApiService.getJobs())
       .subscribe(
       json => {
-        this.initJobList(json)
-        this.updateJobs()
-      }
-      )
+        this.initJobList(json);
+        this.updateJobs();
+      });
 
   }
 
