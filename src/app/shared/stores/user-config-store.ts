@@ -100,6 +100,11 @@ export class UserConfigStore {
     this.config.next(this.getUserConfig().addJobDetailProperty(property));
   }
 
+  unsetJobDetailsProperty(property: string) {
+    const config =  this.getUserConfig();
+    this.config.next(config.unsetProperty(property));
+  }
+
 
 
 }

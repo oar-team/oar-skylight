@@ -45,7 +45,6 @@ export class JobsComponent {
     // Charge un ensemble de jobs
     loadJobs(data: any) {
         if (this.AuthService.getIsLogged()) {
-
             for (let jsonJob of data.items) {
                 // let j:Job = new Job().deserialize(jsonJob);
                 this.getJob(jsonJob.id)

@@ -18,7 +18,7 @@ interface Serializable<T> {
  */
 export class UserConfig {
 
-  private _jobDetailProperties:string[];
+  private _jobDetailProperties: string[];
 
 
 
@@ -32,13 +32,22 @@ export class UserConfig {
   }
 
 
-  deserialize(input :any) {
+  deserialize(input: any) {
     this._jobDetailProperties = input._jobDetailProperties;
     return this;
   }
 
-  addJobDetailProperty(property:string):UserConfig {
+  addJobDetailProperty(property: string): UserConfig {
     this.jobDetailProperties.push(property);
+    return this;
+  }
+
+  unsetProperty(property: string): UserConfig {
+    const keyIndex = this.jobDetailProperties.indexOf(property);
+
+    if (keyIndex >= 0) {
+      this.jobDetailProperties.splice(keyIndex, 1);
+    }
     return this;
   }
 }

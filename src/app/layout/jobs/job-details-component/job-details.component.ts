@@ -41,7 +41,10 @@ export class JobDetails implements AfterViewInit {
     this.jobParametersToDisplay = [];
 
     this.userConfig.getConfigObs().subscribe(
-      config => this.jobParametersToDisplay = config.jobDetailProperties,
+      config => {
+        this.jobParametersToDisplay = config.jobDetailProperties
+        console.log(this.jobParametersToDisplay)
+      },
       err => console.log(err)
     );
 
@@ -125,6 +128,10 @@ export class JobDetails implements AfterViewInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  unsetPropertyToPref(property: string) {
+    this.userConfig.unsetJobDetailsProperty(property);
   }
 
 }

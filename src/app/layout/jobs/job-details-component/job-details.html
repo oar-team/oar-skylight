@@ -69,8 +69,11 @@
                     <div ngbDropdown class="d-inline-block">
                         <button class="btn btn-default" id="dropdownMenu" ngbDropdownToggle>Options</button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a class="dropdown-item" (click)="addPropertyToPref(key)" title="Add this property to the default job display">
+                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) < 0" (click)="addPropertyToPref(key)" title="Add this property to the default job display">
                                 <button class="dropdown-item">Add parameter to favorite</button>
+                            </a>
+                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) >= 0" (click)="unsetPropertyToPref(key)" title="Remove this property to the default job display">
+                                <button class="dropdown-item">Remove parameter from favorite</button>
                             </a>
                         </div>
                     </div>

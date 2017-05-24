@@ -12,14 +12,13 @@ export class JobsStore {
 
   private _jobs: BehaviorSubject<List<Job>> = new BehaviorSubject(List([]));
 
-  constructor(private jobOarApiService: OarApiService) {
+  constructor(private oarApiService: OarApiService) {
     // this.loadInitialData();
 
     Observable.interval(environment.POLLING)
-      .mergeMap(() => this.jobOarApiService.getJobs())
-      .subscribe(
-      json => {
-        this.initJobList(json);
+      .mergeMap(() => this.oarApiService.getJobs())
+      .subscribe( json => {
+        this.initNewJobs(json);
         this.updateJobs();
       });
 
@@ -28,7 +27,7 @@ export class JobsStore {
   /**
    * update jobs that are not terminated
    */
-  updateJobs() {
+  updateJobs(): void {
 
     let jobIds: number[] =
       this._jobs.getValue()
@@ -37,7 +36,7 @@ export class JobsStore {
 
     if (jobIds.length > 0) {
 
-      this.jobOarApiService.getJobsById(jobIds).subscribe(
+      this.oarApiService.getJobsById(jobIds).subscribe(
         (json: any) => {
 
           if (json.items.length > 0) {
@@ -61,16 +60,11 @@ export class JobsStore {
     }
 
   }
-  /**
-   * load from userspace ?
-   */
-  loadInitialData() {
 
-  }
 
   updateJob(id: string) {
 
-    this.jobOarApiService.getJob(id).subscribe(
+    this.oarApiService.getJob(id).subscribe(
       jsonJob => {
         let job: Job = new Job().deserialize(jsonJob);
         this.addJobWithJob(job, this._jobs.getValue().toArray());
@@ -78,7 +72,7 @@ export class JobsStore {
     )
   }
 
-  initJobList(json: any) {
+  initNewJobs(json: any) {
     // Update if there's something to update
     if (json.items.length > 0) {
 
@@ -96,7 +90,7 @@ export class JobsStore {
 
   addJob(id: string): Observable<any> {
 
-    let obs = this.jobOarApiService.getJob(id);
+    let obs = this.oarApiService.getJob(id);
 
     obs.subscribe(
       json => this.addJobWithJob(
@@ -138,7 +132,7 @@ export class JobsStore {
    *
    * todo : if job doesn't exist, do a request
    */
-  getJob(id: string): Job {
+  private getJob(id: string): Job {
 
     if (this.containsJob(id, this._jobs.getValue().toArray())) {
 
@@ -150,19 +144,11 @@ export class JobsStore {
       console.log('else')
 
       let job: Job = new Job();
-      return job
-      // this.jobOarApiService.getJob(id).subscribe(
-      //   jobJson => {
-      //     return job.deserialize(jobJson)
-      //   }
-      // )
+      return job;
     }
 
   }
 
-  getJobObs(id: string) {
-
-  }
 
   /**
    * Check if a job exist in the List
