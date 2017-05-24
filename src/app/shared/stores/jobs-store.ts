@@ -111,7 +111,6 @@ export class JobsStore {
     if (!this.containsJob(job.id.toString(), arr)) {
       this._jobs.next(this._jobs.getValue().push(job));
     } else {
-      console.log('updating job-' + job.id + ' | state :' + job.state)
       arr[arr.findIndex(jobArr => jobArr.id == job.id)] = job;
 
       this._jobs.next(List(arr));
@@ -157,6 +156,16 @@ export class JobsStore {
     return jobs.some(
       (job) => job.id.toString() === id
     )
+  }
+
+  removeJob(job: Job) {
+
+    let jobs = this._jobs.getValue().toArray();
+    if (this.containsJob(job.id.toString(), jobs)) {
+      const jobIndex =  jobs.indexOf(job);
+      this._jobs.next(this._jobs.getValue().remove(jobIndex));
+
+    }
   }
 
 
