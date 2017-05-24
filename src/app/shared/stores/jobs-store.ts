@@ -34,7 +34,7 @@ export class JobsStore {
         .filter(job => job.state != "Terminated" && job.state != "Error")
         .map((job) => job.id).toArray();
 
-    if (jobIds.length > 0) {
+    if (jobIds.length > 0 ) {
 
       this.oarApiService.getJobsById(jobIds).subscribe(
         (json: any) => {
