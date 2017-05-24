@@ -1,3 +1,5 @@
+import { User } from './../../../shared/models/user';
+import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { OarApiService } from '../../../shared/services/oar-api/oar-api.service';
 import { Job } from '../../../shared/services/oar-api/model/job';
@@ -16,7 +18,7 @@ import { AuthenticationService } from '../../../shared/services/auth/authentific
 export class JobsComponent {
 
     jobs: any;
-
+    user: User;
     constructor(
         private apiService: OarApiService,
         private router: Router,
@@ -28,7 +30,11 @@ export class JobsComponent {
             jobs => this.jobs = jobs.toArray(),
             err => console.log(err)
         );
-        console.log(this.router.config);
+
+        this.AuthService.getUserObservable().subscribe(
+            user => this.user = user,
+            err => console.log(err)
+        );
 
     }
 
@@ -52,6 +58,7 @@ export class JobsComponent {
         } else {
             console.log('loadJobs not logged')
         }
+
     }
 
     /**
@@ -64,5 +71,9 @@ export class JobsComponent {
 
     gotoJob(id: string) {
         this.router.navigate(['' + id]);
+    }
+
+    hideJob(job: Job) {
+        this.jobStore.removeJob(job);
     }
 }
