@@ -45,4 +45,8 @@ export class HeaderComponent implements OnInit {
 
         return false;
     }
+
+    login() {
+        this.router.navigate(['login']);
+    }
 }

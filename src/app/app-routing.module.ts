@@ -7,7 +7,6 @@ const routes: Routes = [
     { path: '', loadChildren: './layout/layout.module#LayoutModule' },
     { path: 'fm', component: FmComponent },
     { path: 'login', loadChildren: './login/login.module#LoginModule' },
-    { path: 'signup', loadChildren: './signup/signup.module#SignupModule' },
     { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
     { path: '**', redirectTo: 'not-found' }
 ];
