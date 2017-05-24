@@ -47,11 +47,23 @@ export class OarApiService {
      */
     getJobsById(ids: number[]): Observable<Response> {
 
-        const headers = this.generateHeaders();
+        if (this.auth.getIsLoggedValue()) {
+            console.log('user is logged')
 
-        return this.http.get(
-            this.baseUrlOar + 'jobs.json?ids=' + ids.toString(), { headers: headers }
-        ).map(res => res.json());
+            const headers = this.generateHeaders();
+
+            return this.http.get(
+                this.baseUrlOar + 'jobs.json?ids=' + ids.toString(), { headers: headers }
+            ).map(res => {
+                if (res.status < 200 || res.status >= 300) {
+                    console.log('res err')
+                    throw new Error('This request has failed ' + res.status);
+                }
+                return res.json();
+            });
+        } else {
+            console.log('Could not execute this request');
+        }
     }
 
     /**
