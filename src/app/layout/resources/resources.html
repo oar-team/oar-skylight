@@ -6,34 +6,36 @@
 
 <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="25">
     <thead>
-    <tr>
-        <th style="width: 10%">
-            <mfDefaultSorter by="id">ID</mfDefaultSorter>
-        </th>
-        <th style="width: 10%">
-            <mfDefaultSorter by="stopTime">available_upto</mfDefaultSorter>
-        </th>
-        <th style="width: 10%">
-            <mfDefaultSorter by="owner">state</mfDefaultSorter>
-        </th>
-        <th style="width: 30%">
-            <mfDefaultSorter by="message">network_address</mfDefaultSorter>
-        </th>     
-    </tr>
+        <tr>
+            <th style="width: 10%">
+                <mfDefaultSorter by="id">ID</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="stopTime">available_upto</mfDefaultSorter>
+            </th>
+            <th style="width: 10%">
+                <mfDefaultSorter by="owner">state</mfDefaultSorter>
+            </th>
+            <th style="width: 30%">
+                <mfDefaultSorter by="message">network_address</mfDefaultSorter>
+            </th>
+        </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of mf.data">
-        <td >{{item.id}}</td>
-        <td>{{item.available_upto | date:'medium'}}</td>
-        <td>{{item.state}}</td>
-        <td>{{item.network_address}}</td>
-    </tr>
+        <tr *ngFor="let item of mf.data">
+            <td>{{item.id}}</td>
+            <td>{{item.available_upto | date:'medium'}}</td>
+            <td>{{item.state}}
+                <app-job-state [state]="item.state"></app-job-state>
+            </td>
+            <td>{{item.network_address}}</td>
+        </tr>
     </tbody>
     <tfoot>
-    <tr>
-        <td colspan="4">
-            <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
-        </td>
-    </tr>
+        <tr>
+            <td colspan="4">
+                <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator>
+            </td>
+        </tr>
     </tfoot>
 </table>

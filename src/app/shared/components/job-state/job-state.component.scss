@@ -1,0 +1,11 @@
+.round {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+}
+
+:host {
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: middle;
+}

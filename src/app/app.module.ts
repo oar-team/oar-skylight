@@ -12,6 +12,7 @@ import { AuthenticationService } from './shared/services/auth/authentification.s
 import { JobsStore } from './shared/stores/jobs-store';
 import { OarApiService } from './shared/services/oar-api';
 import { UserConfigStore } from './shared/stores/user-config-store';
+import { JobStateComponent } from './shared/components/job-state/job-state.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {

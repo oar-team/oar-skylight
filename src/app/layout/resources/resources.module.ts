@@ -1,11 +1,13 @@
+import { JobStateModule } from './../../shared/components/job-state/job-state.module';
+import { JobStateComponent } from './../../shared/components/job-state/job-state.component';
 import { NgModule } from '@angular/core';
 import { ResourcesComponent } from './resources.component';
-import {DataTableModule} from "angular2-datatable/index";
+import {DataTableModule} from 'angular2-datatable/index';
 import { ResourcesRoutingModule } from './';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-    imports: [CommonModule, DataTableModule, ResourcesRoutingModule],
+    imports: [CommonModule, DataTableModule, ResourcesRoutingModule, JobStateModule],
     providers: [],
     declarations: [ResourcesComponent],
     exports: [ResourcesComponent]
