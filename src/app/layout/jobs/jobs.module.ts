@@ -1,3 +1,4 @@
+import { JobStateModule } from './../../shared/components/job-state/job-state.module';
 import { JobStateComponent } from './../../shared/components/job-state/job-state.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,7 @@ import { PageHeaderModule } from '../../shared';
 import {NewJobFormComponent } from './';
 
 @NgModule({
-    imports: [CommonModule, DataTableModule, NgbDropdownModule, JobsRoutingModule, PageHeaderModule, FormsModule],
+    imports: [CommonModule, DataTableModule, NgbDropdownModule, JobsRoutingModule, PageHeaderModule, FormsModule, JobStateModule],
     providers: [AuthGuard],
     declarations: [JobsComponent, NewJobFormComponent, JobDetails, KeysPipe],
     exports: [JobsComponent, JobDetails, NewJobFormComponent]
