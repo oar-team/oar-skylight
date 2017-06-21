@@ -12,7 +12,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class JobStateComponent implements OnInit {
 
   @Input() state: String;
-  private color: String = '';
+  color: String = '';
   constructor() { }
   ngOnInit() {
     if (this.state === 'Alive') {

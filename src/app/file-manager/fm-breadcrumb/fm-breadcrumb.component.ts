@@ -16,7 +16,7 @@ export class FmBreadcrumbComponent implements OnInit {
    */
   @Output() goTo = new EventEmitter<string>();
 
-  private elements: BreadcrumbLink[];
+  elements: BreadcrumbLink[];
   constructor() {
     this.elements = [];
   }

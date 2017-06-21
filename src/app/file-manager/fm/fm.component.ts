@@ -12,17 +12,17 @@ import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 export class FmComponent implements OnInit {
   
   // Item list for the current directory
-  private folderItems: FmItem[] = [];
+  folderItems: FmItem[] = [];
 
   // Current directory
-  private uri: string;
-  private filePreview: string;
+  uri: string;
+  filePreview: string;
   // query for the datatable, use by data-filter.pipe
-  private filterQuery: string = '';
-  private selectedFile: FmItem;
+  filterQuery: string = '';
+  selectedFile: FmItem;
 
   uploadedFiles: any[] = [];
-  private uploadUrl: string = '';
+  uploadUrl: string = '';
 
   constructor(private media: MediaService, public activeModal: NgbActiveModal) {
     this.uri = '~/';
