@@ -1,0 +1,12 @@
+<div>
+    <button type="button" class="btn btn" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseUpload">
+        Upload to this folder
+    </button>
+
+</div>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div id="collapseUpload" [ngbCollapse]="isCollapsed">
+        <input type="file" class="form-control-file" (change)="fileChanged($event)" name="file">
+        <button (click)="upload()" [disabled]="!file" class="btn btn-success">Upload</button>
+    </div>
+</div>
