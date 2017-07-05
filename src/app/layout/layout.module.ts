@@ -1,3 +1,4 @@
+import { FmModule } from './../file-manager/fm.module';
 import { JobStateModule } from './../shared/components/job-state/job-state.module';
 import { JobStateComponent } from './../shared/components/job-state/job-state.component';
 import { NgModule } from '@angular/core';
@@ -17,7 +18,8 @@ import { HeaderComponent, SidebarComponent } from '../shared';
         FormsModule,
         TranslateModule,
         LayoutRoutingModule,
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        FmModule
     ],
     declarations: [
         LayoutComponent,
