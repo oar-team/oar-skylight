@@ -46,14 +46,15 @@
     </div>
 </div>
 <div class="row" [hidden]="!displayStd">
-    <div class="col-md-8 offset-md-2">
-
-        <pre>
-      <code [innerHTML]="displayStd" highlight class="bash">
-        
-      </code>
-    </pre>
-
+    <div class="col-md-8">
+        <div class="output">
+            <span><small> output :</small></span>
+            <pre class="code">
+                <code [innerHTML]="displayStd">
+                    
+                </code>
+            </pre>
+        </div>
     </div>
 </div>
 <div class="row">

@@ -12,6 +12,7 @@ import { Location } from '@angular/common';
   selector: 'job-details',
   templateUrl: 'job-details.html',
   providers: [OarApiService],
+  styleUrls: ['job-details.component.scss']
 })
 
 export class JobDetails implements AfterViewInit {
