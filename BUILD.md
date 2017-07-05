@@ -3,6 +3,7 @@
 ## Production build
 
 1) Make sure everything is set up properly.
+- You have **node >=v6.9.0 and npm >=3**
 - Checkout on banche you want to build
 - Do a `npm update` to make sure libraries are up to date (or `npm install`)
 
