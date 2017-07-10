@@ -11,7 +11,7 @@
                 <mfDefaultSorter by="id">ID</mfDefaultSorter>
             </th>
             <th style="width: 10%">
-                <mfDefaultSorter by="stopTime">available_upto</mfDefaultSorter>
+                <mfDefaultSorter by="stopTime">Last Update</mfDefaultSorter>
             </th>
             <th style="width: 10%">
                 <mfDefaultSorter by="owner">state</mfDefaultSorter>
@@ -24,7 +24,7 @@
     <tbody>
         <tr *ngFor="let item of mf.data">
             <td>{{item.id}}</td>
-            <td>{{item.available_upto | date:'medium'}}</td>
+            <td>{{item.apiTimestamp | date:'medium'}}</td>
             <td>{{item.state}}
                 <app-job-state [state]="item.state"></app-job-state>
             </td>
