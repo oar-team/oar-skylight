@@ -1,3 +1,4 @@
+import { SimpleNotificationsModule } from 'angular2-notifications';
 import { AuthGuard } from './shared/services/auth/auth-guard.service';
 import { FmModule } from './file-manager/fm.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +14,7 @@ import { JobsStore } from './shared/stores/jobs-store';
 import { OarApiService } from './shared/services/oar-api';
 import { UserConfigStore } from './shared/stores/user-config-store';
 import { JobStateComponent } from './shared/components/job-state/job-state.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -28,7 +30,9 @@ export function HttpLoaderFactory(http: Http) {
         BrowserModule,
         FormsModule,
         HttpModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
+        SimpleNotificationsModule.forRoot(),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

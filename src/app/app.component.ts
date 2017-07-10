@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { NotificationsService } from 'angular2-notifications';
 
 @Component({
     selector: 'app-root',
@@ -8,8 +9,18 @@ import { TranslateService } from '@ngx-translate/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    
+    public notificationsOptions = {
+        position: ['bottom', 'right'],
+        timeOut: 3000,
+        lastOnBottom: true,
+        showProgressBar: false,
+        pauseOnHover: false,
+        clickToClose: true,
+        maxLength: 10
+    };
 
-    constructor(private translate: TranslateService) {
+    constructor(private translate: TranslateService, private notifications: NotificationsService) {
         translate.addLangs(['en', 'fr', 'ur']);
         translate.setDefaultLang('en');
 
