@@ -50,7 +50,7 @@
                 </td>
                 <td (click)="onClickItem(item)" class="pointer">{{item.name}}</td>
                 <td (click)="onClickItem(item)" class="pointer">{{item.mtime | date:'jms' }}</td>
-                <td (click)="onClickItem(item)" class="pointer">{{item.size}}<span *ngIf="item.size"> ko</span></td>
+                <td (click)="onClickItem(item)" class="pointer">{{item.size | fileSize:2}}<span *ngIf="item.size"></span></td>
                 <td>
                     <button class="btn btn-danger" (click)="deleteItem(item)">
                         <i class="fa fa-trash-o" aria-hidden="true"></i>

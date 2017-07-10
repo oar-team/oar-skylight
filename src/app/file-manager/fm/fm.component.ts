@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { FmItem } from './../models/fm-item.interface';
 import { MediaService } from './../../shared/services/media/media.service';
 import { Component, OnInit, OnChanges, Output, EventEmitter } from '@angular/core';
@@ -35,7 +36,8 @@ export class FmComponent implements OnInit {
   getDirectory(uri: string) {
     this.uri = uri;
 
-    this.media.list(uri).subscribe(
+    this.media.list(uri)
+    .subscribe(
       (res: any) => {
         const resBody = JSON.parse(res._body);
         this.folderItems = resBody.items;
