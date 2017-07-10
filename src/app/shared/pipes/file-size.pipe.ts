@@ -21,8 +21,9 @@ export class FileSizePipe implements PipeTransform {
     'PB'
   ];
 
-  transform(bytes: number = 0, precision: number = 2 ) : string {
-    if ( isNaN( parseFloat( String(bytes) )) || ! isFinite( bytes ) ) return '?';
+  transform(bytes: number = 0, precision: number = 1 ): string {
+
+    if (isNaN( parseFloat( String(bytes) )) || ! isFinite( bytes ) ) return '?';
 
     let unit = 0;
 
@@ -31,6 +32,11 @@ export class FileSizePipe implements PipeTransform {
       unit ++;
     }
 
-    return bytes.toFixed( + precision ) + ' ' + this.units[ unit ];
+    if (typeof bytes.toFixed !== "undefined") { 
+        return bytes.toFixed( + precision ) + ' ' + this.units[ unit ];
+    } else {
+      return null;
+    }
+
   }
 }
