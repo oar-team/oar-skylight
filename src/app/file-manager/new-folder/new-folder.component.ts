@@ -3,11 +3,24 @@ import { EventEmitter } from '@angular/core';
 import { Output } from '@angular/core';
 import { MediaService } from './../../shared/services/media/media.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-new-folder',
   templateUrl: './new-folder.component.html',
-  styleUrls: ['./new-folder.component.scss']
+  styleUrls: ['./new-folder.component.scss'],
+    animations: [
+      trigger('flyInOut', [
+        state('in', style({transform: 'translateX(0)'})),
+        transition('void => *', [
+          style({transform: 'translateX(100%)'}),
+          animate(150)
+        ]),
+        transition('* => void', [
+          animate(50, style({transform: 'translateX(100%)'}))
+        ])
+      ])
+  ]
 })
 export class NewFolderComponent implements OnInit {
 
