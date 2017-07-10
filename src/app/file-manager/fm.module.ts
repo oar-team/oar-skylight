@@ -12,6 +12,7 @@ import { FmComponent } from './fm/fm.component';
 import { FmBreadcrumbComponent } from './fm-breadcrumb/fm-breadcrumb.component';
 import { UploadComponent } from './upload/upload.component';
 import { NewFolderComponent } from './new-folder/new-folder.component';
+import { DeleteItemComponent } from './delete-item/delete-item.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,15 @@ import { NewFolderComponent } from './new-folder/new-folder.component';
     ReactiveFormsModule
   ],
   exports: [FmComponent, FmBreadcrumbComponent],
-  declarations: [FmComponent, FmBreadcrumbComponent, DataFilterPipe, UploadComponent, NewFolderComponent, FileSizePipe],
+  declarations: [
+                  FmComponent,
+                  FmBreadcrumbComponent,
+                  DataFilterPipe,
+                  UploadComponent,
+                  NewFolderComponent,
+                  FileSizePipe,
+                  DeleteItemComponent
+                ],
    providers: [MediaService, NgbActiveModal]
 })
 export class FmModule { }

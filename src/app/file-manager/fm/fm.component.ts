@@ -73,16 +73,11 @@ export class FmComponent implements OnInit {
     this.getDirectory(this.uri);
   }
 
-  /**
-   * Use media service to delete a file
-   * TODO : Display validation message before delete
-   */
-  deleteItem(item: FmItem) {
-    
-     this.media.deleteMedia(this.generatePath(item)).subscribe(
-       succes => this.reload(),
-       err => console.log(err)
-     );
+  downloadItem(item: FmItem) {
+    this.media.getMedia(this.generatePath(item)).subscribe(
+      res => {console.log(res)},
+      err => console.log(err)
+    );
   }
 
   /**
