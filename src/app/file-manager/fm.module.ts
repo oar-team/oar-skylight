@@ -1,3 +1,5 @@
+import { FileSizePipe } from './../shared/pipes/file-size.pipe';
+import { SharedPipesModule } from './../shared/pipes/shared-pipes.module';
 import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DataFilterPipe } from './data-filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +23,7 @@ import { NewFolderComponent } from './new-folder/new-folder.component';
     ReactiveFormsModule
   ],
   exports: [FmComponent, FmBreadcrumbComponent],
-  declarations: [FmComponent, FmBreadcrumbComponent, DataFilterPipe, UploadComponent, NewFolderComponent],
+  declarations: [FmComponent, FmBreadcrumbComponent, DataFilterPipe, UploadComponent, NewFolderComponent, FileSizePipe],
    providers: [MediaService, NgbActiveModal]
 })
 export class FmModule { }
