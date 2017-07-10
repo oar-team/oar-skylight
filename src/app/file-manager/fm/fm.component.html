@@ -67,7 +67,10 @@
             </tr>
             <tr>
                 <td colspan="5">
-                    <app-upload [path]="uri"></app-upload>
+                    <div class="options">
+                        <app-upload [path]="uri" (refresh)="refresh($event)"></app-upload>
+                        <app-new-folder [path]="uri" (refresh)="refresh($event)"></app-new-folder>
+                    </div>
                 </td>
             </tr>
         </tfoot>

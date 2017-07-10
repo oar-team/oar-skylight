@@ -76,11 +76,11 @@ export class FmComponent implements OnInit {
    * TODO : Display validation message before delete
    */
   deleteItem(item: FmItem) {
-
-    this.media.deleteMedia(this.generatePath(item)).subscribe(
-      succes => this.reload(),
-      err => console.log(err)
-    );
+    
+     this.media.deleteMedia(this.generatePath(item)).subscribe(
+       succes => this.reload(),
+       err => console.log(err)
+     );
   }
 
   /**
@@ -102,6 +102,11 @@ export class FmComponent implements OnInit {
    */
   selectFile(selectedFile: FmItem) {
     this.activeModal.close(this.generatePath(selectedFile));
+  }
+
+  refresh() {
+    console.log('refresh')
+    this.reload();
   }
 
 

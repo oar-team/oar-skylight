@@ -1,0 +1,25 @@
+div.button-left {
+    float: left;
+}
+
+input {
+    margin: 0 1em;
+}
+
+div.display {
+    display: flex;
+}
+
+form {
+    display: flex;
+}
+
+:host {
+    -webkit-transition: width 2s;
+    /* Safari */
+    transition: width 2s;
+}
+
+.redBorder {
+    border: 1px solid red;
+}

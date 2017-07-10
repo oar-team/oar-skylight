@@ -1,14 +1,15 @@
+import { Observable } from 'rxjs/Rx';
+import { NotificationsService } from 'angular2-notifications';
 import { AuthenticationService } from './../auth/authentification.service';
 import { environment } from './../../../../environments/environment';
 import { Http, Headers, Response, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MediaService {
 
   private baseUrl = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi-priv/media/';
-  constructor(private http: Http, private auth: AuthenticationService) {
+  constructor(private http: Http, private auth: AuthenticationService, private notifications: NotificationsService) {
 
   }
 
@@ -35,15 +36,16 @@ export class MediaService {
   }
 
   deleteMedia(path: string): Observable<Response> {
-
+    console.log('deleteMedia')
     const url = this.baseUrl + path;
-
+    console.log(url);
     const headers = this.generateHeaders('json');
 
-    return this.http.delete(
+    const req =  this.http.delete(
       url, { headers: headers }
-    ).map(res => res);
+    ).map(res => res.json());
 
+    return req;
   }
 
 
@@ -52,7 +54,7 @@ export class MediaService {
    * @param path
    * @param file
    */
-  uploadMedia(path: string, file: File) {
+  uploadMedia(path: string, file: File): Observable<Response> {
 
     // We need to put the name and extension in the url
     const url = this.baseUrl + path + '/' + file.name;
@@ -64,12 +66,52 @@ export class MediaService {
     const headers = this.generateHeaders('stream');
     const options = new RequestOptions({ headers: headers });
 
-    this.http.post(url, blob, options)
+    const req = this.http.post(url, blob, options);
+        req
         .catch(error => Observable.throw(error))
         .subscribe(
-            data => console.log('success'),
+            data => this.notifications.success('File uploaded !', file.name + ' was successfully uploaded'),
+            error => this.notifications.error('Something went wrong !', error)
+        );
+
+    return req;
+  }
+  
+  /**
+   * Create a folder. Since the API doesn't allow the create of folder, we will create a file in a given folder and then delete the file
+   * @param path
+   */
+  createFolder(path: String) {
+
+    // We need to put the name and extension in the url
+    const randomId = Math.random().toString(36).substring(2);
+    const url = this.baseUrl + path + '/' + randomId ;
+
+    // API expect an 'application/octet-stream'
+    const headers = this.generateHeaders('stream');
+    const options = new RequestOptions({ headers: headers });
+
+    // To be able to do multiple subscribe on this Observable, we use the share function
+    // Share() change the observable from 'cold' to 'hot'
+    const req = this.http.post(url, new Blob(), options).share();
+
+        req
+        .catch(error => Observable.throw(error))
+        .subscribe(// TODO : Finish
+            (data: any) => {
+              console.log(data.status);
+              if (data.status >= 200 && data.status < 300 ) {
+                 this.deleteMedia(path + '/' + randomId).subscribe(
+                   res => this.notifications.success('Folder created !', ''),
+                   err => console.log(err)
+                 );
+              }
+
+            },
             error => console.log(error)
         );
+
+    return req;
   }
 
   getBaseUrl() {

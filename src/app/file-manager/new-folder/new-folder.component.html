@@ -1,0 +1,11 @@
+<div class="button-left">
+    <button class="btn" (click)="isInputVisible = !isInputVisible">
+    New Folder
+</button>
+</div>
+<div class="display" *ngIf="isInputVisible">
+    <form [formGroup]="newFolderForm" novalidate>
+        <input type="text" class="form-control" name="folderName" [ngClass]="{'redBorder': !newFolderForm.valid}" [(ngModel)]="folderName" formControlName="name" placeholder="Folder name" required>
+        <button class="btn btn-success" [disabled]="!newFolderForm.valid" (click)="createFolder()">Create</button>
+    </form>
+</div>
