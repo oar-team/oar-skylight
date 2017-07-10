@@ -110,15 +110,7 @@ export class AuthenticationService {
   getIsLoggedValue(): boolean {
     let isLogged = false;
 
-    if (this.isLogged.getValue()) {
-      isLogged = this.isLogged.getValue();
-    } else if (sessionStorage.getItem('isLogged') === 'true') {
-      isLogged = true;
-    } else if (sessionStorage.getItem('isLogged') === 'false') {
-      isLogged = false;
-    }
-
-    return isLogged;
+    return this.isLogged.getValue();
   }
 
   /** Request WhoAmI to the API. We check if we are correctly logged In
