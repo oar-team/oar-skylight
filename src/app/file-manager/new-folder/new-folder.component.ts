@@ -27,7 +27,7 @@ export class NewFolderComponent implements OnInit {
   public isInputVisible = false;
   public folderName: String;
   @Input() path: string;
-  @Output() refresh: EventEmitter<String> = new EventEmitter<String>();
+  @Output() refresh: EventEmitter<String> = new EventEmitter<String>(true);
 
   newFolderForm = new FormGroup ({
     name: new FormControl('', Validators.pattern('^[A-Za-z][A-Za-z0-9]*$'))

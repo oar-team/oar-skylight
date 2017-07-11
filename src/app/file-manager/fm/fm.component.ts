@@ -101,7 +101,7 @@ export class FmComponent implements OnInit {
     this.activeModal.close(this.generatePath(selectedFile));
   }
 
-  refresh() {
+  refresh(event) {
     console.log('refresh')
     this.reload();
   }
