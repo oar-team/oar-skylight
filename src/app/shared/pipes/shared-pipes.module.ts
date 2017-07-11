@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule
     ],
-    declarations: [FileSizePipe]
+    declarations: []
 })
 export class SharedPipesModule { }
