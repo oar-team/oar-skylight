@@ -20,7 +20,7 @@ export class OarApiService {
     private mdp = 'docker';
 
     private baseUrlOar = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi-priv/';
-    private urlResources = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'resources.json';
+    private urlResources = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi-priv/' + 'resources.json';
     private urlJobs = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'jobs.json';
     private _urlMedia = this.baseUrlOar + 'media';
 
@@ -36,9 +36,11 @@ export class OarApiService {
        *     __return format :__ JSON
        */
     getJobs(): Observable<Response> {
-        const url = environment.API_PROTOCOLE + '://' + environment.API + 'oarapi/' + 'jobs.json';
+
+        const headers = this.generateHeaders();
+        const url = this.baseUrlOar + 'jobs.json';
         return this.http.get(
-            url
+            url, {headers: headers}
         ).map(res => res.json());
     }
 
@@ -104,9 +106,13 @@ export class OarApiService {
      */
     getResources(): Observable<Response> {
 
+        const headers = this.generateHeaders();
+
         return this.http.get(
-            this.urlResources
-        ).map(res => res.json());
+            this.urlResources, { headers: headers }
+        )
+        .map(res => res.json())
+        .catch((error: any) => { return this.handleError(error); });
     }
 
 
@@ -145,7 +151,10 @@ export class OarApiService {
         );
 
     }
-
+    
+    /**
+     * Generate JSON headers with Basic Auth
+     */
     private generateHeaders() {
 
         const headers: Headers = new Headers();
@@ -154,6 +163,11 @@ export class OarApiService {
         headers.append('Content-Type', 'application/json');
         return headers;
     }
+
+
+  handleError(error: any): Observable<any> {
+        return Observable.throw(new Error(error.status));
+  }
 
 
 }
