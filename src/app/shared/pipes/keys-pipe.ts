@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 /**
  * Custom pipe that return a list of key for each element.
@@ -11,13 +11,15 @@ import { Pipe, PipeTransform } from '@angular/core';
           {{ entry.value}}
 
  */
-@Pipe({ name: 'keys' })
+@Pipe({ name: "keys" })
 export class KeysPipe implements PipeTransform {
   transform(value: any, args: string[]): any {
-    let keys: any[] = [];
+    const keys: any[] = [];
+
     for (let key in value) {
       keys.push({ key: key, value: value[key] });
     }
+
     return keys;
   }
 }
