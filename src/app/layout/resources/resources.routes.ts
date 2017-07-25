@@ -6,7 +6,7 @@ import { ResourcesComponent } from './';
 
 
 const routes: Routes = [
-    { path: '', component: ResourcesComponent},
+    { path: '', component: ResourcesComponent, canActivate: [AuthGuard] },
 ];
 
 

@@ -3,7 +3,13 @@
 <div class="list-group">
     <a *ngFor="let job of jobs" href="#" class="list-group-item" >{{job.id}} - {{job.owner}}</a>
 </div>-->
-
+<table class="table">
+    <tr>
+        <td *ngFor="let state of resourcesRecap() | keys">
+            <app-job-state [state]="state.key"></app-job-state> {{ state.key }} : {{ state.value }}
+        </td>
+    </tr>
+</table>
 <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="25">
     <thead>
         <tr>
@@ -14,7 +20,7 @@
                 <mfDefaultSorter by="stopTime">Last Update</mfDefaultSorter>
             </th>
             <th style="width: 10%">
-                <mfDefaultSorter by="owner">state</mfDefaultSorter>
+                <mfDefaultSorter by="state">state</mfDefaultSorter>
             </th>
             <th style="width: 30%">
                 <mfDefaultSorter by="message">network_address</mfDefaultSorter>
