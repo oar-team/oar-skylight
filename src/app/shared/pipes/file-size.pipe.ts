@@ -1,42 +1,43 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
-/*
+/**
  * Convert bytes into largest possible unit.
+ * 
  * Takes an precision argument that defaults to 2.
- * Usage:
+ * 
+ * [Credit to JonCatmull]{@link https://gist.github.com/JonCatmull/ecdf9441aaa37336d9ae2c7f9cb7289a}
+ * 
+ * __Usage__:
+ * @example
  *   bytes | fileSize:precision
- * Example:
+ * @example
  *   {{ 1024 |  fileSize}}
  *   formats to: 1 KB
-*/
-@Pipe({name: 'fileSize'})
+ * 
+ * 
+ * 
+ * @export
+ * @class FileSizePipe
+ * @implements {PipeTransform}
+ */
+@Pipe({ name: "fileSize" })
 export class FileSizePipe implements PipeTransform {
+  private units = ["bytes", "KB", "MB", "GB", "TB", "PB"];
 
-  private units = [
-    'bytes',
-    'KB',
-    'MB',
-    'GB',
-    'TB',
-    'PB'
-  ];
-
-  transform(bytes: number = 0, precision: number = 1 ): string {
-
-    if (isNaN( parseFloat( String(bytes) )) || ! isFinite( bytes ) ) return '?';
+  transform(bytes: number = 0, precision: number = 1): string {
+    if (isNaN(parseFloat(String(bytes))) || !isFinite(bytes)) return "?";
 
     let unit = 0;
 
-    while ( bytes >= 1024 ) {
+    while (bytes >= 1024) {
       bytes /= 1024;
-      unit ++;
+      unit++;
     }
 
-    if (typeof bytes.toFixed !== "undefined") { 
-        return bytes.toFixed( + precision ) + ' ' + this.units[ unit ];
+    if (typeof bytes.toFixed !== "undefined") {
+      return bytes.toFixed(+precision) + " " + this.units[unit];
     } else {
       return null;
     }
-
   }
 }
