@@ -1,10 +1,10 @@
-import { MediaService } from './../../shared/services/media/media.service';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MediaService } from "./../../shared/services/media/media.service";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-upload',
-  templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  selector: "app-upload",
+  templateUrl: "./upload.component.html",
+  styleUrls: ["./upload.component.scss"]
 })
 export class UploadComponent implements OnInit {
   public isCollapsed: Boolean = true;
@@ -36,7 +36,7 @@ export class UploadComponent implements OnInit {
       req.subscribe(res => {
         // If upload successfull
         this.isCollapsed = true;
-        this.refresh.next('');
+        this.refresh.next("");
       });
     }
   }
