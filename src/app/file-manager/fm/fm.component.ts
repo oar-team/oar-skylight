@@ -63,12 +63,7 @@ export class FmComponent implements OnInit {
   
   uploadUrl: string = "";
   
-  /**
-   * Creates an instance of FmComponent.
-   * @param {MediaService} media 
-   * @param {NgbActiveModal} activeModal 
-   * @memberof FmComponent
-   */
+
   constructor(private media: MediaService, public activeModal: NgbActiveModal) {
     this.uri = "~/";
     this.getDirectory(this.uri);

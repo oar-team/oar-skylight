@@ -32,16 +32,12 @@ export class FmBreadcrumbComponent {
 
   elements: BreadcrumbLink[];
 
-  /**
-   * Creates an instance of FmBreadcrumbComponent.
-   * @memberof FmBreadcrumbComponent
-   */
   constructor() {
     this.elements = [];
   }
 
   /**
-   * Generate an array of {@link BreadcrumbLink} for the breadcrumb into {@link FmBreadcrumbComponent#elements} property
+   * Generate an array of BreadcrumbLink for the breadcrumb into elements property
    * 
    * @memberof FmBreadcrumbComponent
    */
