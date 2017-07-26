@@ -1,8 +1,6 @@
 # TODO 
 
-- Errors handler + UI
-- File Manager Upload - download
-alert delete
+- File Manager Download
 - Stderr stdout console style
 - Templates
 - Link : Resources & node list + details link
