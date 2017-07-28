@@ -36,9 +36,6 @@
                         <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
                                 <li class="link">
-                                    <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
                                     <a 
                                         
                                          href="../overview.html" 
@@ -47,19 +44,30 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./todo.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>TODO
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
@@ -76,6 +84,12 @@
                                 </li>
                                 <li class="link">
                                     <a href="../modules/FmModule.html" >FmModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -126,14 +140,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -144,6 +158,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -158,6 +175,9 @@
                                     <a href="../components/JobDetails.html" >JobDetails</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/JobsComponent.html" >JobsComponent</a>
                                 </li>
                                 <li class="link">
@@ -165,6 +185,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NewJobFormComponent.html"  data-type="entity-link" class="active" >NewJobFormComponent</a>
@@ -193,23 +216,29 @@
                                 <li class="link">
                                     <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
                                     <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Job.html" >Job</a>
@@ -236,14 +265,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -270,20 +299,54 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/FmItem.html" >FmItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
                                     <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                 </li>
                                 <li class="link">
                                     <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -291,6 +354,9 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -333,9 +399,6 @@
                                <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
                                        <li class="link">
-                                           <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
                                            <a 
                                                
                                                 href="../overview.html" 
@@ -344,19 +407,30 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./todo.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>TODO
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
@@ -373,6 +447,12 @@
                                        </li>
                                        <li class="link">
                                            <a href="../modules/FmModule.html" >FmModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -423,14 +503,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -441,6 +521,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -455,6 +538,9 @@
                                            <a href="../components/JobDetails.html" >JobDetails</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/JobsComponent.html" >JobsComponent</a>
                                        </li>
                                        <li class="link">
@@ -462,6 +548,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NewJobFormComponent.html"  data-type="entity-link" class="active" >NewJobFormComponent</a>
@@ -490,23 +579,29 @@
                                        <li class="link">
                                            <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
                                            <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Job.html" >Job</a>
@@ -533,14 +628,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -567,20 +662,54 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/FmItem.html" >FmItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
                                            <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                        </li>
                                        <li class="link">
                                            <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -588,6 +717,9 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -612,6 +744,8 @@
                    <div class="content-data">
 
 
+
+
 <ol class="breadcrumb">
   <li>Components</li>
   <li>NewJobFormComponent</li>
@@ -619,7 +753,7 @@
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab" data-link="infos">Infos</a>
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
 
     <li>
@@ -635,7 +769,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -695,11 +829,11 @@
                             <code>constructor(oarApi: <a href="../injectables/OarApiService.html">OarApiService</a>, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank">Router</a>, jobStore: <a href="../injectables/JobsStore.html">JobsStore</a>, modalService: NgbModal)</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:18</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:18</a></div>
+                                </td>
+                            </tr>
     
                 </tbody>
             </table>
@@ -724,15 +858,17 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:28</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:28</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-description"><p>Submit the job from the Form<br/>We use jobTemplate .getXXX() to format our request</p><br/></div>
+                                <div class="io-description"><p>Submit the job from the Form
+    We use jobTemplate .getXXX() to format our request</p>
+    </div>
     
                                 <div class="io-description">
                                     <b>Returns : </b>    <code>void</code>
@@ -756,15 +892,16 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:55</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:55</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-description"><p>Redirect to the job detail page</p><br/></div>
+                                <div class="io-description"><p>Redirect to the job detail page</p>
+    </div>
     
                                 <div class="io-description">
                                         <b>Parameters :</b>
@@ -794,68 +931,6 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> demo</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>demo()</code>
-                        </td>
-                    </tr>
-    
-    
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:64</a></div>
-                            </td>
-                        </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> submitNewJobFormDemo</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-    <code>submitNewJobFormDemo()</code>
-                        </td>
-                    </tr>
-    
-    
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:93</a></div>
-                            </td>
-                        </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    
-                                <div class="io-description">
-                                    <b>Returns : </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
                             <b> openFm</b>
                         </td>
                     </tr>
@@ -866,11 +941,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:116</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:64</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -905,9 +980,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:18</a></div>
+                                <i>Type : </i>    <code><a href="../classes/JobFormTemplate.html" target="_self" >JobFormTemplate</a></code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/layout/jobs/post-job-component/new-job-form.component.ts:18</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
     </section>
@@ -976,58 +1057,6 @@ export class NewJobFormComponent {
     if (jobId) {
       this.router.navigate([&#x27;jobs/&#x27; + jobId])
     }
-  }
-
-  demo(): void {
-    let jobsToPost: JobFormTemplate[] &#x3D; [];
-
-
-    let jobT &#x3D; new JobFormTemplate();
-    jobT.script &#x3D; &#x60;/bin/sleep 5; 
-        echo &#x27;Hello World \n Job took 5s&#x27;;
-        &#x60;;
-    jobsToPost.push(jobT);
-
-    for (let i &#x3D; 0; i &lt; 32; i++) {
-      let jobT &#x3D; new JobFormTemplate();
-      let randomTime &#x3D; Math.floor(Math.random() * (150 - 5)) + 5;
-      jobT.name &#x3D; &#x27;Demo job &#x27; + i;
-      jobT.script &#x3D; &#x27;/bin/sleep &#x27; + randomTime;
-      jobsToPost.push(jobT);
-    }
-
-    jobsToPost.forEach(
-      job &#x3D;&gt; {
-        this.jobTemplate &#x3D; job;
-        this.submitNewJobFormDemo();
-      }
-    );
-
-    this.router.navigate([&#x27;dashboard/jobs&#x27;]);
-
-  }
-
-  submitNewJobFormDemo() {
-    let resource &#x3D; this.jobTemplate.getResource();
-    let name &#x3D; this.jobTemplate.getName();
-    let command &#x3D; this.jobTemplate.getCommand();
-    let directory &#x3D; this.jobTemplate.getDirectory();
-    let property &#x3D; this.jobTemplate.getProperty();
-    let type &#x3D; this.jobTemplate.getType();
-    let reservation &#x3D; this.jobTemplate.getReservation();
-
-    this.oarApi.postNewJob(resource, name, command, directory, property, type, reservation).subscribe(
-      result &#x3D;&gt; {
-        let jobId &#x3D; result.json().id
-        if (jobId) {
-          this.jobStore.addJob(result.json().id).subscribe(
-            //() &#x3D;&gt; this.redirect(result.json()),
-            err &#x3D;&gt; console.log(err),
-          );
-        }
-      },
-      err &#x3D;&gt; console.log(err)
-    )
   }
 
   openFm() {
@@ -1143,8 +1172,6 @@ export class NewJobFormComponent {
                     &lt;div class&#x3D;&quot;col-lg-2 offset-lg-6&quot;&gt;
 
                         &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-default&quot; [class.disabled]&#x3D;&quot;!jobForm.valid&quot;&gt;Submit Job&lt;/button&gt;
-
-                        &lt;button type&#x3D;&quot;button&quot; (click)&#x3D;&quot;demo()&quot; class&#x3D;&quot;btn btn-success&quot;&gt;Demo&lt;/button&gt;
                     &lt;/div&gt;
 
                 &lt;/div&gt;
@@ -1181,8 +1208,8 @@ export class NewJobFormComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">    <h1> New Job </h1>    <form #jobForm="ngForm" (ngSubmit)="submitNewJobForm()">        <div class="row">            <!-- COL 1 -->            <div class="col-lg-6 col-xs-12">                <div class="form-group">                    <label for="inputRessourcesJobForm">Nodes</label>                    <input type="number" class="form-control" id="inputRessourcesJobForm" required [(ngModel)]="jobTemplate.nodes" name="nodes">                    <small class="form-text text-muted">Number of nodes</small>                </div>                <div class="form-group">                    <label for="inputJobNameJobForm">Name</label>                    <input type="text" class="form-control" id="inputJobNameJobForm" required [(ngModel)]="jobTemplate.name" name="name">                </div>                <div class="form-group">                    <label for="inputRunJobForm">Program to run</label>                    <div class="input-group">                        <input type="text" class="form-control" id="inputRunJobForm" [(ngModel)]="jobTemplate.script" name="script">                        <span class="input-group-btn">                            <button class="btn btn-secondary" type="button" (click)="openFm()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>                        </span>                    </div>                </div>                <div class="form-group">                    <label for="inputTypesJobForm">Types</label>                    <input type="text" class="form-control" id="inputTypesJobForm" [(ngModel)]="jobTemplate.types" name="types">                </div>                <div class="form-group">                    <label for="inputReservationDatesJobForm">Reservation dates</label>                    <input type="text" class="form-control" id="inputReservationDatesJobForm">                </div>            </div>            <!-- COL 2 -->            <div class="col-lg-6  col-xs-12">                <div class="form-group">                    <label for="inputPropertiesJobForm">Properties</label>                    <input type="text" class="form-control" id="inputPropertiesJobForm">                </div>                <div class="form-group">                    <label for="inputCpuJobForm">CPU</label>                    <input type="number" class="form-control" id="inputCpuJobForm" required [(ngModel)]="jobTemplate.cpu" name="cpu">                </div>                <div class="form-group">                    <label for="inputWalltimeJobForm">Walltime</label>                    <input type="time" class="form-control" id="inputWalltimeJobForm" name="time" step="600" required [(ngModel)]="jobTemplate.walltime" name="walltime">                    <small class="form-text text-muted">hours : minutes</small>                </div>                <div class="form-group">                    <label for="inputDirectoryJobForm">Directory</label>                    <input type="text" class="form-control" id="inputDirectoryJobForm">                </div>            </div>            <div class="col-lg-12 text-center">                <div class="row">                    <div class="col-lg-2 offset-lg-6">                        <button type="submit" class="btn btn-default" [class.disabled]="!jobForm.valid">Submit Job</button>                        <button type="button" (click)="demo()" class="btn btn-success">Demo</button>                    </div>                </div>            </div>        </div>    </form></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FmBreadcrumbComponent', 'selector': 'app-fm-breadcrumb'},{'name': 'FmComponent', 'selector': 'app-fm'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'JobDetails', 'selector': 'job-details'},{'name': 'JobsComponent', 'selector': 'jobs-page'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NewJobFormComponent', 'selector': 'new-job-form'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'ResourcesComponent', 'selector': 'resources-page'},{'name': 'SearchComponent', 'selector': 'search-page'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'StatComponent', 'selector': 'app-stat'},{'name': 'TimelineComponent', 'selector': 'app-timeline'}];
+        var COMPONENT_TEMPLATE = '<div><div class="container-fluid">    <h1> New Job </h1>    <form #jobForm="ngForm" (ngSubmit)="submitNewJobForm()">        <div class="row">            <!-- COL 1 -->            <div class="col-lg-6 col-xs-12">                <div class="form-group">                    <label for="inputRessourcesJobForm">Nodes</label>                    <input type="number" class="form-control" id="inputRessourcesJobForm" required [(ngModel)]="jobTemplate.nodes" name="nodes">                    <small class="form-text text-muted">Number of nodes</small>                </div>                <div class="form-group">                    <label for="inputJobNameJobForm">Name</label>                    <input type="text" class="form-control" id="inputJobNameJobForm" required [(ngModel)]="jobTemplate.name" name="name">                </div>                <div class="form-group">                    <label for="inputRunJobForm">Program to run</label>                    <div class="input-group">                        <input type="text" class="form-control" id="inputRunJobForm" [(ngModel)]="jobTemplate.script" name="script">                        <span class="input-group-btn">                            <button class="btn btn-secondary" type="button" (click)="openFm()"><i class="fa fa-folder-open" aria-hidden="true"></i></button>                        </span>                    </div>                </div>                <div class="form-group">                    <label for="inputTypesJobForm">Types</label>                    <input type="text" class="form-control" id="inputTypesJobForm" [(ngModel)]="jobTemplate.types" name="types">                </div>                <div class="form-group">                    <label for="inputReservationDatesJobForm">Reservation dates</label>                    <input type="text" class="form-control" id="inputReservationDatesJobForm">                </div>            </div>            <!-- COL 2 -->            <div class="col-lg-6  col-xs-12">                <div class="form-group">                    <label for="inputPropertiesJobForm">Properties</label>                    <input type="text" class="form-control" id="inputPropertiesJobForm">                </div>                <div class="form-group">                    <label for="inputCpuJobForm">CPU</label>                    <input type="number" class="form-control" id="inputCpuJobForm" required [(ngModel)]="jobTemplate.cpu" name="cpu">                </div>                <div class="form-group">                    <label for="inputWalltimeJobForm">Walltime</label>                    <input type="time" class="form-control" id="inputWalltimeJobForm" name="time" step="600" required [(ngModel)]="jobTemplate.walltime" name="walltime">                    <small class="form-text text-muted">hours : minutes</small>                </div>                <div class="form-group">                    <label for="inputDirectoryJobForm">Directory</label>                    <input type="text" class="form-control" id="inputDirectoryJobForm">                </div>            </div>            <div class="col-lg-12 text-center">                <div class="row">                    <div class="col-lg-2 offset-lg-6">                        <button type="submit" class="btn btn-default" [class.disabled]="!jobForm.valid">Submit Job</button>                    </div>                </div>            </div>        </div>    </form></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteItemComponent', 'selector': 'app-delete-item'},{'name': 'FmBreadcrumbComponent', 'selector': 'app-fm-breadcrumb'},{'name': 'FmComponent', 'selector': 'app-fm'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'JobDetails', 'selector': 'job-details'},{'name': 'JobStateComponent', 'selector': 'app-job-state'},{'name': 'JobsComponent', 'selector': 'jobs-page'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NewFolderComponent', 'selector': 'app-new-folder'},{'name': 'NewJobFormComponent', 'selector': 'new-job-form'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'ResourcesComponent', 'selector': 'resources-page'},{'name': 'SearchComponent', 'selector': 'search-page'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'StatComponent', 'selector': 'app-stat'},{'name': 'TimelineComponent', 'selector': 'app-timeline'},{'name': 'UploadComponent', 'selector': 'app-upload'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NewJobFormComponent'};
 </script>

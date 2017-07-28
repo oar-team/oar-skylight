@@ -36,9 +36,6 @@
                         <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
                                 <li class="link">
-                                    <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
                                     <a 
                                         
                                          href="../overview.html" 
@@ -47,19 +44,30 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./todo.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>TODO
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
@@ -76,6 +84,12 @@
                                 </li>
                                 <li class="link">
                                     <a href="../modules/FmModule.html" >FmModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -126,14 +140,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -144,6 +158,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -158,6 +175,9 @@
                                     <a href="../components/JobDetails.html"  data-type="entity-link" class="active" >JobDetails</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/JobsComponent.html" >JobsComponent</a>
                                 </li>
                                 <li class="link">
@@ -165,6 +185,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -193,23 +216,29 @@
                                 <li class="link">
                                     <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
                                     <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Job.html" >Job</a>
@@ -236,14 +265,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -270,20 +299,54 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/FmItem.html" >FmItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
                                     <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                 </li>
                                 <li class="link">
                                     <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -291,6 +354,9 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -333,9 +399,6 @@
                                <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
                                        <li class="link">
-                                           <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
                                            <a 
                                                
                                                 href="../overview.html" 
@@ -344,19 +407,30 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./todo.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>TODO
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
@@ -373,6 +447,12 @@
                                        </li>
                                        <li class="link">
                                            <a href="../modules/FmModule.html" >FmModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -423,14 +503,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -441,6 +521,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -455,6 +538,9 @@
                                            <a href="../components/JobDetails.html"  data-type="entity-link" class="active" >JobDetails</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/JobsComponent.html" >JobsComponent</a>
                                        </li>
                                        <li class="link">
@@ -462,6 +548,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -490,23 +579,29 @@
                                        <li class="link">
                                            <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
                                            <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Job.html" >Job</a>
@@ -533,14 +628,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -567,20 +662,54 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/FmItem.html" >FmItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
                                            <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                        </li>
                                        <li class="link">
                                            <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -588,6 +717,9 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -612,6 +744,8 @@
                    <div class="content-data">
 
 
+
+
 <ol class="breadcrumb">
   <li>Components</li>
   <li>JobDetails</li>
@@ -619,7 +753,7 @@
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab" data-link="infos">Infos</a>
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
 
     <li>
@@ -635,7 +769,7 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -685,6 +819,10 @@
                 <td class="col-md-9"><code>job-details</code></td>
             </tr>
 
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>job-details.component.scss</code></td>
+            </tr>
 
 
 
@@ -709,11 +847,11 @@
                             <code>constructor(route: <a href="https://angular.io/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank">ActivatedRoute</a>, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank">Router</a>, apiService: <a href="../injectables/OarApiService.html">OarApiService</a>, media: <a href="../injectables/MediaService.html">MediaService</a>, jobStore: <a href="../injectables/JobsStore.html">JobsStore</a>, userConfig: <a href="../injectables/UserConfigStore.html">UserConfigStore</a>, location: <a href="https://angular.io/docs/ts/latest/api/common/index/Location-class.html" target="_blank">Location</a>)</code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:29</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:28</a></div>
+                                </td>
+                            </tr>
     
                 </tbody>
             </table>
@@ -738,11 +876,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:53</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:53</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -769,11 +907,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:76</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:71</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -800,11 +938,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:80</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:75</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -831,11 +969,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:91</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:84</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -862,11 +1000,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="103" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:103</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="93" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:93</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -893,11 +1031,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:108</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:97</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -924,11 +1062,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:121</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:109</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -955,11 +1093,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="125" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:125</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:113</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -986,11 +1124,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:129</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:117</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -1017,11 +1155,11 @@
                     </tr>
     
     
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="133" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:133</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:121</a></div>
+                                </td>
+                            </tr>
     
                     <tr>
                         <td class="col-md-4">
@@ -1056,9 +1194,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:22</a></div>
+                                <i>Type : </i>    <code>Number</code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:21</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1076,14 +1220,20 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Decorators : </i><code>ViewChild</code>
+                                <i>Type : </i>    <code><a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank" >ElementRef</a></code>
+    
                             </td>
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:29</a></div>
+                                <i>Decorators : </i><code>ViewChild</code>
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:28</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1101,9 +1251,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:25</a></div>
+                                <i>Type : </i>    <code>string</code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:24</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1121,9 +1277,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:20</a></div>
+                                <i>Type : </i>    <code>number</code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:19</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1141,9 +1303,15 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:21</a></div>
+                                <i>Type : </i>    <code><a href="../classes/Job.html" target="_self" >Job</a></code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:20</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1161,14 +1329,20 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Decorators : </i><code>ViewChild</code>
+                                <i>Type : </i>    <code>any</code>
+    
                             </td>
                         </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:19</a></div>
+                                <i>Decorators : </i><code>ViewChild</code>
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:18</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1180,15 +1354,21 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>jobKeys:     <code>String[]</code>
+                            <code>jobKeys:     <code>[]</code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:28</a></div>
+                                <i>Type : </i>    <code>[]</code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:27</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1200,15 +1380,21 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>jobParametersToDisplay:     <code>string[]</code>
+                            <code>jobParametersToDisplay:     <code>[]</code>
     </bcode>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:24</a></div>
+                                <i>Type : </i>    <code>[]</code>
+    
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:23</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -1220,7 +1406,7 @@
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>messageButton:     <code>string</code>
+                            <code>messageButton:     <code></code>
     </bcode>
                         </td>
                     </tr>
@@ -1229,11 +1415,11 @@
                                 <i>Default value : </i><code>Display details</code>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:23</a></div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/layout/jobs/job-details-component/job-details.component.ts:22</a></div>
+                                </td>
+                            </tr>
                 </tbody>
             </table>
     </section>
@@ -1241,43 +1427,44 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { MediaService } from &#x27;./../../../shared/services/media/media.service&#x27;;
-import { Component, ViewChild, AfterViewInit, ElementRef } from &#x27;@angular/core&#x27;;
-import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
-import { JobsStore } from &#x27;../../../shared/stores/jobs-store&#x27;;
-import { Job, OarApiService, Link } from &#x27;../../../shared/services/oar-api&#x27;;
-import { UserConfigStore } from &#x27;../../../shared/stores/user-config-store&#x27;;
-import { Observable } from &#x27;rxjs&#x27;;
-import { Location } from &#x27;@angular/common&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { MediaService } from &quot;./../../../shared/services/media/media.service&quot;;
+import { Component, ViewChild, AfterViewInit, ElementRef } from &quot;@angular/core&quot;;
+import { Router, ActivatedRoute } from &quot;@angular/router&quot;;
+import { JobsStore } from &quot;../../../shared/stores/jobs-store&quot;;
+import { Job, OarApiService, Link } from &quot;../../../shared/services/oar-api&quot;;
+import { UserConfigStore } from &quot;../../../shared/stores/user-config-store&quot;;
+import { Observable } from &quot;rxjs&quot;;
+import { Location } from &quot;@angular/common&quot;;
 
 @Component({
   moduleId: module.id,
-  selector: &#x27;job-details&#x27;,
-  templateUrl: &#x27;job-details.html&#x27;,
+  selector: &quot;job-details&quot;,
+  templateUrl: &quot;job-details.html&quot;,
   providers: [OarApiService],
+  styleUrls: [&quot;job-details.component.scss&quot;]
 })
-
 export class JobDetails implements AfterViewInit {
-
-  @ViewChild(&#x27;jobDetailsTable&#x27;) jobDetailsTable: any;
+  @ViewChild(&quot;jobDetailsTable&quot;) jobDetailsTable: any;
   id: number;
   job: Job;
   buttonState: Number;
-  messageButton &#x3D; &#x27;Display details&#x27;;
+  messageButton &#x3D; &quot;Display details&quot;;
   jobParametersToDisplay: string[];
-  displayStd: string &#x3D; &#x27;&#x27;;
+  displayStd: string &#x3D; &quot;&quot;;
 
   // Use to display sorted key values
   jobKeys: String[];
-  @ViewChild(&#x27;code&#x27;) codeElement: ElementRef;
+  @ViewChild(&quot;code&quot;) codeElement: ElementRef;
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private router: Router,
     private apiService: OarApiService,
     private media: MediaService,
     private jobStore: JobsStore,
     private userConfig: UserConfigStore,
-    private location: Location) {
+    private location: Location
+  ) {
     this.job &#x3D; new Job();
     this.buttonState &#x3D; 1;
     this.jobKeys &#x3D; [];
@@ -1285,35 +1472,29 @@ export class JobDetails implements AfterViewInit {
 
     this.userConfig.getConfigObs().subscribe(
       config &#x3D;&gt; {
-        this.jobParametersToDisplay &#x3D; config.jobDetailProperties
-        console.log(this.jobParametersToDisplay)
+        this.jobParametersToDisplay &#x3D; config.jobDetailProperties;
+        console.log(this.jobParametersToDisplay);
       },
       err &#x3D;&gt; console.log(err)
     );
-
   }
 
   ngOnInit() {
     this.route.params.subscribe(params &#x3D;&gt; {
-      let id &#x3D; +params[&#x27;id&#x27;];// (+) converts string &#x27;id&#x27; to a number
+      let id &#x3D; +params[&quot;id&quot;]; // (+) converts string &#x27;id&#x27; to a number
       this.id &#x3D; id;
 
-      this.jobStore.jobs.subscribe(
-        list &#x3D;&gt; {
-          if (list.find(job &#x3D;&gt; job.id &#x3D;&#x3D; id)) {
+      this.jobStore.jobs.subscribe(list &#x3D;&gt; {
+        if (list.find(job &#x3D;&gt; job.id &#x3D;&#x3D;&#x3D; id)) {
+          this.job &#x3D; list.find(job &#x3D;&gt; job.id &#x3D;&#x3D;&#x3D; id);
 
-            this.job &#x3D; list.find(job &#x3D;&gt; job.id &#x3D;&#x3D; id)
-
-            this.jobKeys &#x3D; Object.keys(this.job.json);
-            this.jobKeys.sort();
-          } else {
-            this.jobStore.addJob(id.toString());
-          }
+          this.jobKeys &#x3D; Object.keys(this.job.json);
+          this.jobKeys.sort();
+        } else {
+          this.jobStore.addJob(id.toString());
         }
-      );
-
+      });
     });
-
   }
 
   ngAfterViewInit() {
@@ -1321,48 +1502,41 @@ export class JobDetails implements AfterViewInit {
   }
 
   showStdOut() {
-
     this.media.getMedia(this.job.stdoutFile).subscribe(
       (res: any) &#x3D;&gt; {
         this.displayStd &#x3D; res._body;
       },
       err &#x3D;&gt; console.log(err)
     );
-
   }
 
   showStdErr() {
-
     this.media.getMedia(this.job.stderrFile).subscribe(
       (res: any) &#x3D;&gt; {
-
         this.displayStd &#x3D; res._body;
       },
       err &#x3D;&gt; console.log(err)
     );
-
   }
 
   hideStd() {
     this.displayStd &#x3D; undefined;
   }
 
-
   getDetails() {
-
     if (this.buttonState &#x3D;&#x3D; 0) {
       this.buttonState &#x3D; 1;
       this.messageButton &#x3D; &quot;Display Details&quot;;
-      this.jobDetailsTable.nativeElement.style &#x3D; &quot;display:none;&quot;
+      this.jobDetailsTable.nativeElement.style &#x3D; &quot;display:none;&quot;;
     } else {
       this.buttonState &#x3D; 0;
       this.messageButton &#x3D; &quot;Hide Details&quot;;
-      this.jobDetailsTable.nativeElement.style &#x3D; &quot;display:table;&quot;
+      this.jobDetailsTable.nativeElement.style &#x3D; &quot;display:table;&quot;;
     }
   }
 
   onClickLink(link: Link) {
-    console.log(&#x27;route : &#x27; + link.href);
+    console.log(&quot;route : &quot; + link.href);
   }
 
   addPropertyToPref(property: string) {
@@ -1376,19 +1550,15 @@ export class JobDetails implements AfterViewInit {
   unsetPropertyToPref(property: string) {
     this.userConfig.unsetJobDetailsProperty(property);
   }
-
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;button class&#x3D;&quot;btn btn-default&quot; (click)&#x3D;&quot;goBack()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-arrow-left&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt; Go Back&lt;/button&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-page-header [heading]&#x3D;&quot;&#x27;Job Details&#x27;&quot; [icon]&#x3D;&quot;&#x27;fa-th-list&#x27;&quot;&gt;&lt;/app-page-header&gt;
 
-&lt;app-page-header [heading]&#x3D;&quot;&#x27;Details&#x27;&quot; [icon]&#x3D;&quot;&#x27;fa-th-list&#x27;&quot;&gt;&lt;/app-page-header&gt;
-
-&lt;h2&gt;Job : {{id}} - Details &lt;/h2&gt;
 &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;job&quot;&gt;
-    &lt;div class&#x3D;&quot;col-xl-4&quot;&gt;
+    &lt;div class&#x3D;&quot;col-xl-6&quot;&gt;
         &lt;table class&#x3D;&quot;table table-striped table-hover table-bordered&quot;&gt;
             &lt;tr&gt;
                 &lt;td&gt;ID&lt;/td&gt;
@@ -1412,15 +1582,20 @@ export class JobDetails implements AfterViewInit {
     &lt;/div&gt;
     &lt;div class&#x3D;&quot;col-xl-4&quot;&gt;
         &lt;div class&#x3D;&quot;btn-group-vertical&quot; role&#x3D;&quot;group&quot; aria-label&#x3D;&quot;...&quot;&gt;
-            &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-lg btn-secondary&quot; *ngFor&#x3D;&quot;let link of job.links&quot; (click)&#x3D;&quot;onClickLink(link)&quot;&gt;
-        &lt;span *ngIf&#x3D;&quot;link.title&quot;&gt;{{ link.title }}&lt;/span&gt;
-      &lt;/button&gt;
+            &lt;button class&#x3D;&quot;btn btn-default&quot; (click)&#x3D;&quot;goBack()&quot;&gt;&lt;i class&#x3D;&quot;fa fa-arrow-left&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;/i&gt; Go Back&lt;/button&gt;
+
+            &lt;ng-template *ngFor&#x3D;&quot;let link of job.links&quot;&gt;
+                &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-lg btn-secondary&quot; *ngIf&#x3D;&quot;link.title&quot; (click)&#x3D;&quot;onClickLink(link)&quot;&gt;
+                    &lt;span *ngIf&#x3D;&quot;link.title&quot;&gt;{{ link.title }}&lt;/span&gt;
+                &lt;/button&gt;
+            &lt;/ng-template&gt;
+
             &lt;button *ngIf&#x3D;&quot;!displayStd&quot; class&#x3D;&quot;btn btn-lg btn-success&quot; (click)&#x3D;&quot;showStdOut()&quot;&gt;
-        Show output
-      &lt;/button&gt;
+                Show output
+            &lt;/button&gt;
             &lt;button *ngIf&#x3D;&quot;displayStd&quot; class&#x3D;&quot;btn btn-lg btn-success&quot; (click)&#x3D;&quot;hideStd()&quot;&gt;
-        Hide output
-      &lt;/button&gt;
+                Hide output
+            &lt;/button&gt;
             &lt;!--&lt;button *ngIf&#x3D;&quot;!displayStd&quot; class&#x3D;&quot;btn btn-lg btn-info&quot;&gt;
         Show error
       &lt;/button&gt;--&gt;
@@ -1428,14 +1603,15 @@ export class JobDetails implements AfterViewInit {
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class&#x3D;&quot;row&quot; [hidden]&#x3D;&quot;!displayStd&quot;&gt;
-    &lt;div class&#x3D;&quot;col-md-8 offset-md-2&quot;&gt;
-
-        &lt;pre&gt;
-      &lt;code [innerHTML]&#x3D;&quot;displayStd&quot; highlight class&#x3D;&quot;bash&quot;&gt;
-        
-      &lt;/code&gt;
-    &lt;/pre&gt;
-
+    &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+        &lt;div class&#x3D;&quot;output&quot;&gt;
+            &lt;span&gt;&lt;small&gt; output :&lt;/small&gt;&lt;/span&gt;
+            &lt;pre class&#x3D;&quot;code&quot;&gt;
+                &lt;code [innerHTML]&#x3D;&quot;displayStd&quot;&gt;
+                    
+                &lt;/code&gt;
+            &lt;/pre&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class&#x3D;&quot;row&quot;&gt;
@@ -1503,8 +1679,8 @@ export class JobDetails implements AfterViewInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button><app-page-header [heading]="\'Details\'" [icon]="\'fa-th-list\'"></app-page-header><h2>Job : {{id}} - Details </h2><div class="row" *ngIf="job">    <div class="col-xl-4">        <table class="table table-striped table-hover table-bordered">            <tr>                <td>ID</td>                <td> {{ job.id }}</td>            </tr>            <tr>                <td>Owner</td>                <td> {{ job.owner }}</td>            </tr>            <tr>                <td>State</td>                <td> {{ job.state }}</td>            </tr>            <ng-container *ngIf="job.json">                <tr *ngFor="let param of jobParametersToDisplay">                    <td>{{ param }}</td>                    <td>{{ job.json[param] }}</td>                </tr>            </ng-container>        </table>    </div>    <div class="col-xl-4">        <div class="btn-group-vertical" role="group" aria-label="...">            <button type="button" class="btn btn-lg btn-secondary" *ngFor="let link of job.links" (click)="onClickLink(link)">        <span *ngIf="link.title">{{ link.title }}</span>      </button>            <button *ngIf="!displayStd" class="btn btn-lg btn-success" (click)="showStdOut()">        Show output      </button>            <button *ngIf="displayStd" class="btn btn-lg btn-success" (click)="hideStd()">        Hide output      </button>            <!--<button *ngIf="!displayStd" class="btn btn-lg btn-info">        Show error      </button>-->        </div>    </div></div><div class="row" [hidden]="!displayStd">    <div class="col-md-8 offset-md-2">        <pre>      <code [innerHTML]="displayStd" highlight class="bash">              </code>    </pre>    </div></div><div class="row">    <div class="col-xl-8 col-xs-12">        <button class="btn btn-secondary dropdown-toggle" type="button" (click)="getDetails()" id="showDetailsButton" title="Display this job properties">{{ messageButton }}    </button>        <br> <br>        <table class="table table-striped table-hover table-bordered" id="jobDetailsTable" #jobDetailsTable style="display:none;">            <tr *ngFor="let key of jobKeys">                <td>{{ key }}</td>                <td>{{ job.json[key] }}</td>                <td>                    <div ngbDropdown class="d-inline-block">                        <button class="btn btn-default" id="dropdownMenu" ngbDropdownToggle>Options</button>                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) < 0" (click)="addPropertyToPref(key)" title="Add this property to the default job display">                                <button class="dropdown-item">Add parameter to favorite</button>                            </a>                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) >= 0" (click)="unsetPropertyToPref(key)" title="Remove this property to the default job display">                                <button class="dropdown-item">Remove parameter from favorite</button>                            </a>                        </div>                    </div>                    <!--                                    <div class="btn-group" ngbDropdownToggle>                        <button id="single-button" type="button" class="btn btn-default">                          Options <span class="caret"></span>                        </button>                        <ul role="menu" aria-labelledby="single-button">                            <li role="menuitem"><a class="dropdown-item" (click)="addPropertyToPref(key)" title="Add this property to the default job display">Add parameter to favorite</a></li>                        </ul>                    </div>-->                </td>            </tr>        </table>    </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'FmBreadcrumbComponent', 'selector': 'app-fm-breadcrumb'},{'name': 'FmComponent', 'selector': 'app-fm'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'JobDetails', 'selector': 'job-details'},{'name': 'JobsComponent', 'selector': 'jobs-page'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NewJobFormComponent', 'selector': 'new-job-form'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'ResourcesComponent', 'selector': 'resources-page'},{'name': 'SearchComponent', 'selector': 'search-page'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'StatComponent', 'selector': 'app-stat'},{'name': 'TimelineComponent', 'selector': 'app-timeline'}];
+        var COMPONENT_TEMPLATE = '<div><app-page-header [heading]="\'Job Details\'" [icon]="\'fa-th-list\'"></app-page-header><div class="row" *ngIf="job">    <div class="col-xl-6">        <table class="table table-striped table-hover table-bordered">            <tr>                <td>ID</td>                <td> {{ job.id }}</td>            </tr>            <tr>                <td>Owner</td>                <td> {{ job.owner }}</td>            </tr>            <tr>                <td>State</td>                <td> {{ job.state }}</td>            </tr>            <ng-container *ngIf="job.json">                <tr *ngFor="let param of jobParametersToDisplay">                    <td>{{ param }}</td>                    <td>{{ job.json[param] }}</td>                </tr>            </ng-container>        </table>    </div>    <div class="col-xl-4">        <div class="btn-group-vertical" role="group" aria-label="...">            <button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>            <ng-template *ngFor="let link of job.links">                <button type="button" class="btn btn-lg btn-secondary" *ngIf="link.title" (click)="onClickLink(link)">                    <span *ngIf="link.title">{{ link.title }}</span>                </button>            </ng-template>            <button *ngIf="!displayStd" class="btn btn-lg btn-success" (click)="showStdOut()">                Show output            </button>            <button *ngIf="displayStd" class="btn btn-lg btn-success" (click)="hideStd()">                Hide output            </button>            <!--<button *ngIf="!displayStd" class="btn btn-lg btn-info">        Show error      </button>-->        </div>    </div></div><div class="row" [hidden]="!displayStd">    <div class="col-md-8">        <div class="output">            <span><small> output :</small></span>            <pre class="code">                <code [innerHTML]="displayStd">                                    </code>            </pre>        </div>    </div></div><div class="row">    <div class="col-xl-8 col-xs-12">        <button class="btn btn-secondary dropdown-toggle" type="button" (click)="getDetails()" id="showDetailsButton" title="Display this job properties">{{ messageButton }}    </button>        <br> <br>        <table class="table table-striped table-hover table-bordered" id="jobDetailsTable" #jobDetailsTable style="display:none;">            <tr *ngFor="let key of jobKeys">                <td>{{ key }}</td>                <td>{{ job.json[key] }}</td>                <td>                    <div ngbDropdown class="d-inline-block">                        <button class="btn btn-default" id="dropdownMenu" ngbDropdownToggle>Options</button>                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) < 0" (click)="addPropertyToPref(key)" title="Add this property to the default job display">                                <button class="dropdown-item">Add parameter to favorite</button>                            </a>                            <a class="dropdown-item" *ngIf="jobParametersToDisplay.indexOf(key) >= 0" (click)="unsetPropertyToPref(key)" title="Remove this property to the default job display">                                <button class="dropdown-item">Remove parameter from favorite</button>                            </a>                        </div>                    </div>                    <!--                                    <div class="btn-group" ngbDropdownToggle>                        <button id="single-button" type="button" class="btn btn-default">                          Options <span class="caret"></span>                        </button>                        <ul role="menu" aria-labelledby="single-button">                            <li role="menuitem"><a class="dropdown-item" (click)="addPropertyToPref(key)" title="Add this property to the default job display">Add parameter to favorite</a></li>                        </ul>                    </div>-->                </td>            </tr>        </table>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatComponent', 'selector': 'app-chat'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DeleteItemComponent', 'selector': 'app-delete-item'},{'name': 'FmBreadcrumbComponent', 'selector': 'app-fm-breadcrumb'},{'name': 'FmComponent', 'selector': 'app-fm'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'JobDetails', 'selector': 'job-details'},{'name': 'JobStateComponent', 'selector': 'app-job-state'},{'name': 'JobsComponent', 'selector': 'jobs-page'},{'name': 'LayoutComponent', 'selector': 'app-layout'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NewFolderComponent', 'selector': 'app-new-folder'},{'name': 'NewJobFormComponent', 'selector': 'new-job-form'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'NotificationComponent', 'selector': 'app-notification'},{'name': 'PageHeaderComponent', 'selector': 'app-page-header'},{'name': 'ResourcesComponent', 'selector': 'resources-page'},{'name': 'SearchComponent', 'selector': 'search-page'},{'name': 'SidebarComponent', 'selector': 'app-sidebar'},{'name': 'StatComponent', 'selector': 'app-stat'},{'name': 'TimelineComponent', 'selector': 'app-timeline'},{'name': 'UploadComponent', 'selector': 'app-upload'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'JobDetails'};
 </script>

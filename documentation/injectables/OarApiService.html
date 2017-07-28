@@ -36,9 +36,6 @@
                         <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
                                 <li class="link">
-                                    <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
                                     <a 
                                         
                                          href="../overview.html" 
@@ -47,19 +44,30 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./todo.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>TODO
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
@@ -76,6 +84,12 @@
                                 </li>
                                 <li class="link">
                                     <a href="../modules/FmModule.html" >FmModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -126,14 +140,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -144,6 +158,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -158,6 +175,9 @@
                                     <a href="../components/JobDetails.html" >JobDetails</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/JobsComponent.html" >JobsComponent</a>
                                 </li>
                                 <li class="link">
@@ -165,6 +185,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -193,23 +216,29 @@
                                 <li class="link">
                                     <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
                                     <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Job.html" >Job</a>
@@ -236,14 +265,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -270,20 +299,54 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/FmItem.html" >FmItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
                                     <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                 </li>
                                 <li class="link">
                                     <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -291,6 +354,9 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -333,9 +399,6 @@
                                <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
                                        <li class="link">
-                                           <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
                                            <a 
                                                
                                                 href="../overview.html" 
@@ -344,19 +407,30 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./todo.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>TODO
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
@@ -373,6 +447,12 @@
                                        </li>
                                        <li class="link">
                                            <a href="../modules/FmModule.html" >FmModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -423,14 +503,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -441,6 +521,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -455,6 +538,9 @@
                                            <a href="../components/JobDetails.html" >JobDetails</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/JobsComponent.html" >JobsComponent</a>
                                        </li>
                                        <li class="link">
@@ -462,6 +548,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -490,23 +579,29 @@
                                        <li class="link">
                                            <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
                                            <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Job.html" >Job</a>
@@ -533,14 +628,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -567,20 +662,54 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/FmItem.html" >FmItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
                                            <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                        </li>
                                        <li class="link">
                                            <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -588,6 +717,9 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -614,6 +746,8 @@
 
 
 
+
+
 <ol class="breadcrumb">
   <li>Injectables</li>
   <li>OarApiService</li>
@@ -621,15 +755,17 @@
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
+
+
     <li>
         <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="infos">
+    <div class="tab-pane fade active in" id="info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -641,7 +777,10 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Service for OAR API Access<br/><strong>More info about the API :</strong> <a href="http://oar.imag.fr/docs/latest/user/api.html">http://oar.imag.fr/docs/latest/user/api.html</a><br/>You can change the protocole and API entry point in the enrivonment config file.</p><br/>
+                <p>Service for OAR API Access
+<strong>More info about the API :</strong> <a href="http://oar.imag.fr/docs/latest/user/api.html">http://oar.imag.fr/docs/latest/user/api.html</a>
+You can change the protocole and API entry point in the enrivonment config file.</p>
+
             </p>
 
             <section>
@@ -653,11 +792,11 @@
                                     <code>constructor(http: <a href="https://angular.io/docs/ts/latest/api/http/index/Http-class.html" target="_blank">Http</a>, auth: <a href="../injectables/AuthenticationService.html">AuthenticationService</a>)</code>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:25</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:25</a></div>
+                                        </td>
+                                    </tr>
             
                         </tbody>
                     </table>
@@ -682,18 +821,20 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:38</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:38</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Get all current jobs<br/><strong>return format :</strong> JSON</p><br/></div>
+                                        <div class="io-description"><p>Get all current jobs
+            <strong>return format :</strong> JSON</p>
+            </div>
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -709,23 +850,24 @@
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-            <code>getJobsById(ids: number[])</code>
+            <code>getJobsById(ids: [])</code>
                                 </td>
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:48</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:50</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Return a JSON of given job by id</p><br/></div>
+                                        <div class="io-description"><p>Return a JSON of given job by id</p>
+            </div>
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -746,18 +888,20 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:73</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:75</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Get a job by its id<br/><strong>return format :</strong> JSON</p><br/></div>
+                                        <div class="io-description"><p>Get a job by its id
+            <strong>return format :</strong> JSON</p>
+            </div>
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -778,18 +922,19 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:86</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="88" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:88</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Get the jobs of a given username</p><br/></div>
+                                        <div class="io-description"><p>Get the jobs of a given username</p>
+            </div>
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -810,18 +955,20 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:105</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:107</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
-                                        <div class="io-description"><p>Get all resources<br/><strong>return format :</strong> JSON</p><br/></div>
+                                        <div class="io-description"><p>Get all resources
+            <strong>return format :</strong> JSON</p>
+            </div>
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -842,17 +989,17 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="121" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:121</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:127</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>Observable&lt;Response&gt;</code>
+                                            <b>Returns : </b>    <code>Observable&lt;&gt;</code>
             
                                         </div>
                                 </td>
@@ -863,30 +1010,61 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> generateHeaders</b>
+                                    <b><span class="modifier">Private</span> generateHeaders</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                        <span class="modifier-icon method fa fa-play lock">
-                                            <span class="fa fa-lock"></span>
-                                        </span>
+                                        <span class="modifier-icon method fa fa-play lock"></span>
                                     <code>generateHeaders()</code>
                                 </td>
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="149" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:149</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="158" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:158</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Generate JSON headers with Basic Auth</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>void</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> handleError</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>handleError(error: any)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="168" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:168</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
             
                                         <div class="io-description">
-                                            <b>Returns : </b>    <code>void</code>
+                                            <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
             
                                         </div>
                                 </td>
@@ -904,52 +1082,52 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> _urlMedia</b>
+                                    <b><span class="modifier">Private</span> _urlMedia</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>_urlMedia:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>_urlMedia:     <code></code>
             </bcode>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:25</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:25</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> baseUrlOar</b>
+                                    <b><span class="modifier">Private</span> baseUrlOar</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>baseUrlOar:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>baseUrlOar:     <code></code>
             </bcode>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:22</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:22</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> login</b>
+                                    <b><span class="modifier">Private</span> login</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>login:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>login:     <code></code>
             </bcode>
                                 </td>
                             </tr>
@@ -958,23 +1136,23 @@
                                         <i>Default value : </i><code>docker</code>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:19</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:19</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> mdp</b>
+                                    <b><span class="modifier">Private</span> mdp</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>mdp:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>mdp:     <code></code>
             </bcode>
                                 </td>
                             </tr>
@@ -983,31 +1161,31 @@
                                         <i>Default value : </i><code>docker</code>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:20</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:20</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> urlJobs</b>
+                                    <b><span class="modifier">Private</span> urlJobs</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>urlJobs:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>urlJobs:     <code></code>
             </bcode>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:24</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:24</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -1025,12 +1203,25 @@
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="117" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:117</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:123</a></div>
+                                        </td>
+                                    </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>Getter for urlMedia</p><br/></div>
+                                    <div class="io-description"><p>Getter for urlMedia</p>
+            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                  <div class="io-description">
+                                  </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -1039,24 +1230,26 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Protected</span> urlResources</b>
+                                    <b><span class="modifier">Private</span> urlResources</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-lock"></span><code>urlResources:     <code>string</code>
+                                    <span class="modifier-icon fa fa-lock"></span><code>urlResources:     <code></code>
             </bcode>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:23</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/shared/services/oar-api/oar-api.service.ts:23</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
             </section>
     </div>
+
+
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { AuthenticationService } from &#x27;./../auth/authentification.service&#x27;;
 import { Http, Response, Headers } from &#x27;@angular/http&#x27;;
@@ -1080,7 +1273,7 @@ export class OarApiService {
     private mdp &#x3D; &#x27;docker&#x27;;
 
     private baseUrlOar &#x3D; environment.API_PROTOCOLE + &#x27;://&#x27; + environment.API + &#x27;oarapi-priv/&#x27;;
-    private urlResources &#x3D; environment.API_PROTOCOLE + &#x27;://&#x27; + environment.API + &#x27;oarapi/&#x27; + &#x27;resources.json&#x27;;
+    private urlResources &#x3D; environment.API_PROTOCOLE + &#x27;://&#x27; + environment.API + &#x27;oarapi-priv/&#x27; + &#x27;resources.json&#x27;;
     private urlJobs &#x3D; environment.API_PROTOCOLE + &#x27;://&#x27; + environment.API + &#x27;oarapi/&#x27; + &#x27;jobs.json&#x27;;
     private _urlMedia &#x3D; this.baseUrlOar + &#x27;media&#x27;;
 
@@ -1096,9 +1289,11 @@ export class OarApiService {
        *     __return format :__ JSON
        */
     getJobs(): Observable&lt;Response&gt; {
-        const url &#x3D; environment.API_PROTOCOLE + &#x27;://&#x27; + environment.API + &#x27;oarapi/&#x27; + &#x27;jobs.json&#x27;;
+
+        const headers &#x3D; this.generateHeaders();
+        const url &#x3D; this.baseUrlOar + &#x27;jobs.json&#x27;;
         return this.http.get(
-            url
+            url, {headers: headers}
         ).map(res &#x3D;&gt; res.json());
     }
 
@@ -1164,9 +1359,13 @@ export class OarApiService {
      */
     getResources(): Observable&lt;Response&gt; {
 
+        const headers &#x3D; this.generateHeaders();
+
         return this.http.get(
-            this.urlResources
-        ).map(res &#x3D;&gt; res.json());
+            this.urlResources, { headers: headers }
+        )
+        .map(res &#x3D;&gt; res.json())
+        .catch((error: any) &#x3D;&gt; { return this.handleError(error); });
     }
 
 
@@ -1205,7 +1404,10 @@ export class OarApiService {
         );
 
     }
-
+    
+    /**
+     * Generate JSON headers with Basic Auth
+     */
     private generateHeaders() {
 
         const headers: Headers &#x3D; new Headers();
@@ -1214,6 +1416,11 @@ export class OarApiService {
         headers.append(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);
         return headers;
     }
+
+
+  handleError(error: any): Observable&lt;any&gt; {
+        return Observable.throw(new Error(error.status));
+  }
 
 
 }
