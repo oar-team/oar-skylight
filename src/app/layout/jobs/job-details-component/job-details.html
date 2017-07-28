@@ -1,10 +1,7 @@
-<button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+<app-page-header [heading]="'Job Details'" [icon]="'fa-th-list'"></app-page-header>
 
-<app-page-header [heading]="'Details'" [icon]="'fa-th-list'"></app-page-header>
-
-<h2>Job : {{id}} - Details </h2>
 <div class="row" *ngIf="job">
-    <div class="col-xl-4">
+    <div class="col-xl-6">
         <table class="table table-striped table-hover table-bordered">
             <tr>
                 <td>ID</td>
@@ -28,15 +25,20 @@
     </div>
     <div class="col-xl-4">
         <div class="btn-group-vertical" role="group" aria-label="...">
-            <button type="button" class="btn btn-lg btn-secondary" *ngFor="let link of job.links" (click)="onClickLink(link)">
-        <span *ngIf="link.title">{{ link.title }}</span>
-      </button>
+            <button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+
+            <ng-template *ngFor="let link of job.links">
+                <button type="button" class="btn btn-lg btn-secondary" *ngIf="link.title" (click)="onClickLink(link)">
+                    <span *ngIf="link.title">{{ link.title }}</span>
+                </button>
+            </ng-template>
+
             <button *ngIf="!displayStd" class="btn btn-lg btn-success" (click)="showStdOut()">
-        Show output
-      </button>
+                Show output
+            </button>
             <button *ngIf="displayStd" class="btn btn-lg btn-success" (click)="hideStd()">
-        Hide output
-      </button>
+                Hide output
+            </button>
             <!--<button *ngIf="!displayStd" class="btn btn-lg btn-info">
         Show error
       </button>-->
@@ -44,14 +46,15 @@
     </div>
 </div>
 <div class="row" [hidden]="!displayStd">
-    <div class="col-md-8 offset-md-2">
-
-        <pre>
-      <code [innerHTML]="displayStd" highlight class="bash">
-        
-      </code>
-    </pre>
-
+    <div class="col-md-8">
+        <div class="output">
+            <span><small> output :</small></span>
+            <pre class="code">
+                <code [innerHTML]="displayStd">
+                    
+                </code>
+            </pre>
+        </div>
     </div>
 </div>
 <div class="row">

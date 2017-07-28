@@ -29,7 +29,9 @@
             <td>{{item.owner}}</td>
             <td>{{item.message}}</td>
             <td>{{item.name}}</td>
-            <td>{{item.state}}</td>
+            <td>{{item.state}}
+                <app-job-state [state]="item.state"></app-job-state>
+            </td>
             <td>
                 <span *ngIf="user.username ">
 

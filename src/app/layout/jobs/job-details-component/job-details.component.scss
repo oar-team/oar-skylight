@@ -1,0 +1,11 @@
+@import '../../../../styles/bootstrap/_variables.scss';
+.output {
+    .code {
+        background-color: #333;
+        color: #fff;
+    }
+    span {
+        font-family: $font-family-monospace;
+        text-decoration: underline;
+    }
+}

@@ -18,3 +18,9 @@ td {
 td.type {
     padding: 5px 1em;
 }
+
+.options {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}

@@ -1,5 +1,6 @@
 # Oar Skylight
 
+Oar Skylight is a Single Page Application based on [OAR API](oar.imag.fr/docs/latest/user/api.html).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
@@ -20,8 +21,8 @@ Provides fast, reliable and extensible starter for the development of Angular pr
 
 In order to start the project use:
 ```bash
-$ git clone git@github.com:start-angular/SB-Admin-BS4-Angular-4.git
-$ cd SB-Admin-BS4-Angular-4
+$ git clone https://github.com/oar-team/oar-skylight.git
+$ cd oar-skylight
 # install the project's dependencies
 $ npm install
 # watches your files and uses livereload by default run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -35,9 +36,31 @@ $ npm run build
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
+[Check angular CLI documentation](https://github.com/angular/angular-cli/wiki/build) for tooling informations
+
 ### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+#### Production build
+
+1) Make sure everything is set up properly.
+- You have **node >=v6.9.0 and npm >=3**
+- Checkout on banche you want to build
+- Do a `npm update` to make sure libraries are up to date (or `npm install`)
+
+2) Go to `/src/environments/environment.prod.ts` and make sure constants are well configured.
+
+3) Run build process with :  `npm run build`.
+
+    Generated files can be found in `/dist/`
+
+4) Copy `/dist/` sources to your www directory. (keep the `.htaccess` rules)
+
+##### Problem solving
+
+- `ENOENT: no such file or directory` you are not on the good directory. 
+
+- Cannot build ? [Check angular CLI documentation](https://github.com/angular/angular-cli/wiki/build)
 
 ### Documentation 
 
@@ -45,5 +68,4 @@ To run the Documentation :
 
 `npm install -g @compodoc/compodoc`
 
-Generate and serve the documentation
-̀`npm run compodoc`
+Generate the documentation with `npm run compodoc`. Now go to : http://localhost:4200/documentation/

@@ -12,5 +12,8 @@
         <a [routerLink]="['/resources']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-th-list"></i> &nbsp;Resources
         </a>
+        <a (click)="openExplorer()" *ngIf="user.username" class="list-group-item">
+            <i class="fa fa-folder-open"></i> &nbsp;Explorateur
+        </a>
     </ul>
 </nav>

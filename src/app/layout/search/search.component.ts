@@ -8,6 +8,7 @@ import { SearchService } from '../../shared/services/search/search.service';
   moduleId: module.id,
   selector: 'search-page',
   templateUrl: './search.html',
+  styleUrls: ['./search.component.scss'],
   providers: [OarApiService]
 })
 
@@ -18,7 +19,7 @@ export class SearchComponent {
   jobList: any[] = [];
 
   selectedValue = 'Id';
-  options: string[] = ['Name', 'Id', 'Date'];
+  options: string[] = ['Id']; // ['Name', 'Id', 'Date']
 
   constructor(private apiService: OarApiService,
     private router: Router,

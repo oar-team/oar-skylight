@@ -1,29 +1,26 @@
-import { environment } from './../../../../environments/environment';
-import { Injectable } from '@angular/core';
-import { Router, } from '@angular/router';
-import { User } from '../../models/user';
-import { Http, Response, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
-import { BehaviorSubject, Observable } from 'rxjs/Rx';
+import { environment } from "./../../../../environments/environment";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { User } from "../../models/user";
+import { Http, Response, Headers } from "@angular/http";
+import "rxjs/add/operator/map";
+import { BehaviorSubject, Observable } from "rxjs/Rx";
 
 @Injectable()
 export class AuthenticationService {
-
   private user: BehaviorSubject<User>;
   private isLogged: BehaviorSubject<boolean>;
 
-  private urlProtocole = environment.API_PROTOCOLE + '://';
-  private urlWhoAmI: string = this.urlProtocole + environment.API + 'oarapi-priv/' + 'whoami.json';
+  private urlProtocole = environment.API_PROTOCOLE + "://";
+  private urlWhoAmI: string = this.urlProtocole +
+    environment.API +
+    "oarapi-priv/" +
+    "whoami.json";
 
-  constructor(private _router: Router,
-    private http: Http,
-  ) {
-    this.user = new BehaviorSubject<User>(new User('', ''));
+  constructor(private _router: Router, private http: Http) {
+    this.user = new BehaviorSubject<User>(new User("", ""));
     this.isLogged = new BehaviorSubject<boolean>(false);
-
-
   }
-
 
   /**
    *  Getter for user
@@ -33,11 +30,9 @@ export class AuthenticationService {
     return this.user.getValue();
   }
 
-
   getUserObservable(): Observable<User> {
     return this.user;
   }
-
 
   /**
    * Setter for user
@@ -47,27 +42,27 @@ export class AuthenticationService {
     this.user.next(user);
   }
 
-
   /**
    * Action of clicking in the login button
    */
-  login(user: User) {
-
+  login(user: User): Observable<Response> {
     this.setUser(user);
     this.requestWhoAmI();
 
+    const req = this.doRequestWhoAmI();
+    req
+      .catch(err => {
+        return Observable.throw(err.status);
+      })
+      .subscribe(data => this.isUserLogged(data));
+
+    return req;
   }
 
   /**
    * Get WhoAmI data and call isUserLogged
    */
-  requestWhoAmI() {
-
-    this.doRequestWhoAmI().subscribe(
-      data => this.isUserLogged(data),
-      error => console.log(error)
-    );
-  }
+  requestWhoAmI() {}
 
   /**
    *  From WhoAmI Response, set isLogged
@@ -75,8 +70,7 @@ export class AuthenticationService {
    */
 
   isUserLogged(data: any) {
-
-    console.log('isUserLogged');
+    console.log("isUserLogged");
     if (data.authenticated_user === this.getUser().getUsername()) {
       this.setIsLogged(true);
     } else {
@@ -86,15 +80,13 @@ export class AuthenticationService {
 
   setIsLogged(value: boolean) {
     this.isLogged.next(value);
-    sessionStorage.setItem('isLogged', '' + value);
+    sessionStorage.setItem("isLogged", "" + value);
   }
-
 
   //  Getter for isLogged
   getIsLogged(): BehaviorSubject<boolean> {
     return this.isLogged;
   }
-
 
   /*
    *    Request the Api if the user is logged.
@@ -108,17 +100,9 @@ export class AuthenticationService {
 
   //  Getter for isLogged value
   getIsLoggedValue(): boolean {
-    let isLogged = false;
+    const isLogged = false;
 
-    if (this.isLogged.getValue()) {
-      isLogged = this.isLogged.getValue();
-    } else if (sessionStorage.getItem('isLogged') === 'true') {
-      isLogged = true;
-    } else if (sessionStorage.getItem('isLogged') === 'false') {
-      isLogged = false;
-    }
-
-    return isLogged;
+    return this.isLogged.getValue();
   }
 
   /** Request WhoAmI to the API. We check if we are correctly logged In
@@ -130,24 +114,26 @@ export class AuthenticationService {
     const headers = new Headers();
     const user = this.user.getValue();
 
-    headers.append('Authorization', 'Basic ' + btoa(user.getUsername() + ':' + user.getPassword()));
-    headers.append('Content-Type', 'application/json');
+    headers.append(
+      "Authorization",
+      "Basic " + btoa(user.getUsername() + ":" + user.getPassword())
+    );
+    headers.append("Content-Type", "application/json");
 
-    return this.http.get(this.urlWhoAmI, {
-      headers: headers
-    }
-    ).map(res => res.json());
+    return this.http
+      .get(this.urlWhoAmI, { headers: headers })
+      .map(res => res.json(), error => Observable.throw(error))
+      .catch(error => {
+        return Observable.throw(error.status);
+      })
+      .share();
   }
-
 
   logOut(error: any) {
     console.log(error);
-    console.log('Log out');
+    console.log("Log out");
 
     this.isLogged.next(false);
-    this.user.next(new User('', ''));
-
+    this.user.next(new User("", ""));
   }
-
-
 }

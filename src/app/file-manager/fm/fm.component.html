@@ -16,16 +16,16 @@
                 <th style="width: 5%">
                     <mfDefaultSorter by="type">Type</mfDefaultSorter>
                 </th>
-                <th style="width: 65%">
+                <th style="width: 45%">
                     <mfDefaultSorter by="name">Name</mfDefaultSorter>
                 </th>
                 <th style="width: 10%">
                     <mfDefaultSorter by="mtime">Last updated</mfDefaultSorter>
                 </th>
-                <th style="width: 10%">
+                <th style="width: 20%">
                     <mfDefaultSorter by="size">Size</mfDefaultSorter>
                 </th>
-                <th style="width: 10%">
+                <th style="width: 20%">
                     Action
                 </th>
             </tr>
@@ -50,10 +50,11 @@
                 </td>
                 <td (click)="onClickItem(item)" class="pointer">{{item.name}}</td>
                 <td (click)="onClickItem(item)" class="pointer">{{item.mtime | date:'jms' }}</td>
-                <td (click)="onClickItem(item)" class="pointer">{{item.size}}<span *ngIf="item.size"> ko</span></td>
+                <td (click)="onClickItem(item)" class="pointer">{{item.size | fileSize:2}}<span *ngIf="item.size"></span></td>
                 <td>
-                    <button class="btn btn-danger" (click)="deleteItem(item)">
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    <app-delete-item [path]="uri" [item]="item" (refresh)="refresh($event)"></app-delete-item>
+                    <button class="btn" (click)="downloadItem(item)" *ngIf="item.type == 'f'">
+                        <i class="fa fa-cloud-download" aria-hidden="true"></i>
                     </button>
                 </td>
             </tr>
@@ -66,12 +67,11 @@
                 </td>
             </tr>
             <tr>
-                <td>
-                    <button type="button" class="btn btn-success">Add to this Folder</button>
-                </td>
-                <td colspan="3">
-                </td>
-                <td>
+                <td colspan="5">
+                    <div class="options">
+                        <app-upload [path]="uri" (refresh)="refresh($event)"></app-upload>
+                        <app-new-folder [path]="uri" (refresh)="refresh($event)"></app-new-folder>
+                    </div>
                 </td>
             </tr>
         </tfoot>

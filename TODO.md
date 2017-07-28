@@ -1,8 +1,13 @@
 # TODO 
 
-
-- new User(username, password) -> btoa the password
-- Icon color for job states
-- Errors handler + UI
-- File Manager
+- File Manager Download
+- Stderr stdout console style
 - Templates
+- Link : Resources & node list + details link
+
+template : dossier partagé
+Titre + description
+Prise en compte du Script
+
+
+Build documentation

@@ -1,3 +1,6 @@
+import { FmModule } from './../file-manager/fm.module';
+import { JobStateModule } from './../shared/components/job-state/job-state.module';
+import { JobStateComponent } from './../shared/components/job-state/job-state.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -16,6 +19,7 @@ import { HeaderComponent, SidebarComponent } from '../shared';
         TranslateModule,
         LayoutRoutingModule,
         NgbModule.forRoot(),
+        FmModule
     ],
     declarations: [
         LayoutComponent,

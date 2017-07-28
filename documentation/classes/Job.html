@@ -36,9 +36,6 @@
                         <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
                                 <li class="link">
-                                    <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
-                                <li class="link">
                                     <a 
                                         
                                          href="../overview.html" 
@@ -47,19 +44,30 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./todo.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>TODO
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
@@ -76,6 +84,12 @@
                                 </li>
                                 <li class="link">
                                     <a href="../modules/FmModule.html" >FmModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -126,14 +140,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -144,6 +158,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -158,6 +175,9 @@
                                     <a href="../components/JobDetails.html" >JobDetails</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/JobsComponent.html" >JobsComponent</a>
                                 </li>
                                 <li class="link">
@@ -165,6 +185,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -193,23 +216,29 @@
                                 <li class="link">
                                     <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                </li>
                         </ul>
                     </li>
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
                                     <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                 </li>
                                 <li class="link">
                                     <a href="../classes/Job.html"  data-type="entity-link" class="active" >Job</a>
@@ -236,14 +265,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -270,20 +299,54 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
+                            <span class="fa fa-info"></span>
+                            <span>Interfaces</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-interfaces-links"
+                            >
+                                <li class="link">
+                                    <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/FmItem.html" >FmItem</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../interfaces/Serializable.html" >Serializable</a>
+                                </li>
+                        </ul>
+                    </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
                                     <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                 </li>
                                 <li class="link">
                                     <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -291,6 +354,9 @@
                         </ul>
                     </li>
             
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
             
                     <li class="chapter">
                         <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -333,9 +399,6 @@
                                <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
                                        <li class="link">
-                                           <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
-                                       <li class="link">
                                            <a 
                                                
                                                 href="../overview.html" 
@@ -344,19 +407,30 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./todo.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>TODO
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
@@ -373,6 +447,12 @@
                                        </li>
                                        <li class="link">
                                            <a href="../modules/FmModule.html" >FmModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/FmRoutingModule.html" >FmRoutingModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/JobStateModule.html" >JobStateModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/JobsModule.html" >JobsModule</a>
@@ -423,14 +503,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -441,6 +521,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/DashboardComponent.html" >DashboardComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/DeleteItemComponent.html" >DeleteItemComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/FmBreadcrumbComponent.html" >FmBreadcrumbComponent</a>
@@ -455,6 +538,9 @@
                                            <a href="../components/JobDetails.html" >JobDetails</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/JobStateComponent.html" >JobStateComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/JobsComponent.html" >JobsComponent</a>
                                        </li>
                                        <li class="link">
@@ -462,6 +548,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/NewFolderComponent.html" >NewFolderComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/NewJobFormComponent.html" >NewJobFormComponent</a>
@@ -490,23 +579,29 @@
                                        <li class="link">
                                            <a href="../components/TimelineComponent.html" >TimelineComponent</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../components/UploadComponent.html" >UploadComponent</a>
+                                       </li>
                                </ul>
                            </li>
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
                                            <a href="../classes/CliStablePage.html" >CliStablePage</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/CustomXHRBackend.html" >CustomXHRBackend</a>
                                        </li>
                                        <li class="link">
                                            <a href="../classes/Job.html"  data-type="entity-link" class="active" >Job</a>
@@ -533,14 +628,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -567,20 +662,54 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
+                                   <span class="fa fa-info"></span>
+                                   <span>Interfaces</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="interfaces-links"
+                   >
+                                       <li class="link">
+                                           <a href="../interfaces/BreadcrumbLink.html" >BreadcrumbLink</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/FmItem.html" >FmItem</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../interfaces/Serializable.html" >Serializable</a>
+                                       </li>
+                               </ul>
+                           </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
                                            <a href="../pipes/DataFilterPipe.html" >DataFilterPipe</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../pipes/FileSizePipe.html" >FileSizePipe</a>
                                        </li>
                                        <li class="link">
                                            <a href="../pipes/KeysPipe.html" >KeysPipe</a>
@@ -588,6 +717,9 @@
                                </ul>
                            </li>
                    
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
                    
                            <li class="chapter">
                                <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
@@ -616,6 +748,8 @@
 
 
 
+
+
 <ol class="breadcrumb">
   <li>Classes</li>
   <li>Job</li>
@@ -623,15 +757,17 @@
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="active">
-        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
     </li>
+
+
     <li>
         <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="infos">
+    <div class="tab-pane fade active in" id="info">
         <p class="comment">
             <h3>File</h3>
         </p>
@@ -643,7 +779,8 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>TODO : Description Job</p><br/>
+                <p>TODO : Description Job</p>
+
             </p>
 
 
@@ -657,11 +794,11 @@
                                     <code>constructor()</code>
                                 </td>
                             </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:70</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:70</a></div>
+                                        </td>
+                                    </tr>
             
                         </tbody>
                     </table>
@@ -686,11 +823,11 @@
                             </tr>
             
             
-                                <tr>
-                                    <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:77</a></div>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:77</a></div>
+                                        </td>
+                                    </tr>
             
                             <tr>
                                 <td class="col-md-4">
@@ -715,604 +852,786 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> apiTimestamp</b>
+                                    <b><span class="modifier">Public</span> apiTimestamp</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>apiTimestamp:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>apiTimestamp:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:42</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:42</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> arrayId</b>
+                                    <b><span class="modifier">Public</span> arrayId</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>arrayId:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>arrayId:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:43</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:43</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> arrayIndex</b>
+                                    <b><span class="modifier">Public</span> arrayIndex</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>arrayIndex:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>arrayIndex:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:44</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:44</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> command</b>
+                                    <b><span class="modifier">Public</span> command</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>command:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>command:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:45</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:45</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> cpusetName</b>
+                                    <b><span class="modifier">Public</span> cpusetName</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>cpusetName:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>cpusetName:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:46</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:46</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> events</b>
+                                    <b><span class="modifier">Public</span> events</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>events:     <code><a href="../classes/JobEvent.html" target="_self" >JobEvent[]</a></code>
+                                    <span class="modifier-icon fa fa-"></span><code>events:     <code>[]</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:47</a></div>
+                                        <i>Type : </i>    <code>[]</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:47</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> exitCode</b>
+                                    <b><span class="modifier">Public</span> exitCode</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>exitCode:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>exitCode:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:48</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:48</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> id</b>
+                                    <b><span class="modifier">Public</span> id</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>id:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>id:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:49</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:49</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> initialRequest</b>
+                                    <b><span class="modifier">Public</span> initialRequest</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>initialRequest:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>initialRequest:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:50</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:50</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> json</b>
+                                    <b><span class="modifier">Public</span> json</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>json:     <code>any</code>
+                                    <span class="modifier-icon fa fa-"></span><code>json:     <code>any</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:41</a></div>
+                                        <i>Type : </i>    <code>any</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:41</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> links</b>
+                                    <b><span class="modifier">Public</span> links</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>links:     <code><a href="../classes/Link.html" target="_self" >Link[]</a></code>
+                                    <span class="modifier-icon fa fa-"></span><code>links:     <code>[]</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:51</a></div>
+                                        <i>Type : </i>    <code>[]</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:51</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> message</b>
+                                    <b><span class="modifier">Public</span> message</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>message:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>message:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:52</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:52</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> name</b>
+                                    <b><span class="modifier">Public</span> name</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>name:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>name:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:53</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:53</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> owner</b>
+                                    <b><span class="modifier">Public</span> owner</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>owner:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>owner:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:54</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:54</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> project</b>
+                                    <b><span class="modifier">Public</span> project</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>project:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>project:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:55</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:55</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> properties</b>
+                                    <b><span class="modifier">Public</span> properties</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>properties:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>properties:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:56</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:56</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> queue</b>
+                                    <b><span class="modifier">Public</span> queue</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>queue:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>queue:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:57</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:57</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> reservation</b>
+                                    <b><span class="modifier">Public</span> reservation</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>reservation:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>reservation:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:58</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:58</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> resubmitJobId</b>
+                                    <b><span class="modifier">Public</span> resubmitJobId</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>resubmitJobId:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>resubmitJobId:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:59</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:59</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> scheduledStart</b>
+                                    <b><span class="modifier">Public</span> scheduledStart</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>scheduledStart:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>scheduledStart:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:60</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:60</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> startTime</b>
+                                    <b><span class="modifier">Public</span> startTime</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>startTime:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>startTime:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:61</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:61</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> state</b>
+                                    <b><span class="modifier">Public</span> state</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>state:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>state:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:62</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:62</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> stderrFile</b>
+                                    <b><span class="modifier">Public</span> stderrFile</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>stderrFile:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>stderrFile:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:63</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:63</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> stdoutFile</b>
+                                    <b><span class="modifier">Public</span> stdoutFile</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>stdoutFile:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>stdoutFile:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:64</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:64</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> stopTime</b>
+                                    <b><span class="modifier">Public</span> stopTime</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>stopTime:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>stopTime:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:65</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:65</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> submissionTime</b>
+                                    <b><span class="modifier">Public</span> submissionTime</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>submissionTime:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>submissionTime:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:66</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:66</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> type</b>
+                                    <b><span class="modifier">Public</span> type</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>type:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>type:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:67</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:67</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> types</b>
+                                    <b><span class="modifier">Public</span> types</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>types:     <code>String[]</code>
+                                    <span class="modifier-icon fa fa-"></span><code>types:     <code>[]</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:68</a></div>
+                                        <i>Type : </i>    <code>[]</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:68</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> walltime</b>
+                                    <b><span class="modifier">Public</span> walltime</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>walltime:     <code>number</code>
+                                    <span class="modifier-icon fa fa-"></span><code>walltime:     <code>number</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:69</a></div>
+                                        <i>Type : </i>    <code>number</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:69</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <b><span class="modifier">Static</span> wantedResources</b>
+                                    <b><span class="modifier">Public</span> wantedResources</b>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <span class="modifier-icon fa fa-export"></span><code>wantedResources:     <code>string</code>
+                                    <span class="modifier-icon fa fa-"></span><code>wantedResources:     <code>string</code>
             </bcode>
                                 </td>
                             </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:70</a></div>
+                                        <i>Type : </i>    <code>string</code>
+            
                                     </td>
                                 </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/shared/services/oar-api/model/job.ts:70</a></div>
+                                        </td>
+                                    </tr>
                         </tbody>
                     </table>
             </section>
     </div>
+
+
     <div class="tab-pane fade tab-source-code" id="source">
         <pre class="line-numbers"><code class="language-typescript">import { Link } from &#x27;./link&#x27;;
 
