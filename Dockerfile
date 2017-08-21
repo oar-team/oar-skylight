@@ -12,7 +12,7 @@ RUN cd oar-skylight && npm install
 RUN cd oar-skylight && npm run build
 
 # To build oar-skylight, you can run:
-#     docker build -t skylight
+#     docker build -t skylight .
 #     docker run -v /var/www/skylight:/server -it skylight
 #       cp -a oar-skylight/dist/* /server/
 #       cp -a oar-skylight/dist/.htaccess /server/
