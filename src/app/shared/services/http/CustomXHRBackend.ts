@@ -14,9 +14,6 @@ export class CustomXHRBackend extends XHRBackend {
  
   processResponse(response:Response){
     switch (response.status) {
-      case 401:
-        console.log('401 XHR');
-        return Observable.throw('your custom error here');
       case 403:
         // You could redirect to forbidden page here
         return Observable.throw('your custom error here');

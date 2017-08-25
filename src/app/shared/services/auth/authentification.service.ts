@@ -37,40 +37,31 @@ export class AuthenticationService {
   /**
    * Setter for user
    */
-
   setUser(user: User) {
     this.user.next(user);
   }
 
   /**
-   * Action of clicking in the login button
+   * Login action
    */
   login(user: User): Observable<Response> {
     this.setUser(user);
-    this.requestWhoAmI();
 
     const req = this.doRequestWhoAmI();
-    req
-      .catch(err => {
-        return Observable.throw(err.status);
-      })
-      .subscribe(data => this.isUserLogged(data));
+    req.subscribe(data => {
+      console.log(data);
+      this.isUserLogged(data.json());
+    });
 
     return req;
   }
 
   /**
-   * Get WhoAmI data and call isUserLogged
-   */
-  requestWhoAmI() {}
-
-  /**
    *  From WhoAmI Response, set isLogged
    *  If a user is responded, isLogged = true
    */
-
   isUserLogged(data: any) {
-    console.log("isUserLogged");
+    console.log(data);
     if (data.authenticated_user === this.getUser().getUsername()) {
       this.setIsLogged(true);
     } else {
@@ -93,8 +84,6 @@ export class AuthenticationService {
    *    Return isLogged. Subscribe to get the value
    */
   getIsLoggedWhoAmI(): BehaviorSubject<boolean> {
-    this.requestWhoAmI();
-
     return this.isLogged;
   }
 
@@ -110,7 +99,7 @@ export class AuthenticationService {
   * Level of access: private
   * API doc: http://oar.imag.fr/docs/latest/user/api.html#get-whoami
   */
-  doRequestWhoAmI() {
+  doRequestWhoAmI(): Observable<Response> {
     const headers = new Headers();
     const user = this.user.getValue();
 
@@ -118,21 +107,19 @@ export class AuthenticationService {
       "Authorization",
       "Basic " + btoa(user.getUsername() + ":" + user.getPassword())
     );
+    headers.append("Accept", "application/json");
     headers.append("Content-Type", "application/json");
 
-    return this.http
-      .get(this.urlWhoAmI, { headers: headers })
-      .map(res => res.json(), error => Observable.throw(error))
-      .catch(error => {
-        return Observable.throw(error.status);
-      })
-      .share();
+    return this.http.get(this.urlWhoAmI, { headers: headers }).share();
   }
 
+  /**
+   * Unset the user. Interface is then notify of the absence of logged user
+   * 
+   * @param {*} error 
+   * @memberof AuthenticationService
+   */
   logOut(error: any) {
-    console.log(error);
-    console.log("Log out");
-
     this.isLogged.next(false);
     this.user.next(new User("", ""));
   }

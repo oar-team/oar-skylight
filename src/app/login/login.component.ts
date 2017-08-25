@@ -15,7 +15,13 @@ import {
 } from "@angular/router";
 import { AuthenticationService } from "../shared/services/auth/authentification.service";
 import { User } from "../shared/models/user";
-
+/**
+ * Login page
+ * 
+ * @export
+ * @class LoginComponent
+ * @implements {OnInit}
+ */
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -58,19 +64,29 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * 
+   * Event on login click
+   * 
+   * @param {JSON} event 
+   * @memberof LoginComponent
+   */
   doLogin(event: JSON) {
+    // We retrive login information
     const username = this.loginForm.value.username;
     const password = this.loginForm.value.password;
 
     const user = new User(username, password);
-    // Redirect after login
+    // for redirect after login. This url can change
     let url = "dashboard";
     const req = this._auth.login(user);
 
     req.catch(error => {
-        return Observable.throw(error.status);
-      })
-
+      console.log("notify");
+      this.notifications.error("Something Went Wrong", error);
+      return Observable.throw(error);
+    })
+    .subscribe(data => console.log(data));
 
     // Subscribe to isUserLogged. We can't use getIsLoggedValue because of asynchronous request.
     this._auth.getIsLogged().subscribe(bool => {
