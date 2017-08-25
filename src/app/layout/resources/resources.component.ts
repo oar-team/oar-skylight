@@ -5,6 +5,13 @@ import { Observable } from "rxjs/Observable";
 import { BehaviorSubject } from "rxjs/Rx";
 import { Router } from "@angular/router";
 
+/**
+ * Display the current state of resources
+ * 
+ * @export
+ * @class ResourcesComponent
+ * @implements {OnInit}
+ */
 @Component({
   moduleId: module.id,
   selector: "resources-page",
@@ -12,16 +19,28 @@ import { Router } from "@angular/router";
   providers: [OarApiService]
 })
 export class ResourcesComponent implements OnInit {
+  // data to display
   data: any = [];
 
   constructor(private apiService: OarApiService, private router: Router) {}
-
+  
+  /**
+   * On init load the resources from the API
+   * 
+   * @memberof ResourcesComponent
+   */
   ngOnInit() {
     this.apiService
       .getResources()
       .subscribe(data => this.loadResources(data), error => console.log(error));
   }
-
+  
+  /**
+   * load json resources into data property
+   * 
+   * @param {*} json 
+   * @memberof ResourcesComponent
+   */
   loadResources(json: any) {
     this.data = json.items;
     console.log(this.resourcesRecap());

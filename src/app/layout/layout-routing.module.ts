@@ -11,7 +11,8 @@ const routes: Routes = [
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'jobs', loadChildren: './jobs/jobs.module.ts#JobsModule', canActivate: [AuthGuard] },
             { path: 'resources', loadChildren: './resources/resources.module.ts#ResourcesModule' },
-            { path: 'search', loadChildren: './search/search.module.ts#SearchModule' }
+            { path: 'search', loadChildren: './search/search.module.ts#SearchModule' },
+            { path: 'usage', loadChildren: './usage/usage.module.ts#UsageModule', canActivate: [AuthGuard] }
         ]
     },
     {

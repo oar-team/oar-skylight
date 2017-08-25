@@ -1,0 +1,20 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 10%">
+                network_adress
+            </th>
+            <th style="width: 90%">
+                state
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let resource of resources | keys">
+            <td> {{ resource.key }} </td>
+            <td>
+                <span *ngFor="let core of resource.value"> {{ core.id }}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
