@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
   API_PROTOCOLE: 'https',
-  API: 'localhost:46668/',
+  API: 'luke-api.univ-grenoble-alpes.fr/',
   POLLING: 30000
 };
