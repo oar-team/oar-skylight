@@ -1,0 +1,20 @@
+.resource {
+    margin: 10px;
+    background-color: #eee;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    min-width: 30%;
+    .name {
+        padding-right: 10px;
+        font-weight: bold;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.loader {
+    margin: 0 10px;
+}
