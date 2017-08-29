@@ -1,0 +1,10 @@
+<app-page-header [heading]="'Resource Details'" [icon]="'fa-th-list'"></app-page-header>
+
+<div class="top-bar">
+    <button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+    <div class="date"> Last update : {{ resource.apiTimestamp | date }}
+    </div>
+</div>
+
+<pre>
+</pre>
