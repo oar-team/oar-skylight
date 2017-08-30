@@ -4,18 +4,6 @@ Oar Skylight is a Single Page Application based on [OAR API](oar.imag.fr/docs/la
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-### Introduction
-Provides fast, reliable and extensible starter for the development of Angular projects.
-
-`sb-admin-bs4-angular4` provides the following features:
-- Developed using boostrap-v4.0.0-alpha.6
-- Following the best practices.
-- Ahead-of-Time compilation support.
-- Official Angular i18n support.
-- Production and development builds.
-- Ahead-of-Time compilation support.
-- Tree-Shaking production builds.
-
 ### How to start
 **Note** that this seed project requires  **node >=v6.9.0 and npm >=3**.
 
@@ -68,4 +56,4 @@ To run the Documentation :
 
 `npm install -g @compodoc/compodoc`
 
-Generate the documentation with `npm run compodoc`. Now go to : http://localhost:4200/documentation/
+Generate the documentation with `npm run compodoc`. Now go to : http://localhost:8080/

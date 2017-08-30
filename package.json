@@ -6,7 +6,7 @@
         "ng": "ng",
         "start": "ng serve --ec=true",
         "build": "ng build --prod",
-        "compodoc": "./node_modules/.bin/compodoc -p ./tsconfig.json",
+        "compodoc": "./node_modules/.bin/compodoc -p ./tsconfig.json -s",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
