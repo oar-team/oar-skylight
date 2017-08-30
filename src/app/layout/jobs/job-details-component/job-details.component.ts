@@ -7,6 +7,13 @@ import { UserConfigStore } from "../../../shared/stores/user-config-store";
 import { Observable } from "rxjs";
 import { Location } from "@angular/common";
 
+/**
+ * Display details of a job
+ * 
+ * @export
+ * @class JobDetails
+ * @implements {AfterViewInit}
+ */
 @Component({
   moduleId: module.id,
   selector: "job-details",
@@ -15,16 +22,30 @@ import { Location } from "@angular/common";
   styleUrls: ["job-details.component.scss"]
 })
 export class JobDetails implements AfterViewInit {
+  /**
+   * Details entry
+   * 
+   * @type {*}
+   * @memberof JobDetails
+   */
   @ViewChild("jobDetailsTable") jobDetailsTable: any;
+  // Job id from url parameters
   id: number;
+  // Fetched job
   job: Job;
+  // Show or hide details
   buttonState: Number;
+  // Changing message of button (Display / hide)
   messageButton = "Display details";
+
+  // Parameters to display from UserConfig
   jobParametersToDisplay: string[];
   displayStd: string = "";
 
   // Use to display sorted key values
   jobKeys: String[];
+
+  // Code div to display stdout
   @ViewChild("code") codeElement: ElementRef;
 
   constructor(
@@ -49,7 +70,12 @@ export class JobDetails implements AfterViewInit {
       err => console.log(err)
     );
   }
-
+  /**
+   * We first load our job with the given id from the API 
+   * Second, we handle json parameters to display
+   * 
+   * @memberof JobDetails
+   */
   ngOnInit() {
     this.route.params.subscribe(params => {
       let id = +params["id"]; // (+) converts string 'id' to a number
@@ -68,10 +94,20 @@ export class JobDetails implements AfterViewInit {
     });
   }
 
+  /**
+   * 
+   * 
+   * @memberof JobDetails
+   */
   ngAfterViewInit() {
     //
   }
 
+  /**
+   * Show stdout
+   * 
+   * @memberof JobDetails
+   */
   showStdOut() {
     this.media.getMedia(this.job.stdoutFile).subscribe(
       (res: any) => {
@@ -81,6 +117,11 @@ export class JobDetails implements AfterViewInit {
     );
   }
 
+  /**
+   * Show stdErr
+   * 
+   * @memberof JobDetails
+   */
   showStdErr() {
     this.media.getMedia(this.job.stderrFile).subscribe(
       (res: any) => {
@@ -90,10 +131,20 @@ export class JobDetails implements AfterViewInit {
     );
   }
 
+  /**
+   * Hide std
+   * 
+   * @memberof JobDetails
+   */
   hideStd() {
     this.displayStd = undefined;
   }
 
+  /**
+   * Display details
+   * 
+   * @memberof JobDetails
+   */
   getDetails() {
     if (this.buttonState == 0) {
       this.buttonState = 1;
@@ -106,18 +157,41 @@ export class JobDetails implements AfterViewInit {
     }
   }
 
+  /**
+   * Dummy get Link
+   * 
+   * @param {Link} link 
+   * @memberof JobDetails
+   */
   onClickLink(link: Link) {
     console.log("route : " + link.href);
   }
 
+  /**
+   * Add json property to favorite in ConfigStore
+   * 
+   * @param {string} property 
+   * @memberof JobDetails
+   */
   addPropertyToPref(property: string) {
     this.userConfig.addJobDetailsProperty(property);
   }
 
+  /**
+   * Go to last 'Page'
+   * 
+   * @memberof JobDetails
+   */
   goBack(): void {
     this.location.back();
   }
 
+  /**
+   * Unset property from favorite in ConfigStore
+   * 
+   * @param {string} property 
+   * @memberof JobDetails
+   */
   unsetPropertyToPref(property: string) {
     this.userConfig.unsetJobDetailsProperty(property);
   }

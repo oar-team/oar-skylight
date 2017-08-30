@@ -1,17 +1,37 @@
+/**
+ * User class used by LoginComponent. No setter here
+ * 
+ * @export
+ * @class User
+ */
 export class User {
-	private password: string;
-	 username: string;
+  // clear password
+  private password: string;
+  // Username
+  username: string;
 
-	constructor(username: string, password: string) {
-		this.password = password;
-		this.username = username;
-	}
+  constructor(username: string, password: string) {
+    this.password = password;
+    this.username = username;
+  }
+  
+  /**
+   * Getter for username
+   * 
+   * @returns 
+   * @memberof User
+   */
+  getUsername() {
+    return this.username;
+  }
 
-    getUsername() {
-        return this.username;
-    }
-
-    getPassword(){
-        return this.password;
-    }
+  /**
+   * Setter for username
+   * 
+   * @returns 
+   * @memberof User
+   */
+  getPassword() {
+    return this.password;
+  }
 }

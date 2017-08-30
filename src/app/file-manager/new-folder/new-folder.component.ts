@@ -35,20 +35,43 @@ import {
     ])
   ]
 })
-export class NewFolderComponent implements OnInit {
+export class NewFolderComponent {
+  // Hide or show form
   public isInputVisible = false;
+
+  // foldername
   public folderName: String;
+
+  /**
+   * Current path location
+   * 
+   * @type {string}
+   * @memberof NewFolderComponent
+   */
   @Input() path: string;
+
+  /**
+   * Send FmComponent a refresh event
+   * 
+   * @type {EventEmitter<String>}
+   * @memberof NewFolderComponent
+   */
   @Output() refresh: EventEmitter<String> = new EventEmitter<String>(true);
 
+  /**
+   * Folder name control
+   * 
+   * @memberof NewFolderComponent
+   */
   newFolderForm = new FormGroup({
     name: new FormControl("", Validators.pattern("^[A-Za-z][A-Za-z0-9]*$"))
   });
 
   constructor(private media: MediaService) {}
 
-  ngOnInit() {}
-
+  /**
+   * Create folder at current location
+   */
   createFolder() {
     this.media
       .createFolder(this.path + "/" + this.folderName)

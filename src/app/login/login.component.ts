@@ -15,9 +15,11 @@ import {
 } from "@angular/router";
 import { AuthenticationService } from "../shared/services/auth/authentification.service";
 import { User } from "../shared/models/user";
+
 /**
  * Login page
  * 
+ * TODO : redirect to last visited page
  * @export
  * @class LoginComponent
  * @implements {OnInit}
@@ -27,7 +29,7 @@ import { User } from "../shared/models/user";
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.scss"]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   // Errors shown on login form
   private msgs: Message[] = [];
 
@@ -35,7 +37,8 @@ export class LoginComponent implements OnInit {
   private whoAmI: JSON;
   // Array of last events with their url
   private events: any = [];
-
+  
+  // Login form with both username and password required
   public loginForm = this.fb.group({
     username: ["", Validators.required],
     password: ["", Validators.required]
@@ -62,7 +65,6 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
 
   /**
    * 

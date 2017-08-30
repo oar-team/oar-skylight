@@ -6,12 +6,20 @@ import { UserConfig } from './model/user-config';
 import { BehaviorSubject, Observable } from 'rxjs/Rx';
 
 /**
- *     more about stores in Angular2 : https://dzone.com/articles/how-to-build-angular-2-apps-using-observable-data-1
+ *   This store handle config states.
+ * 
+ *   more about stores in Angular2 : https://dzone.com/articles/how-to-build-angular-2-apps-using-observable-data-1
  */
 @Injectable()
 export class UserConfigStore {
+
+  // Subject that notify component of Config changes
   private config: BehaviorSubject<UserConfig>;
+
+  // Media url
   private urlMedia: string;
+
+  // url Config
   private urlConfig: string;
   constructor(private oarApiService: OarApiService,
     private auth: AuthenticationService,
@@ -29,7 +37,13 @@ export class UserConfigStore {
 
   }
 
-  // TODO : Save Config on window close
+  /**
+   * Save config on every changes happening
+   * 
+   * @param {UserConfig} config 
+   * @returns {Observable<Response>} 
+   * @memberof UserConfigStore
+   */
   saveConfig(config: UserConfig): Observable<Response> {
 
     console.log(config);
@@ -88,29 +102,45 @@ export class UserConfigStore {
     }
   }
 
-
+  
+  /**
+   * Getter for Config Observable
+   * 
+   * @returns {Observable<UserConfig>} 
+   * @memberof UserConfigStore
+   */
   getConfigObs(): Observable<UserConfig> {
     return this.config.asObservable();
   }
-
+  
+  /**
+   * Get current config state
+   * 
+   * @returns {UserConfig} 
+   * @memberof UserConfigStore
+   */
   getUserConfig(): UserConfig {
     return this.config.getValue();
   }
-
+  
+  // Change config
   addJobDetailsProperty(property: string) {
     this.config.next(this.getUserConfig().addJobDetailProperty(property));
   }
 
+  // Change config
   unsetJobDetailsProperty(property: string) {
     const config =  this.getUserConfig();
     this.config.next(config.unsetProperty(property));
   }
 
 
+  // Change config
   addResourceDetailsProperty(property: string) {
     this.config.next(this.getUserConfig().addResourceDetailProperty(property));
   }
 
+  // Change config
   unsetResourceDetailsProperty(property: string) {
     const config =  this.getUserConfig();
     this.config.next(config.unsetResourceProperty(property));

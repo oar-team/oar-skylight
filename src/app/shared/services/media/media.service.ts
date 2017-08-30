@@ -5,8 +5,15 @@ import { environment } from "./../../../../environments/environment";
 import { Http, Headers, Response, RequestOptions } from "@angular/http";
 import { Injectable } from "@angular/core";
 
+/**
+ * API entry point for handling files
+ * 
+ * @export
+ * @class MediaService
+ */
 @Injectable()
 export class MediaService {
+  // Base url
   private baseUrl = environment.API_PROTOCOLE +
     "://" +
     environment.API +
@@ -17,6 +24,13 @@ export class MediaService {
     private notifications: NotificationsService
   ) {}
 
+  /**
+   * Get a file
+   * 
+   * @param {string} path 
+   * @returns {Observable<Response>} 
+   * @memberof MediaService
+   */
   getMedia(path: string): Observable<Response> {
     const urlStd = this.baseUrl + "~/" + path;
 
@@ -25,6 +39,13 @@ export class MediaService {
     return this.http.get(urlStd, { headers: headers }).map(res => res);
   }
 
+  /**
+   * List a folder
+   * 
+   * @param {string} path 
+   * @returns 
+   * @memberof MediaService
+   */
   list(path: string) {
     const url = this.baseUrl + "ls/" + path;
 
@@ -33,6 +54,13 @@ export class MediaService {
     return this.http.get(url, { headers: headers }).map(res => res);
   }
 
+  /**
+   * Delete a file
+   * 
+   * @param {string} path 
+   * @returns {Observable<Response>} 
+   * @memberof MediaService
+   */
   deleteMedia(path: string): Observable<Response> {
     console.log("deleteMedia");
     const url = this.baseUrl + path;
@@ -83,7 +111,9 @@ export class MediaService {
    */
   createFolder(path: String) {
     // We need to put the name and extension in the url
-    const randomId = Math.random().toString(36).substring(2);
+    const randomId = Math.random()
+      .toString(36)
+      .substring(2);
     const url = this.baseUrl + path + "/" + randomId;
 
     // API expect an 'application/octet-stream'
@@ -111,6 +141,12 @@ export class MediaService {
     return req;
   }
 
+  /**
+   * Getter for base url
+   * 
+   * @returns 
+   * @memberof MediaService
+   */
   getBaseUrl() {
     return this.baseUrl;
   }
