@@ -9,7 +9,7 @@ import { NewJobFormComponent } from './post-job-component/new-job-form.component
 const routes: Routes = [
     { path: '', component: JobsComponent},
     { path: 'new', component: NewJobFormComponent, canActivate: [AuthGuard] },
-    { path: ':id', component: JobDetails }
+    { path: ':id', component: JobDetails, canActivate: [AuthGuard] }
 ];
 
 

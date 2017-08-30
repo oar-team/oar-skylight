@@ -1,20 +1,11 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th style="width: 10%">
-                network_adress
-            </th>
-            <th style="width: 90%">
-                state
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let resource of resources | keys">
-            <td> {{ resource.key }} </td>
-            <td>
-                <span *ngFor="let core of resource.value"> {{ core.id }}</span>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="loader" [hidden]="handledRequests >= totalJobs">
+    <ngb-progressbar type="danger" [animated]="true" [max]="totalJobs" [value]="handledRequests"></ngb-progressbar>
+</div>
+<div class="wrapper">
+    <div class="resource" *ngFor="let resource of resources | keys">
+        <div class="name"> {{ resource.key }}</div>
+        <div class="cores">
+            <ResourceState [jobId]="map[core.id]" [resource]="core" *ngFor="let core of resource.value"></ResourceState>
+        </div>
+    </div>
+</div>

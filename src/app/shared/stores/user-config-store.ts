@@ -88,6 +88,7 @@ export class UserConfigStore {
     }
   }
 
+
   getConfigObs(): Observable<UserConfig> {
     return this.config.asObservable();
   }
@@ -103,6 +104,16 @@ export class UserConfigStore {
   unsetJobDetailsProperty(property: string) {
     const config =  this.getUserConfig();
     this.config.next(config.unsetProperty(property));
+  }
+
+
+  addResourceDetailsProperty(property: string) {
+    this.config.next(this.getUserConfig().addResourceDetailProperty(property));
+  }
+
+  unsetResourceDetailsProperty(property: string) {
+    const config =  this.getUserConfig();
+    this.config.next(config.unsetResourceProperty(property));
   }
 
 
