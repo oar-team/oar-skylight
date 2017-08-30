@@ -57,3 +57,7 @@ To run the Documentation :
 `npm install -g @compodoc/compodoc`
 
 Generate the documentation with `npm run compodoc`. Now go to : http://localhost:8080/
+
+### Code
+
+This app use [Prettier](https://github.com/prettier/prettier) formatting. Please lint your code before commit.
