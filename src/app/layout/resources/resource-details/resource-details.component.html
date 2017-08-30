@@ -1,10 +1,66 @@
-<app-page-header [heading]="'Resource Details'" [icon]="'fa-th-list'"></app-page-header>
+<div class="row">
+    <div class="col-xl-6">
+        <table class="table table-striped table-hover table-bordered">
+            <tr>
+                <td>ID</td>
+                <td> {{ resource.id }}</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td> {{ resource.state }}</td>
+            </tr>
+            <tr>
+                <td>Resource</td>
+                <td> {{ resource.networkAddress }}</td>
+            </tr>
 
-<div class="top-bar">
-    <button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
-    <div class="date"> Last update : {{ resource.apiTimestamp | date }}
+            <ng-container *ngIf="resource.json">
+                <tr *ngFor="let param of resourceParametersToDisplay">
+                    <td>{{ param }}</td>
+                    <td>{{ resource.json[param] }}</td>
+                </tr>
+            </ng-container>
+        </table>
+    </div>
+    <div class="col-xl-4">
+        <div class="btn-group-vertical" role="group" aria-label="...">
+            <button class="btn btn-default" (click)="goBack()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Go Back</button>
+
+
+            <ng-container *ngIf="jobs">
+
+                <button class="btn btn-lg " *ngFor="let job of jobs" (click)="goToJob(job.id)">
+                    Job : {{ job.id }}
+                </button>
+            </ng-container>
+            <!--<button *ngIf="!displayStd" class="btn btn-lg btn-info">
+        Show error
+      </button>-->
+        </div>
     </div>
 </div>
+<br/>
+<div class="row">
+    <div class="col-xl-9">
 
-<pre>
-</pre>
+        <table class="table table-striped table-hover table-bordered" id="resourceDetailsTable" #resourceDetailsTable>
+            <tr *ngFor="let key of resourceKeys">
+                <td>{{ key }}</td>
+                <td>{{ resource.json[key] }}</td>
+                <td>
+                    <div ngbDropdown class="d-inline-block">
+                        <button class="btn btn-default" ngbDropdownToggle>Options</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            <a class="dropdown-item" (click)="addPropertyToPref(key)" *ngIf="resourceParametersToDisplay.indexOf(key) < 0" title="Add this property to the default job display">
+                                <button class="dropdown-item">Add parameter to favorite</button>
+                            </a>
+                            <a class="dropdown-item" (click)="unsetPropertyToPref(key)" *ngIf="resourceParametersToDisplay.indexOf(key) >= 0" title="Remove this property to the default job display">
+                                <button class="dropdown-item">Remove parameter from favorite</button>
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

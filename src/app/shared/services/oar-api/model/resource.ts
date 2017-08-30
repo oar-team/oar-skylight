@@ -36,6 +36,7 @@ export class Resource {
   public stateNum: number;
   public suspendedJobs: string;
   public type: string;
+  public json: any;
 
   constructor(json) {
     this.apiTimestamp = json.api_timestamp || null;
@@ -80,5 +81,7 @@ export class Resource {
         this.links.push(link);
       }
     }
+
+    this.json = json;
   }
 }

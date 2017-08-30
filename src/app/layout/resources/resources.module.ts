@@ -1,3 +1,4 @@
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { PageHeaderModule } from "./../../shared/modules/page-header/page-header.module";
 import { SharedPipesModule } from "./../../shared/pipes/shared-pipes.module";
 import { KeysPipe } from "./../../shared/pipes/keys-pipe";
@@ -17,7 +18,8 @@ import { ResourceDetailsComponent } from "./resource-details/resource-details.co
     ResourcesRoutingModule,
     JobStateModule,
     PageHeaderModule,
-    SharedPipesModule
+    SharedPipesModule,
+    NgbDropdownModule
   ],
   providers: [],
   declarations: [ResourcesComponent, ResourceDetailsComponent],

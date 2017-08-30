@@ -14,7 +14,6 @@ import { environment } from "../../../../environments/environment";
  */
 @Injectable()
 export class OarApiService {
-  
   private baseUrlOar = environment.API_PROTOCOLE +
     "://" +
     environment.API +
@@ -135,6 +134,17 @@ export class OarApiService {
 
     return this.http
       .get(this.urlResourceDetails + id + ".json", { headers: headers })
+      .map(res => res.json())
+      .catch((error: any) => {
+        return this.handleError(error);
+      });
+  }
+
+  getResourceJob(id: string) {
+    const headers = this.generateHeaders();
+
+    return this.http
+      .get(this.urlResourceDetails + id + "/jobs.json", { headers: headers })
       .map(res => res.json())
       .catch((error: any) => {
         return this.handleError(error);
